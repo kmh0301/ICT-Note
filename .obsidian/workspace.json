@@ -11,14 +11,10 @@
             "id": "28fcf2956bf286ee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Testing.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Testing"
+              "title": "新分頁"
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +98,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Testing 的反向連結"
+              "title": "反向連結"
             }
           },
           {
@@ -112,12 +107,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Testing 的對外連結"
+              "title": "對外連結"
             }
           },
           {
@@ -138,11 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Testing.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Testing 的大綱"
+              "title": "大綱"
             }
           }
         ]
@@ -159,12 +151,49 @@
       "canvas:建立新畫布": false,
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
-      "command-palette:開啟命令面板": false
+      "command-palette:開啟命令面板": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
   "active": "28fcf2956bf286ee",
   "lastOpenFiles": [
+    "2021 ICT P1/2021P1Q7.md",
+    "2021 ICT P1/2021P1Q28.md",
+    "2021 ICT P1/2021P1Q38.md",
+    "2021 ICT P1/2021P1Q3.md",
+    "2021 ICT P1/2021P1Q18.md",
+    "2021 ICT P1/2021P1Q19.md",
+    "2021 ICT P1/2021P1Q2.md",
+    "2021 ICT P1/2021P1Q6.md",
+    "2021 ICT P1/2021P1Q29.md",
+    "2021 ICT P1/2021P1Q39.md",
+    "2021 ICT P1/2021P1Q16.md",
+    "2021 ICT P1/2021P1Q22.md",
+    "2021 ICT P1/2021P1Q32.md",
+    "2021 ICT P1/2021P1Q26.md",
+    "2021 ICT P1/2021P1Q9.md",
+    "2021 ICT P1/2021P1Q12.md",
+    "2021 ICT P1/2021P1Q36.md",
+    "2021 ICT P1/2021P1Q27.md",
+    "2021 ICT P1/2021P1Q13.md",
+    "2021 ICT P1/2021P1Q8.md",
+    "2021 ICT P1/2021P1Q37.md",
+    "2021 ICT P1/2021P1Q17.md",
+    "2021 ICT P1/2021P1Q23.md",
+    "2021 ICT P1/2021P1Q33.md",
+    "2021 ICT P1/2021P1Q24.md",
+    "2021 ICT P1/2021P1Q10.md",
+    "2021 ICT P1/2021DSEP1.pdf",
+    "2021 ICT P1",
+    "ICT-sally/2019 ICT P1/2019DSEP1.pdf",
     "3.1.2_chi copy.pdf",
-    "Testing.md"
+    "ICT-sally/2020 ICT P1/2020DSEP1.pdf",
+    "ICT-sally/2022 ICT P1/2022 DSE-ICT-P1.pdf",
+    "ICT-sally/2021 ICT P1/2021DSEP1.pdf",
+    "ICT-sally/ICT Topic",
+    "ICT-sally/2022 ICT P1",
+    "ICT-sally/2020 ICT P1"
   ]
 }
