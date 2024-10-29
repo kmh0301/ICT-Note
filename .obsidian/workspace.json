@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "d83b0704425a06ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "65276394c1ecb13f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28fcf2956bf286ee",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新分頁"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "52146e22fe9813a3",
+    "type": "split",
+    "children": [
+      {
+        "id": "77709ee0fc2aa52b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64ac5b1c8f6110b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "ad1684d212c8e830",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "f57db498eaf65a04",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6b8d1e3ebd397a1d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef381d50226bfb0c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fbd424acbc55428f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向連結"
+            }
+          },
+          {
+            "id": "cb5cbe96b79ca26f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "對外連結"
+            }
+          },
+          {
+            "id": "177660a3f024af50",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "afe93131ea3c8563",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "大綱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
+    }
+  },
+  "active": "64ac5b1c8f6110b8",
+  "lastOpenFiles": [
+    "ICT-Sally",
+    "ICT-Sally/2019 ICT P1/2019P1Q20.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q14.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q6.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q30.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q10.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q24.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q34.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q2.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q40.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q11.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q25.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q35.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q3.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q21.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q15.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q7.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q31.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q8.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q9.md",
+    "ICT-Sally/2019 ICT P1/2019DSEP1.pdf",
+    "ICT-Sally/2019 ICT P1/2019P1Q18.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q28.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q38.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q29.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q39.md",
+    "ICT-Sally/2019 ICT P1/2019P1Q19.md",
+    "ICT-Sally/2022 ICT P1/2022 DSE-ICT-P1.pdf",
+    "ICT-Sally/2020 ICT P1/2020DSEP1.pdf",
+    "ICT-Sally/2019 ICT P1",
+    "ICT-Sally/ICT Topic",
+    "ICT-Sally/2022 ICT P1",
+    "ICT-Sally/2020 ICT P1",
+    "ICT-Sally/2021 ICT P1/2021DSEP1.pdf",
+    "ICT-Sally/2021 ICT P1",
+    "ICT-sally/2019 ICT P1/2019DSEP1.pdf"
+  ]
+}
