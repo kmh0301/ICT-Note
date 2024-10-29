@@ -11,10 +11,14 @@
             "id": "28fcf2956bf286ee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "A1 Ch.2 數據控制及數據組織"
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向連結"
+              "title": "A1 Ch.2 數據控制及數據組織 的反向連結"
             }
           },
           {
@@ -107,11 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "對外連結"
+              "title": "A1 Ch.2 數據控制及數據組織 的對外連結"
             }
           },
           {
@@ -132,9 +138,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md"
+              },
               "icon": "lucide-list",
-              "title": "大綱"
+              "title": "A1 Ch.2 數據控制及數據組織 的大綱"
             }
           }
         ]
@@ -154,11 +162,19 @@
       "command-palette:開啟命令面板": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "64ac5b1c8f6110b8",
+  "active": "28fcf2956bf286ee",
   "lastOpenFiles": [
+    "ICT-Sally/ICT Topic/數據驗證.md",
+    "ICT-Sally/2022DSEP1.pdf",
+    "ICT-Sally/2021DSEP1.pdf",
+    "ICT-Sally/2020DSEP1.pdf",
+    "ICT-Sally/2019DSEP1.pdf",
+    "ICT-Sally/數據驗證.md",
+    "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
     "ICT-Sally",
     "ICT-Sally/2019 ICT P1/2019P1Q20.md",
     "ICT-Sally/2019 ICT P1/2019P1Q14.md",
@@ -183,17 +199,9 @@
     "ICT-Sally/2019 ICT P1/2019P1Q18.md",
     "ICT-Sally/2019 ICT P1/2019P1Q28.md",
     "ICT-Sally/2019 ICT P1/2019P1Q38.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q29.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q39.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q19.md",
     "ICT-Sally/2022 ICT P1/2022 DSE-ICT-P1.pdf",
     "ICT-Sally/2020 ICT P1/2020DSEP1.pdf",
     "ICT-Sally/2019 ICT P1",
-    "ICT-Sally/ICT Topic",
-    "ICT-Sally/2022 ICT P1",
-    "ICT-Sally/2020 ICT P1",
-    "ICT-Sally/2021 ICT P1/2021DSEP1.pdf",
-    "ICT-Sally/2021 ICT P1",
-    "ICT-sally/2019 ICT P1/2019DSEP1.pdf"
+    "ICT-Sally/ICT Topic"
   ]
 }
