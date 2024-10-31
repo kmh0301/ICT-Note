@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "ebd49cf264a11693",
+        "id": "37df8c4075ab4ea4",
         "type": "tabs",
         "children": [
           {
-            "id": "ee24b0b4ee966e7e",
+            "id": "0fe316a4440f6723",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
                 "file": "DSEPP/2022/2022DSEP1.pdf",
-                "page": 4,
-                "left": -33,
-                "top": 413,
-                "zoom": 0.45110887096774194
+                "page": 7,
+                "left": -35,
+                "top": 160,
+                "zoom": 0.4322076612903226
               },
               "icon": "lucide-file-text",
               "title": "2022DSEP1"
@@ -26,34 +26,23 @@
         ]
       },
       {
-        "id": "13ef85198f01d273",
+        "id": "102537492df9b517",
         "type": "tabs",
         "children": [
           {
-            "id": "b89d50b38abcde86",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "關聯圖檢視"
-            }
-          },
-          {
-            "id": "4371accd036255a0",
+            "id": "2600c6c178edf6ac",
             "type": "leaf",
             "state": {
               "type": "diff-view",
               "state": {
-                "file": "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
+                "file": "資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf.md",
                 "staged": false
               },
               "icon": "git-pull-request",
-              "title": "Diff View (2022P1Q12)"
+              "title": "Diff View (資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -205,11 +194,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4371accd036255a0",
+  "active": "2600c6c178edf6ac",
   "lastOpenFiles": [
-    "DSEPP/2022/2022 ICT P1/2022P1Q13.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q32.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q31.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q30.md",
     "DSEPP/2022/2022DSEP1.pdf",
+    "DSEPP/2022/2022 ICT P1/2022P1Q29.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q28.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q26.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q25.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q23.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q22.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q21.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q20.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q19.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q18.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q14.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q13.md",
+    "資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
     "未命名.canvas",
     "ICT Topic/類型檢查.md",
     "ICT Topic/電腦軟件.md",
@@ -220,22 +224,7 @@
     "ICT Topic/資訊處理.md",
     "ICT Topic/資訊管理系統.md",
     "ICT Topic/試算表.md",
-    "ICT Topic/計算像素位元.md",
-    "ICT Topic/網頁.md",
-    "ICT Topic/網絡安全.md",
     "ICT Topic/硬件的功能.png",
-    "ICT Topic/版權.md",
-    "ICT Topic/無用輸入，無用輸出.md",
-    "ICT Topic/演示軟件.md",
-    "ICT Topic/測試.md",
-    "ICT Topic/正確使用電腦.md",
-    "ICT Topic/正確使用機械人.md",
-    "ICT Topic/檢查數位.md",
-    "ICT Topic/檔案大小.md",
-    "ICT Topic/模組化.md",
-    "ICT Topic/數據驗證.md",
-    "ICT Topic/數據有效性檢驗.md",
-    "ICT Topic/數據控制.md",
     "ICT Topic",
     "DSEPP/Sample Paper/Sample Paper_卷二甲 數據庫.pdf",
     "DSEPP/Sample Paper/Sample Paper_卷二乙 數據通訊及建網.pdf",
