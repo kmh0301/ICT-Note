@@ -4,24 +4,56 @@
     "type": "split",
     "children": [
       {
-        "id": "65276394c1ecb13f",
+        "id": "ebd49cf264a11693",
         "type": "tabs",
         "children": [
           {
-            "id": "28fcf2956bf286ee",
+            "id": "ee24b0b4ee966e7e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
-                "mode": "source",
-                "source": false
+                "file": "DSEPP/2022/2022DSEP1.pdf",
+                "page": 4,
+                "left": -33,
+                "top": 413,
+                "zoom": 0.45110887096774194
               },
-              "icon": "lucide-file",
-              "title": "A1 Ch.2 數據控制及數據組織"
+              "icon": "lucide-file-text",
+              "title": "2022DSEP1"
             }
           }
         ]
+      },
+      {
+        "id": "13ef85198f01d273",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b89d50b38abcde86",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "關聯圖檢視"
+            }
+          },
+          {
+            "id": "4371accd036255a0",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
+                "staged": false
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (2022P1Q12)"
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -52,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"2022 DSE-ICT-P1.pdf\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +125,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "A1 Ch.2 數據控制及數據組織 的反向連結"
+              "title": "反向連結"
             }
           },
           {
@@ -112,12 +143,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "A1 Ch.2 數據控制及數據組織 的對外連結"
+              "title": "對外連結"
             }
           },
           {
@@ -138,19 +168,27 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ICT-Sally/A1 Ch.2 數據控制及數據組織.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "A1 Ch.2 數據控制及數據組織 的大綱"
+              "title": "大綱"
+            }
+          },
+          {
+            "id": "750e2b787e015e86",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,45 +201,52 @@
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "28fcf2956bf286ee",
+  "active": "4371accd036255a0",
   "lastOpenFiles": [
-    "ICT-Sally/ICT Topic/數據驗證.md",
-    "ICT-Sally/2022DSEP1.pdf",
-    "ICT-Sally/2021DSEP1.pdf",
-    "ICT-Sally/2020DSEP1.pdf",
-    "ICT-Sally/2019DSEP1.pdf",
-    "ICT-Sally/數據驗證.md",
-    "ICT-Sally/A1 Ch.2 數據控制及數據組織.md",
-    "ICT-Sally",
-    "ICT-Sally/2019 ICT P1/2019P1Q20.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q14.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q6.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q30.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q10.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q24.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q34.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q2.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q40.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q11.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q25.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q35.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q3.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q21.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q15.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q7.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q31.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q8.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q9.md",
-    "ICT-Sally/2019 ICT P1/2019DSEP1.pdf",
-    "ICT-Sally/2019 ICT P1/2019P1Q18.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q28.md",
-    "ICT-Sally/2019 ICT P1/2019P1Q38.md",
-    "ICT-Sally/2022 ICT P1/2022 DSE-ICT-P1.pdf",
-    "ICT-Sally/2020 ICT P1/2020DSEP1.pdf",
-    "ICT-Sally/2019 ICT P1",
-    "ICT-Sally/ICT Topic"
+    "DSEPP/2022/2022 ICT P1/2022P1Q13.md",
+    "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
+    "DSEPP/2022/2022DSEP1.pdf",
+    "未命名.canvas",
+    "ICT Topic/類型檢查.md",
+    "ICT Topic/電腦軟件.md",
+    "ICT Topic/電腦網絡.md",
+    "ICT Topic/電腦系統.md",
+    "ICT Topic/電腦硬件.md",
+    "ICT Topic/電子學習.md",
+    "ICT Topic/資訊處理.md",
+    "ICT Topic/資訊管理系統.md",
+    "ICT Topic/試算表.md",
+    "ICT Topic/計算像素位元.md",
+    "ICT Topic/網頁.md",
+    "ICT Topic/網絡安全.md",
+    "ICT Topic/硬件的功能.png",
+    "ICT Topic/版權.md",
+    "ICT Topic/無用輸入，無用輸出.md",
+    "ICT Topic/演示軟件.md",
+    "ICT Topic/測試.md",
+    "ICT Topic/正確使用電腦.md",
+    "ICT Topic/正確使用機械人.md",
+    "ICT Topic/檢查數位.md",
+    "ICT Topic/檔案大小.md",
+    "ICT Topic/模組化.md",
+    "ICT Topic/數據驗證.md",
+    "ICT Topic/數據有效性檢驗.md",
+    "ICT Topic/數據控制.md",
+    "ICT Topic",
+    "DSEPP/Sample Paper/Sample Paper_卷二甲 數據庫.pdf",
+    "DSEPP/Sample Paper/Sample Paper_卷二乙 數據通訊及建網.pdf",
+    "DSEPP/Sample Paper/Sample Paper_卷二丙 多媒體製作及網站建構.pdf",
+    "DSEPP/Sample Paper/Sample Paper_卷二丁 軟件開發.pdf",
+    "DSEPP/Sample Paper/Sample Paper_卷一.pdf",
+    "DSEPP/Sample Paper",
+    "DSEPP/Practice Paper/Practice Paper_卷二甲 數據庫.pdf",
+    "DSEPP/Practice Paper/Practice Paper_卷二乙 數據通訊及建網.pdf",
+    "Pasted image 20241030161936.png",
+    "Pasted image 20241030154949.png",
+    "未命名 1.canvas"
   ]
 }
