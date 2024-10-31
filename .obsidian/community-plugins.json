@@ -1,3 +1,20 @@
 [
+<<<<<<< Updated upstream
   "pdf-plus"
+=======
+<<<<<<< HEAD
+  "dataview",
+  "editing-toolbar",
+  "pdf-plus",
+  "obsidian-git"
+=======
+  "pdf-plus",
+<<<<<<< HEAD
+  "dataview"
+>>>>>>> origin/main
+=======
+  "dataview",
+  "obsidian-git"
+>>>>>>> origin/main
+>>>>>>> Stashed changes
 ]
