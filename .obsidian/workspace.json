@@ -176,14 +176,23 @@
               "icon": "lucide-list",
               "title": "ASCII 的大綱"
             }
+          },
+          {
+            "id": "d0503e970a8223e5",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,10 +204,11 @@
       "command-palette:開啟命令面板": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bb99f1217ff20e8e",
+  "active": "64ac5b1c8f6110b8",
   "lastOpenFiles": [
     "2017P1]] [[2022P1Q11.md",
     "內（放射狀筆記）/ICT Topic/ASCII.md",
