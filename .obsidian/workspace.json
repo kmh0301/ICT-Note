@@ -11,35 +11,17 @@
             "id": "0fe316a4440f6723",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "canvas",
               "state": {
-                "file": "DSEPP/2022/2022DSEP1.pdf",
-                "page": 7,
-                "left": -35,
-                "top": 160,
-                "zoom": 0.4322076612903226
+                "file": "未命名.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "2022DSEP1"
-            }
-          }
-        ]
-      },
-      {
-        "id": "102537492df9b517",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2600c6c178edf6ac",
-            "type": "leaf",
-            "state": {
-              "type": "diff-view",
-              "state": {
-                "file": "資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf.md",
-                "staged": false
-              },
-              "icon": "git-pull-request",
-              "title": "Diff View (資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf)"
+              "icon": "lucide-layout-dashboard",
+              "title": "未命名"
             }
           }
         ]
@@ -157,23 +139,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "未命名.canvas"
+              },
               "icon": "lucide-list",
-              "title": "大綱"
-            }
-          },
-          {
-            "id": "750e2b787e015e86",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "未命名 的大綱"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -189,51 +163,49 @@
       "command-palette:開啟命令面板": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false,
-      "remotely-save:Remotely Save": false,
-      "obsidian-git:Open Git source control": false
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2600c6c178edf6ac",
+  "active": "64ac5b1c8f6110b8",
   "lastOpenFiles": [
-    "DSEPP/2022/2022 ICT P1/2022P1Q32.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q31.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q30.md",
-    "DSEPP/2022/2022DSEP1.pdf",
-    "DSEPP/2022/2022 ICT P1/2022P1Q29.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q28.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q26.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q25.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q23.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q22.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q21.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q20.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q19.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q18.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q14.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q13.md",
+    "外（線性筆記）/書本內容",
+    "內（放射狀筆記）",
+    "外（線性筆記）",
+    "外（線性筆記）/DSEPP/2022/2022DSEP1.pdf",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q32.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q31.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q30.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q29.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q28.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q26.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q25.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q23.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q22.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q21.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q20.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q19.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q18.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q14.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q13.md",
     "資訊處理]2022DSEP1.pdf22 DSE-ICT-P1.pdf.md",
-    "DSEPP/2022/2022 ICT P1/2022P1Q12.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q12.md",
     "未命名.canvas",
-    "ICT Topic/類型檢查.md",
-    "ICT Topic/電腦軟件.md",
-    "ICT Topic/電腦網絡.md",
-    "ICT Topic/電腦系統.md",
-    "ICT Topic/電腦硬件.md",
-    "ICT Topic/電子學習.md",
-    "ICT Topic/資訊處理.md",
-    "ICT Topic/資訊管理系統.md",
-    "ICT Topic/試算表.md",
-    "ICT Topic/硬件的功能.png",
-    "ICT Topic",
-    "DSEPP/Sample Paper/Sample Paper_卷二甲 數據庫.pdf",
-    "DSEPP/Sample Paper/Sample Paper_卷二乙 數據通訊及建網.pdf",
-    "DSEPP/Sample Paper/Sample Paper_卷二丙 多媒體製作及網站建構.pdf",
-    "DSEPP/Sample Paper/Sample Paper_卷二丁 軟件開發.pdf",
-    "DSEPP/Sample Paper/Sample Paper_卷一.pdf",
-    "DSEPP/Sample Paper",
-    "DSEPP/Practice Paper/Practice Paper_卷二甲 數據庫.pdf",
-    "DSEPP/Practice Paper/Practice Paper_卷二乙 數據通訊及建網.pdf",
+    "內（放射狀筆記）/ICT Topic/類型檢查.md",
+    "內（放射狀筆記）/ICT Topic/電腦軟件.md",
+    "內（放射狀筆記）/ICT Topic/電腦網絡.md",
+    "內（放射狀筆記）/ICT Topic/電腦系統.md",
+    "內（放射狀筆記）/ICT Topic/電腦硬件.md",
+    "內（放射狀筆記）/ICT Topic/電子學習.md",
+    "內（放射狀筆記）/ICT Topic/資訊處理.md",
+    "內（放射狀筆記）/ICT Topic/資訊管理系統.md",
+    "內（放射狀筆記）/ICT Topic/硬件的功能.png",
+    "內（放射狀筆記）/ICT Topic",
+    "外（線性筆記）/DSEPP/Sample Paper/Sample Paper_卷二甲 數據庫.pdf",
+    "外（線性筆記）/DSEPP/Sample Paper/Sample Paper_卷二乙 數據通訊及建網.pdf",
+    "外（線性筆記）/DSEPP/Sample Paper/Sample Paper_卷二丙 多媒體製作及網站建構.pdf",
+    "外（線性筆記）/DSEPP/Sample Paper/Sample Paper_卷二丁 軟件開發.pdf",
+    "外（線性筆記）/DSEPP/Sample Paper/Sample Paper_卷一.pdf",
+    "外（線性筆記）/DSEPP/Sample Paper",
     "Pasted image 20241030161936.png",
     "Pasted image 20241030154949.png",
     "未命名 1.canvas"
