@@ -129,7 +129,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
               "title": "數字系統與表示法 的反向連結"
@@ -185,7 +185,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -205,20 +205,20 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cb5cbe96b79ca26f",
+  "active": "734c655c2be39d78",
   "lastOpenFiles": [
-    "Pasted image 20241031145505.png",
     "外（線性筆記）/書本內容/A1 Ch.3 數據表示.md",
+    "外（線性筆記）/書本內容/A1 Ch.3 數據表示 課題練習.md",
+    "內（放射狀筆記）/ICT Topic/二進制補碼.md",
     "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
+    "Pasted image 20241031145505.png",
     "內（放射狀筆記）/ICT Topic/條碼編碼.md",
     "外（線性筆記）/書本內容/A1 Ch.3 數據表示 課文總結.md",
-    "外（線性筆記）/書本內容/A1 Ch.3 數據表示 課題練習.md",
     "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
     "內（放射狀筆記）/ICT Topic/字符編碼.md",
     "內（放射狀筆記）/ICT Topic/ASCII.md",
     "2017P1]] [[2022P1Q11.md",
     "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q11.md",
-    "內（放射狀筆記）/ICT Topic/二進制補碼.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q40.md",
