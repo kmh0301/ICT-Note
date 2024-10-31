@@ -1,3 +1,7 @@
+---
+up: "[[A1 資訊處理]]"
+---
+
 資訊系統 information system
 1.1 資訊系統
 
