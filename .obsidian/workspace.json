@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
+                "file": "內（放射狀筆記）/ICT Topic/二進制補碼.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A1 Ch.3 例題3.1 Q3"
+              "title": "二進制補碼"
             }
           },
           {
@@ -64,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "abc7b10127821f5a",
@@ -91,10 +91,10 @@
               "type": "pdf",
               "state": {
                 "file": "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-                "page": 46,
-                "left": -26,
-                "top": 309,
-                "zoom": 0.57265625
+                "page": 50,
+                "left": -39,
+                "top": 392,
+                "zoom": 0.38515625000000003
               },
               "icon": "lucide-file-text",
               "title": "Chapter_A3_數據表示"
@@ -173,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
+                "file": "內（放射狀筆記）/ICT Topic/二進制補碼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "A1 Ch.3 例題3.1 Q3 的反向連結"
+              "title": "二進制補碼 的反向連結"
             }
           },
           {
@@ -219,10 +219,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md"
+                "file": "內（放射狀筆記）/ICT Topic/二進制補碼.md"
               },
               "icon": "lucide-list",
-              "title": "A1 Ch.3 例題3.1 Q3 的大綱"
+              "title": "二進制補碼 的大綱"
             }
           },
           {
@@ -280,38 +280,43 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "64ac5b1c8f6110b8",
+  "active": "280df6b29382ae41",
   "lastOpenFiles": [
-    "內（放射狀筆記）/ICT Topic/二補碼溢出誤差​.md",
+    "外（線性筆記）/書本內容/D/Chapter_D3_算法設計(二).pdf",
+    "外（線性筆記）/書本內容/D",
+    "內（放射狀筆記）/ICT Topic/資訊素養.md",
+    "內（放射狀筆記）/ICT Topic/操作系統.md",
+    "內（放射狀筆記）/ICT Topic/2.2 數據控制.md",
+    "內（放射狀筆記）/ICT Topic/2.1 數據分級.md",
+    "Attechments/表 2.2 常見錯誤列表.png",
+    "Attechments/表 2.1 數據階層中不同層級的示例.png",
+    "Attechments/Pasted image 20241101112557.png",
+    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
     "內（放射狀筆記）/ICT Topic/二進制補碼.md",
+    "內（放射狀筆記）/ICT Topic/二補碼溢出誤差​.md",
+    "內（放射狀筆記）/ICT Topic/表示有符號整數​.md",
+    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
+    "內（放射狀筆記）/ICT Topic/二進制數​.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 實驗站3.3 Q1.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
     "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
     "內（放射狀筆記）/ICT Topic/版權.md",
-    "內（放射狀筆記）/ICT Topic/表示有符號整數​.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 實驗站3.3 Q2.md",
-    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
     "Templater/題目範例.md",
     "Templater/課題範例.md",
     "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
-    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "內（放射狀筆記）/ICT Topic/表示無符號整數​.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
     "外（線性筆記）/Maps/A1 資訊處理.md",
     "Pasted image 20241101112557.png",
     "內（放射狀筆記）/ICT Topic/十六進制數.md",
     "外（線性筆記）/Maps/B 電腦系統基礎.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
     "Pasted image 20241101105502.png",
     "Chapter_D3_算法設計(二).pdf",
-    "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
-    "內（放射狀筆記）/ICT Topic/二進制數​.md",
-    "杳屎昨杳尸.md",
     "外（線性筆記）/書本內容/A1/Chapter_A5_數據庫.pdf",
-    "Untitled.md",
     "外（線性筆記）/書本內容/C2",
     "外（線性筆記）/書本內容/C1",
     "外（線性筆記）/書本內容/B",
@@ -319,16 +324,11 @@
     "外（線性筆記）/書本內容/A1/Chapter_A2_數據控制及數據組織.pdf",
     "外（線性筆記）/書本內容/A1/Chapter_A1_資訊處理簡介.pdf",
     "未命名.canvas",
-    "內（放射狀筆記）/ICT Topic/十六進制數和十進制之間的轉換.md",
-    "外（線性筆記）/DSEPP/2017/2017_考生表現.pdf",
     "Attechments/Pasted image 20241101091543.png",
     "Attechments/Pasted image 20241101092052.png",
     "Attechments/Pasted image 20241101092000.png",
     "Attechments/Pasted image 20241101091952.png",
     "Attechments/Pasted image 20241101091942.png",
-    "Attechments/Pasted image 20241101091938.png",
-    "Attechments/Pasted image 20241101091908.png",
-    "Attechments/Pasted image 20241101091858.png",
     "未命名 1.canvas"
   ]
 }
