@@ -13,13 +13,41 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
+                "file": "內（放射狀筆記）/ICT Topic/字符編碼.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "溢出誤差​"
+              "title": "字符編碼"
+            }
+          },
+          {
+            "id": "ccf7f0cafa26306c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "A1 Ch.3 例題3.4 Q1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A1 Ch.3 例題3.4 Q1"
+            }
+          },
+          {
+            "id": "a0faa52733c49d9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "A1 Ch.3 例題3.3 Q2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A1 Ch.3 例題3.3 Q2"
             }
           },
           {
@@ -36,23 +64,24 @@
               "title": "A1 Ch.3 測試站3.2 Q5"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "dcbcee2b74ca9458",
+        "id": "d5525a533917c6e1",
         "type": "tabs",
         "children": [
           {
-            "id": "729c8801e33de91b",
+            "id": "adbac49841f39aec",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
                 "file": "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-                "page": 56,
-                "left": -65,
-                "top": 455,
-                "zoom": 0.23046875
+                "page": 73,
+                "left": -4,
+                "top": 539,
+                "zoom": 0.6
               },
               "icon": "lucide-file-text",
               "title": "Chapter_A3_數據表示"
@@ -176,10 +205,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/溢出誤差​.md"
+                "file": "A1 Ch.3 例題3.4 Q1.md"
               },
               "icon": "lucide-list",
-              "title": "溢出誤差​ 的大綱"
+              "title": "A1 Ch.3 例題3.4 Q1 的大綱"
             }
           },
           {
@@ -190,26 +219,6 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
-            }
-          },
-          {
-            "id": "7d7122d37bb60e8e",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "外掛程式已不復活躍"
-            }
-          },
-          {
-            "id": "37229add3fcf4f93",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "外掛程式已不復活躍"
             }
           }
         ],
@@ -237,11 +246,17 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "a5bacc26f0bf725f",
+  "active": "ccf7f0cafa26306c",
   "lastOpenFiles": [
     "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-    "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
+    "A1 Ch.3 例題3.4 Q1.md",
+    "內（放射狀筆記）/ICT Topic/字符編碼.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
+    "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
+    "A1 Ch.3 例題3.3 Q3.md",
+    "A1 Ch.3 例題3.3 Q2.md",
+    "A1 Ch.3 例題3.3 Q1.md",
     "內（放射狀筆記）/ICT Topic/表示有符號整數​.md",
     "內（放射狀筆記）/ICT Topic/二進制補碼.md",
     "內（放射狀筆記）/ICT Topic/二補碼溢出誤差​.md",
@@ -252,7 +267,6 @@
     "A1 Ch.3 測試站3.2 Q2.md",
     "A1 Ch.3 測試站3.2 Q1.md",
     "A1 Ch.3 實驗站3.1.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 實驗站3.3 Q2.md",
@@ -260,12 +274,7 @@
     "內（放射狀筆記）/ICT Topic/輸入.md",
     "內（放射狀筆記）/ICT Topic/數據.md",
     "內（放射狀筆記）/ICT Topic/十六進制數.md",
-    "內（放射狀筆記）/ICT Topic/十六進制數和十進制之間的轉換.md",
-    "內（放射狀筆記）/ICT Topic/電腦硬件.md",
-    "內（放射狀筆記）/ICT Topic/僞代碼.md",
     "外（線性筆記）/書本內容/A1/Chapter_A5_數據庫.pdf",
-    "內（放射狀筆記）/ICT Topic/演示軟件.md",
-    "內（放射狀筆記）/ICT Topic/實時處理系統.md",
     "外（線性筆記）/書本內容/D/Chapter_D3_算法設計(二).pdf",
     "外（線性筆記）/書本內容/D",
     "Attechments/表 2.2 常見錯誤列表.png",
