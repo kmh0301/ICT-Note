@@ -1,1 +1,9 @@
-{}
+{
+  "interfaceFontFamily": "Andale Mono",
+  "textFontFamily": "Courier New",
+  "baseFontSize": 21,
+  "baseFontSizeAction": true,
+  "translucency": false,
+  "cssTheme": "Minimal",
+  "theme": "moonstone"
+}

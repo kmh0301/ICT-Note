@@ -3,5 +3,7 @@
   "dataview",
   "obsidian-git",
   "obsidian-icon-folder",
-  "templater-obsidian"
+  "templater-obsidian",
+  "smart-connections",
+  "quick-latex"
 ]
