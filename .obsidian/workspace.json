@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Templater/課題範例.md",
+                "file": "外（線性筆記）/Maps/A1 資訊處理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "課題範例"
+              "title": "A1 資訊處理"
             }
           },
           {
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Templater/課題範例.md",
+                "file": "外（線性筆記）/Maps/A1 資訊處理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "課題範例 的反向連結"
+              "title": "A1 資訊處理 的反向連結"
             }
           },
           {
@@ -168,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Templater/課題範例.md"
+                "file": "外（線性筆記）/Maps/A1 資訊處理.md"
               },
               "icon": "lucide-list",
-              "title": "課題範例 的大綱"
+              "title": "A1 資訊處理 的大綱"
             }
           },
           {
@@ -230,21 +230,30 @@
   },
   "active": "061ed857ca5994d5",
   "lastOpenFiles": [
+    "外（線性筆記）/Maps/B 電腦系統基礎.md",
+    "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
+    "外（線性筆記）/書本內容/A1/Chapter_A5_數據庫.pdf",
     "Untitled.md",
+    "Templater/課題範例.md",
+    "外（線性筆記）/書本內容/C2",
+    "外（線性筆記）/書本內容/C1",
+    "外（線性筆記）/書本內容/B",
+    "Chapter_D3_算法設計(二).pdf",
+    "外（線性筆記）/書本內容/A1/Chapter_A4_試算表.pdf",
+    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
+    "外（線性筆記）/書本內容/A1/Chapter_A2_數據控制及數據組織.pdf",
+    "外（線性筆記）/書本內容/A1/Chapter_A1_資訊處理簡介.pdf",
     "未命名.canvas",
     "未命名.md",
-    "Templater/課題範例.md",
     "內（放射狀筆記）/ICT Topic/十六進制數和十進制之間的轉換.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q3.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1.md",
     "外（線性筆記）/DSEPP/2017/2017_考生表現.pdf",
     "內（放射狀筆記）/ICT Topic/二進制數​.md",
-    "Templater",
     "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
     "Attechments/Pasted image 20241101091543.png",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
-    "外（線性筆記）/書本內容/A1",
     "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
     "內（放射狀筆記）/ICT Topic/十六進制數.md",
     "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
@@ -252,7 +261,6 @@
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "外（線性筆記）/Maps/A1 資訊處理.md",
-    "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課文總結.md",
     "內（放射狀筆記）/ICT Topic/二進制數字的計算.md",
@@ -266,16 +274,8 @@
     "Attechments/Pasted image 20241101091754.png",
     "Attechments/Pasted image 20241101091719.png",
     "內（放射狀筆記）/ICT Topic/文本.md",
-    "smart-chats",
     "外（線性筆記）/書本內容/A1/A1 Ch.2 數據控制及數據組織.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
-    "外（線性筆記）/Maps/B 電腦系統基礎.md",
-    "外（線性筆記）/Maps",
-    "Attechments",
-    "未命名",
-    "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
-    "外（線性筆記）/DSEPP/2017/2017 ICT P1",
-    "2017",
     "未命名 1.canvas"
   ]
 }
