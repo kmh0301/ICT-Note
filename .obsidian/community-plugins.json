@@ -1,5 +1,7 @@
 [
   "pdf-plus",
   "dataview",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-icon-folder",
+  "templater-obsidian"
 ]

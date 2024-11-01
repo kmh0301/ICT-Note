@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "外（線性筆記）/書本內容/C1&C2互聯網及其應用.md",
+                "file": "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
                 "mode": "source",
                 "source": false
               },
@@ -69,16 +69,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "外（線性筆記）/書本內容/C1&C2互聯網及其應用.md",
+                "file": "外（線性筆記）/Maps/A1 資訊處理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C1&C2互聯網及其應用"
+              "title": "A1 資訊處理"
+            }
+          },
+          {
+            "id": "3cfc72db93175274",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "二進制數​"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -196,10 +210,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/ASCII.md"
+                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md"
               },
               "icon": "lucide-list",
-              "title": "ASCII 的大綱"
+              "title": "二進制數​ 的大綱"
             }
           },
           {
@@ -231,48 +245,51 @@
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "6a29d5f2e15d8eb7",
+  "active": "3cfc72db93175274",
   "lastOpenFiles": [
+    "Pasted image 20241101084946.png",
+    "Pasted image 20241101084929.png",
+    "Pasted image 20241101084833.png",
+    "Pasted image 20241101084824.png",
+    "Pasted image 20241101084814.png",
+    "Pasted image 20241101084639.png",
+    "Pasted image 20241101084611.png",
+    "Pasted image 20241101084539.png",
+    "Pasted image 20241101084427.png",
+    "Pasted image 20241101084408.png",
+    "Pasted image 20241101084354.png",
+    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
+    "外（線性筆記）/書本內容/A1 Ch.3 數據表示.md",
+    "外（線性筆記）/書本內容/A1 Ch.2 數據控制及數據組織.md",
+    "外（線性筆記）/書本內容/A1 Ch.1資訊處理簡介.md",
+    "外（線性筆記）/Maps/A1 資訊處理.md",
+    "外（線性筆記）/Maps/B 電腦系統基礎.md",
+    "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
+    "外（線性筆記）/Maps",
     "外（線性筆記）/書本內容/C2 Ch.4 初級網頁制作.md",
-    "外（線性筆記）/書本內容/C1&C2互聯網及其應用.md",
     "外（線性筆記）/書本內容/C2 Ch.5 網絡安全和私隱威脅.md",
     "外（線性筆記）/書本內容/C2 Ch.6 網絡保安措施.md",
     "外（線性筆記）/書本內容/C1 Ch.1 建網及互聯網基本知識.md",
     "外（線性筆記）/書本內容/C1 Ch.3 互聯網服務及應用.md",
     "外（線性筆記）/書本內容/C1 Ch.2 互聯網協定.md",
     "外（線性筆記）/書本內容/B Ch.1 輸入及輸出設備.md",
-    "外（線性筆記）/書本內容/B 電腦系統基礎.md",
-    "外（線性筆記）/書本內容/A1 資訊處理.md",
     "外（線性筆記）/書本內容/B Ch.3 電腦軟件.md",
     "外（線性筆記）/書本內容/B Ch.2 電腦硬件.md",
     "內（放射狀筆記）/ICT Topic/十六進制數.md",
-    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
-    "外（線性筆記）/書本內容/A1 Ch.3 數據表示.md",
     "內（放射狀筆記）/ICT Topic/字符編碼.md",
-    "外（線性筆記）/書本內容/A1 Ch.1資訊處理簡介.md",
-    "外（線性筆記）/書本內容/A1 Ch.2 數據控制及數據組織.md",
     "內（放射狀筆記）/ICT Topic/二進制數​.md",
     "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
     "內（放射狀筆記）/ICT Topic/數據單位.md",
     "內（放射狀筆記）/ICT Topic/表示有符號整數​.md",
     "內（放射狀筆記）/ICT Topic/表示無符號整數​.md",
-    "Attechments/Pasted image 20241031145505.png",
     "內（放射狀筆記）/ICT Topic/輸入.md",
     "Attechments",
     "未命名",
-    "Attechments/Pasted image 20241031161946.png",
-    "Attechments/Pasted image 20241031164442.png",
-    "Attechments/Pasted image 20241031164702.png",
-    "Attechments/Pasted image 20241031164731.png",
-    "Attechments/Pasted image 20241031164851.png",
-    "Attechments/Pasted image 20241031164819.png",
-    "Attechments/Pasted image 20241031154746.png",
     "內（放射狀筆記）/ICT Topic/向量圖.md",
-    "內（放射狀筆記）/ICT Topic/正確使用機械人.md",
-    "Attechments/Pasted image 20241031162227.png",
     "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1",
     "2017",
@@ -281,8 +298,6 @@
     "未命名.canvas",
     "外（線性筆記）/書本內容",
     "內（放射狀筆記）",
-    "外（線性筆記）",
-    "內（放射狀筆記）/ICT Topic/硬件的功能.png",
     "未命名 1.canvas"
   ]
 }
