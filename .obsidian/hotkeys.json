@@ -16,5 +16,21 @@
       ],
       "key": "2"
     }
+  ],
+  "neighbouring-files:next": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowLeft"
+    }
+  ],
+  "neighbouring-files:prev": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "ArrowRight"
+    }
   ]
 }
