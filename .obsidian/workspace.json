@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "題目範例.md",
+                "file": "Templater/題目範例.md",
                 "mode": "source",
                 "source": false
               },
@@ -144,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "題目範例.md",
+                "file": "Templater/題目範例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "題目範例.md"
+                "file": "Templater/題目範例.md"
               },
               "icon": "lucide-list",
               "title": "題目範例 的大綱"
@@ -251,10 +251,10 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "280df6b29382ae41",
+  "active": "64ac5b1c8f6110b8",
   "lastOpenFiles": [
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
-    "題目範例.md",
+    "Templater/題目範例.md",
     "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
     "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",

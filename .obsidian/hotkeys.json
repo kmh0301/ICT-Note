@@ -7,5 +7,14 @@
       ],
       "key": "1"
     }
+  ],
+  "templater-obsidian:Templater/題目範例.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "2"
+    }
   ]
 }
