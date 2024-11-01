@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
+                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "二進制和十進制之間的轉換​"
+              "title": "二進制數​"
             }
           },
           {
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
+                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +117,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "二進制和十進制之間的轉換​ 的反向連結"
+              "title": "二進制數​ 的反向連結"
             }
           },
           {
@@ -153,10 +153,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md"
+                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md"
               },
               "icon": "lucide-list",
-              "title": "二進制和十進制之間的轉換​ 的大綱"
+              "title": "二進制數​ 的大綱"
             }
           },
           {
@@ -190,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -213,8 +213,9 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "64ac5b1c8f6110b8",
+  "active": "37229add3fcf4f93",
   "lastOpenFiles": [
+    "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
     "Attechments/Pasted image 20241101091543.png",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
     "外（線性筆記）/書本內容/A1",
@@ -229,7 +230,6 @@
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課文總結.md",
     "內（放射狀筆記）/ICT Topic/二進制數​.md",
-    "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
     "內（放射狀筆記）/ICT Topic/二進制數字的計算.md",
     "Attechments/Pasted image 20241101092052.png",
     "Attechments/Pasted image 20241101092000.png",
@@ -241,7 +241,6 @@
     "Attechments/Pasted image 20241101091858.png",
     "Attechments/Pasted image 20241101091754.png",
     "Attechments/Pasted image 20241101091719.png",
-    "Attechments/Pasted image 20241101091704.png",
     "內（放射狀筆記）/ICT Topic/文本.md",
     "smart-chats",
     "未命名.canvas",
