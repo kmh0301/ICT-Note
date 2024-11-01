@@ -29,7 +29,7 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    ""
+    "Templater/課題範例.md"
   ],
   "startup_templates": [
     ""
