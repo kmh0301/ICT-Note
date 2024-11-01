@@ -3,6 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "相關試題": "multitext"
+    "相關試題": "multitext",
+    "DSE出現頻率": "text"
   }
 }
