@@ -4,39 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "bb40f612ed589822",
+        "id": "5538632e5ad30931",
         "type": "tabs",
         "children": [
           {
-            "id": "91a0d7cd90191816",
+            "id": "88e79a5a70350e7e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/二進制數​.md",
+                "file": "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "二進制數​"
+              "title": "十六進制數數字的計算"
             }
           },
           {
-            "id": "061ed857ca5994d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "外（線性筆記）/Maps/A1 資訊處理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A1 資訊處理"
-            }
-          },
-          {
-            "id": "dca271b2d97ebad6",
+            "id": "8e298f91be5aea57",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,9 +34,45 @@
               "icon": "lucide-file",
               "title": "A1 Ch.3 例題3.1 Q1"
             }
+          },
+          {
+            "id": "280df6b29382ae41",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "題目範例.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "題目範例"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
+      },
+      {
+        "id": "abc7b10127821f5a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9bf2900bbdaa89e3",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
+                "page": 32,
+                "left": -4,
+                "top": 12,
+                "zoom": 0.6
+              },
+              "icon": "lucide-file-text",
+              "title": "Chapter_A3_數據表示"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -122,7 +144,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "外（線性筆記）/Maps/A1 資訊處理.md",
+                "file": "題目範例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +154,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "A1 資訊處理 的反向連結"
+              "title": "題目範例 的反向連結"
             }
           },
           {
@@ -168,10 +190,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "外（線性筆記）/Maps/A1 資訊處理.md"
+                "file": "題目範例.md"
               },
               "icon": "lucide-list",
-              "title": "A1 資訊處理 的大綱"
+              "title": "題目範例 的大綱"
             }
           },
           {
@@ -209,7 +231,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -228,40 +251,44 @@
       "smart-connections:Open: Smart Chat Conversation": false
     }
   },
-  "active": "061ed857ca5994d5",
+  "active": "280df6b29382ae41",
   "lastOpenFiles": [
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
+    "題目範例.md",
+    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
+    "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
+    "外（線性筆記）/Maps/A1 資訊處理.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
+    "Pasted image 20241101112557.png",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
+    "內（放射狀筆記）/ICT Topic/十六進制數.md",
+    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
     "外（線性筆記）/Maps/B 電腦系統基礎.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
+    "Pasted image 20241101105502.png",
+    "Templater/課題範例.md",
+    "Chapter_D3_算法設計(二).pdf",
     "外（線性筆記）/Maps/C1&C2互聯網及其應用.md",
+    "內（放射狀筆記）/ICT Topic/二進制數​.md",
+    "杳屎昨杳尸.md",
     "外（線性筆記）/書本內容/A1/Chapter_A5_數據庫.pdf",
     "Untitled.md",
-    "Templater/課題範例.md",
     "外（線性筆記）/書本內容/C2",
     "外（線性筆記）/書本內容/C1",
     "外（線性筆記）/書本內容/B",
-    "Chapter_D3_算法設計(二).pdf",
     "外（線性筆記）/書本內容/A1/Chapter_A4_試算表.pdf",
-    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
     "外（線性筆記）/書本內容/A1/Chapter_A2_數據控制及數據組織.pdf",
     "外（線性筆記）/書本內容/A1/Chapter_A1_資訊處理簡介.pdf",
     "未命名.canvas",
-    "未命名.md",
     "內（放射狀筆記）/ICT Topic/十六進制數和十進制之間的轉換.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q3.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md",
     "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1.md",
     "外（線性筆記）/DSEPP/2017/2017_考生表現.pdf",
-    "內（放射狀筆記）/ICT Topic/二進制數​.md",
     "內（放射狀筆記）/ICT Topic/二進制和十進制之間的轉換​.md",
     "Attechments/Pasted image 20241101091543.png",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
-    "內（放射狀筆記）/ICT Topic/十六進制數數字的計算.md",
-    "內（放射狀筆記）/ICT Topic/十六進制數.md",
-    "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
     "內（放射狀筆記）/ICT Topic/數據單位.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
-    "外（線性筆記）/Maps/A1 資訊處理.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課文總結.md",
     "內（放射狀筆記）/ICT Topic/二進制數字的計算.md",
     "Attechments/Pasted image 20241101092052.png",
@@ -271,11 +298,8 @@
     "Attechments/Pasted image 20241101091938.png",
     "Attechments/Pasted image 20241101091908.png",
     "Attechments/Pasted image 20241101091858.png",
-    "Attechments/Pasted image 20241101091754.png",
-    "Attechments/Pasted image 20241101091719.png",
     "內（放射狀筆記）/ICT Topic/文本.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.2 數據控制及數據組織.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
     "未命名 1.canvas"
   ]
 }
