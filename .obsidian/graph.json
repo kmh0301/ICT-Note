@@ -1,13 +1,13 @@
 {
   "collapse-filter": false,
-  "search": "path:內（放射狀筆記）  ",
+  "search": "",
   "showTags": false,
-  "showAttachments": true,
+  "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
   "colorGroups": [],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1.38780517578125,
@@ -17,6 +17,6 @@
   "repelStrength": 9.66552734375,
   "linkStrength": 0.394612630208333,
   "linkDistance": 220,
-  "scale": 0.3364497433065546,
-  "close": false
+  "scale": 0.11883726179337917,
+  "close": true
 }

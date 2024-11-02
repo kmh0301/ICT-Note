@@ -4,8 +4,11 @@
   "obsidian-git",
   "obsidian-icon-folder",
   "templater-obsidian",
+  "smart-connections",
   "quick-latex",
   "editing-toolbar",
-  "neighbouring-files",
-  "virtual-linker"
+  "remotely-save",
+  "obsidian-style-settings",
+  "obsidian-to-anki-plugin",
+  "calendar"
 ]
