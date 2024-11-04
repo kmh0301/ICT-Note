@@ -121,6 +121,62 @@
             }
           },
           {
+            "id": "f8bdaf9ac6818d0b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "數碼化.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "數碼化"
+            }
+          },
+          {
+            "id": "855272c5fca80677",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "A1 Ch.3 數據表示"
+            }
+          },
+          {
+            "id": "b267cb64090216a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "內（放射狀筆記）/ICT Topic/多媒體.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "多媒體"
+            }
+          },
+          {
+            "id": "b7f4eb3a1c5b0bad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "壓縮.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "壓縮"
+            }
+          },
+          {
             "id": "ccf7f0cafa26306c",
             "type": "leaf",
             "state": {
@@ -149,7 +205,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 11
       },
       {
         "id": "d5525a533917c6e1",
@@ -162,10 +218,10 @@
               "type": "pdf",
               "state": {
                 "file": "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-                "page": 98,
-                "left": -26,
-                "top": 134,
-                "zoom": 0.57265625
+                "page": 108,
+                "left": 54,
+                "top": 394,
+                "zoom": 0.7
               },
               "icon": "lucide-file-text",
               "title": "Chapter_A3_數據表示"
@@ -305,10 +361,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "數碼化.md"
+                "file": "壓縮.md"
               },
               "icon": "lucide-list",
-              "title": "數碼化 的大綱"
+              "title": "壓縮 的大綱"
             }
           },
           {
@@ -355,26 +411,35 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "deb5e579e1334498",
+  "active": "b7f4eb3a1c5b0bad",
   "lastOpenFiles": [
+    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
+    "壓縮.md",
+    "Chapter_A3_數據表示 20.png",
+    "內（放射狀筆記）/ICT Topic/多媒體.md",
+    "Chapter_A3_數據表示 19.png",
+    "Chapter_A3_數據表示 18.png",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q1.md",
+    "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課文總結.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
     "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
     "數碼化.md",
-    "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
+    "A1 Ch.3 測試站3.6.md",
+    "Pasted image 20241104170600.png",
+    "A1 Ch.3 例題3.6 Q2.md",
+    "Chapter_A3_數據表示 17.png",
+    "A1 Ch.3 例題3.6 Q1.md",
+    "Chapter_A3_數據表示 16.png",
     "Chapter_A3_數據表示 15.png",
     "Chapter_A3_數據表示 14.png",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "Chapter_A3_數據表示 13.png",
     "Chapter_A3_數據表示 12.png",
     "內（放射狀筆記）/ICT Topic/條碼編碼.md",
     "A1 Ch.3 測試站3.5 Q1.md",
-    "Chapter_A3_數據表示 11.png",
-    "Pasted image 20241104163842.png",
     "二維碼.md",
     "A1 Ch.3 例題3.5 Q1.md",
-    "Chapter_A3_數據表示 10.png",
-    "Chapter_A3_數據表示 9.png",
-    "Chapter_A3_數據表示 8.png",
-    "Chapter_A3_數據表示 7.png",
     "內（放射狀筆記）/ICT Topic/字符編碼.md",
     "A1 Ch.3 例題3.4 Q3.md",
     "A1 Ch.3 測試站 3.4.md",
@@ -385,15 +450,6 @@
     "內（放射狀筆記）/ICT Topic/二進制補碼.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 測試站3.2 Q1.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.3 Q3.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q2.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q3.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.3 Q1.md",
-    "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.2 數據控制及數據組織.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
-    "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q2.md",
-    "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
     "外（線性筆記）/DSEPP/2017/2017_參考答案.pdf",
     "外（線性筆記）/DSEPP/2021/2021DSEP1.pdf",
     "外（線性筆記）/DSEPP/2021/2021_卷二乙 數據通訊及建網.pdf",
