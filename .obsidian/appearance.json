@@ -1,9 +1,9 @@
 {
   "interfaceFontFamily": "Inter",
-  "textFontFamily": "Courier New",
+  "textFontFamily": "Inter",
   "baseFontSize": 21,
   "baseFontSizeAction": true,
   "translucency": false,
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "theme": "moonstone"
 }

@@ -11,6 +11,8 @@ tags:
 
 # ◣ 題目
 ![[Chapter_A3_數據表示.pdf#page=60&rect=28,24,938,505|Chapter_A3_數據表示, p.60]]
+#flashcard
+
 
 # ◣ 相關概念
 
