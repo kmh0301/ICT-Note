@@ -4,210 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "5538632e5ad30931",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a5bacc26f0bf725f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "內（放射狀筆記）/ICT Topic/字符編碼.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "字符編碼"
-            }
-          },
-          {
-            "id": "b0208f40cf5f9f60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "內（放射狀筆記）/ICT Topic/字符編碼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "字符編碼"
-            }
-          },
-          {
-            "id": "7068f31621d41bca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A1 Ch.3 數據表示"
-            }
-          },
-          {
-            "id": "71d399a37e128019",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "內（放射狀筆記）/ICT Topic/條碼編碼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "條碼編碼"
-            }
-          },
-          {
-            "id": "7764e1e407542556",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "二維碼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "二維碼"
-            }
-          },
-          {
-            "id": "181d7f5bf03672fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "二維碼.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "二維碼"
-            }
-          },
-          {
-            "id": "b5c070d262d62944",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "模疑及數碼數據"
-            }
-          },
-          {
-            "id": "deb5e579e1334498",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "數碼化.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "數碼化"
-            }
-          },
-          {
-            "id": "f8bdaf9ac6818d0b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "數碼化.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "數碼化"
-            }
-          },
-          {
-            "id": "855272c5fca80677",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A1 Ch.3 數據表示"
-            }
-          },
-          {
-            "id": "b267cb64090216a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "內（放射狀筆記）/ICT Topic/多媒體.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "多媒體"
-            }
-          },
-          {
-            "id": "b7f4eb3a1c5b0bad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "壓縮.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "壓縮"
-            }
-          },
-          {
-            "id": "ccf7f0cafa26306c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.4 Q1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "A1 Ch.3 例題3.4 Q1"
-            }
-          },
-          {
-            "id": "8a2680f4668c882b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian to Anki (plugin).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Obsidian to Anki (plugin)"
-            }
-          }
-        ],
-        "currentTab": 11
-      },
-      {
         "id": "d5525a533917c6e1",
         "type": "tabs",
         "children": [
@@ -215,16 +11,14 @@
             "id": "adbac49841f39aec",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-                "page": 108,
-                "left": 54,
-                "top": 394,
-                "zoom": 0.7
+                "file": "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "Chapter_A3_數據表示"
+              "icon": "lucide-file",
+              "title": "2017P1Q1"
             }
           },
           {
@@ -361,10 +155,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "壓縮.md"
+                "file": "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md"
               },
               "icon": "lucide-list",
-              "title": "壓縮 的大綱"
+              "title": "2017P1Q1 的大綱"
             }
           },
           {
@@ -411,45 +205,46 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "b7f4eb3a1c5b0bad",
+  "active": "adbac49841f39aec",
   "lastOpenFiles": [
+    "Obsidian to Anki (plugin).md",
+    "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q2.md",
+    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q1.md",
+    "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1Q1.md",
     "外（線性筆記）/書本內容/A1/Chapter_A3_數據表示.pdf",
-    "壓縮.md",
-    "Chapter_A3_數據表示 20.png",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.4 Q1.md",
     "內（放射狀筆記）/ICT Topic/多媒體.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
+    "內（放射狀筆記）/ICT Topic/數碼化.md",
+    "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
+    "內（放射狀筆記）/ICT Topic/二維碼.md",
+    "內（放射狀筆記）/ICT Topic/條碼編碼.md",
+    "內（放射狀筆記）/ICT Topic/字符編碼.md",
+    "外（線性筆記）/DSEPP/2017/2017 ICT P1/2017P1.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.4 Q2.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.5 Q1.md",
+    "Pasted image 20241104170600.png",
+    "ux design question.md",
+    "內（放射狀筆記）/ICT Topic/壓縮.md",
+    "Chapter_A3_數據表示 20.png",
     "Chapter_A3_數據表示 19.png",
     "Chapter_A3_數據表示 18.png",
-    "外（線性筆記）/DSEPP/2022/2022 ICT P1/2022P1Q1.md",
     "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課文總結.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示 課題練習.md",
-    "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
-    "數碼化.md",
-    "A1 Ch.3 測試站3.6.md",
-    "Pasted image 20241104170600.png",
-    "A1 Ch.3 例題3.6 Q2.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 測試站3.6.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.6 Q2.md",
     "Chapter_A3_數據表示 17.png",
-    "A1 Ch.3 例題3.6 Q1.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.6 Q1.md",
     "Chapter_A3_數據表示 16.png",
     "Chapter_A3_數據表示 15.png",
     "Chapter_A3_數據表示 14.png",
     "Chapter_A3_數據表示 13.png",
     "Chapter_A3_數據表示 12.png",
-    "內（放射狀筆記）/ICT Topic/條碼編碼.md",
-    "A1 Ch.3 測試站3.5 Q1.md",
-    "二維碼.md",
-    "A1 Ch.3 例題3.5 Q1.md",
-    "內（放射狀筆記）/ICT Topic/字符編碼.md",
-    "A1 Ch.3 例題3.4 Q3.md",
-    "A1 Ch.3 測試站 3.4.md",
-    "A1 Ch.3 例題3.4 Q2.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 測試站3.5 Q1.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.4 Q3.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 測試站 3.4.md",
     "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.4 Q1.md",
-    "內（放射狀筆記）/ICT Topic/表示有符號整數​.md",
-    "內（放射狀筆記）/ICT Topic/二進制補碼.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 測試站3.2 Q1.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.3 Q3.md",
     "外（線性筆記）/DSEPP/2017/2017_參考答案.pdf",
     "外（線性筆記）/DSEPP/2021/2021DSEP1.pdf",
     "外（線性筆記）/DSEPP/2021/2021_卷二乙 數據通訊及建網.pdf",
