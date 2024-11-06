@@ -32,5 +32,14 @@
       ],
       "key": "ArrowRight"
     }
+  ],
+  "templater-obsidian:Templater/Flashcard.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
   ]
 }
