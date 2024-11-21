@@ -8,21 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c32743a683af27d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "外（線性筆記）/Maps/B 電腦系統基礎.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "B 電腦系統基礎"
-            }
-          },
-          {
-            "id": "0b52760a1bae1e46",
+            "id": "7821b948df24a4ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,33 +22,37 @@
             }
           },
           {
-            "id": "7821b948df24a4ee",
+            "id": "d0108c7494e9b879",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A2 Ch.4 試算表.md",
+                "file": "外（線性筆記）/Maps/A2 資訊處理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "A2 Ch.4 試算表"
+              "title": "A2 資訊處理"
             }
           },
           {
-            "id": "b5315da93dcb595e",
+            "id": "0388c8ec7e145f19",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "pdf",
               "state": {
-                "currentVersion": "1.7.6"
+                "file": "外（線性筆記）/DSEPP/2023/2023_卷一.pdf",
+                "page": 1,
+                "left": -4,
+                "top": -9,
+                "zoom": 1.6701934703748487
               },
-              "icon": "lucide-file",
-              "title": "Release Notes 1.7.6"
+              "icon": "lucide-file-text",
+              "title": "2023_卷一"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -179,9 +169,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "外（線性筆記）/DSEPP/2023/2023_卷一.pdf"
+              },
               "icon": "lucide-list",
-              "title": "大綱"
+              "title": "2023_卷一 的大綱"
             }
           },
           {
@@ -225,34 +217,43 @@
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "b5315da93dcb595e",
+  "active": "0388c8ec7e145f19",
   "lastOpenFiles": [
+    "外（線性筆記）/DSEPP/2023/2023_考生表現.pdf",
+    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.2 數據控制及數據組織.md",
+    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
+    "外（線性筆記）/書本內容/A1/2021P1Q40.md",
+    "試算表數據輸入.md",
+    "外（線性筆記）/書本內容/A2/A2 Ch.4 試算表.md",
+    "試算表簡介.md",
+    "Pasted image 20241120211254.png",
+    "外（線性筆記）/Maps/A2 資訊處理.md",
+    "A2 Ch.5 數據庫.md",
+    "外（線性筆記）/Maps/A1 資訊處理.md",
+    "2.3 數據庫的功能.md",
+    "外（線性筆記）/書本內容/B/B Ch.2 電腦硬件.md",
+    "外（線性筆記）/書本內容/A2",
+    "外（線性筆記）/書本內容/B/B Ch.3 電腦軟件.md",
+    "外（線性筆記）/書本內容/B/B Ch.1 輸入及輸出設備.md",
+    "Attechments/Pasted image 20241111151604.png",
+    "Attechments/Pasted image 20241111151547.png",
+    "Attechments/Pasted image 20241111151156.png",
+    "Attechments/Pasted image 20241111151039.png",
+    "Attechments/Pasted image 20241111150637.png",
+    "Attechments/Pasted image 20241111150145.png",
+    "Attechments/Pasted image 20241111150117.png",
+    "Attechments/Pasted image 20241111145845.png",
+    "Attechments/Pasted image 20241111145414.png",
     "內（放射狀筆記）/ICT Topic/A2 Ch.4 試算表.md",
     "內（放射狀筆記）/ICT Topic/A2 Ch.4 試算表.html",
-    "Pasted image 20241111151604.png",
-    "Pasted image 20241111151547.png",
-    "Pasted image 20241111151156.png",
-    "Pasted image 20241111151039.png",
-    "Pasted image 20241111150637.png",
-    "Pasted image 20241111150145.png",
-    "Pasted image 20241111150117.png",
-    "Pasted image 20241111145845.png",
-    "Pasted image 20241111145414.png",
-    "Pasted image 20241111145145.png",
     "2.4 檔案存取方法.md",
-    "2.3 數據庫的功能.md",
-    "外（線性筆記）/Maps/A2 資訊處理.md",
-    "外（線性筆記）/書本內容/B/B Ch.1 輸入及輸出設備.md",
-    "外（線性筆記）/書本內容/B/B Ch.3 電腦軟件.md",
-    "外（線性筆記）/書本內容/B/B Ch.2 電腦硬件.md",
-    "A2 Ch.4 試算表.md",
     "外（線性筆記）/書本內容/A1/A1 Ch.3 數據表示.md",
-    "外（線性筆記）/Maps/A1 資訊處理.md",
     "外（線性筆記）/Maps/B 電腦系統基礎.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
     "未命名",
     "內（放射狀筆記）/ICT Topic/模疑及數碼數據.md",
     "內（放射狀筆記）/ICT Topic/操作系統.md",
@@ -261,13 +262,6 @@
     "內（放射狀筆記）/ICT Topic/儲存.md",
     "內（放射狀筆記）/ICT Topic/壓縮.md",
     "內（放射狀筆記）/ICT Topic/檢查數位.md",
-    "內（放射狀筆記）/ICT Topic/檔案大小.md",
-    "內（放射狀筆記）/ICT Topic/聲道數目.md",
-    "內（放射狀筆記）/ICT Topic/雙重輸入.md",
-    "內（放射狀筆記）/ICT Topic/IP.md",
-    "內（放射狀筆記）/ICT Topic/CPU.md",
-    "內（放射狀筆記）/ICT Topic/ASCII.md",
-    "內（放射狀筆記）/ICT Topic/類型檢查.md",
     "外（線性筆記）/DSEPP/2017/2017_參考答案.pdf",
     "未命名.canvas",
     "外（線性筆記）/DSEPP/2017/2017_卷一.pdf",
@@ -276,7 +270,6 @@
     "Attechments/2021MC",
     "外（線性筆記）/DSEPP/2021/2021DSEP1.pdf",
     "外（線性筆記）/DSEPP/2021/2021_卷二乙 數據通訊及建網.pdf",
-    "外（線性筆記）/DSEPP/2021/2021_卷一.pdf",
     "未命名 1.canvas"
   ]
 }
