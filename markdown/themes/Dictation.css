@@ -1,0 +1,435 @@
+/* @theme Dictation */
+
+@charset "UTF-8";
+@import 'uncover';
+
+/* Color Variables - 顏色變數 */
+:root {
+  /* All colors set to black for formal dictation */
+  --text-primary: #000;
+  --text-secondary: #000;
+  --text-light: #000;
+  --text-white: #000;
+  
+  /* Background Colors - all white */
+  --bg-white: white;
+  --bg-light-gray: white;
+  --bg-medium-gray: white;
+  --bg-stripe: white;
+  --bg-purple-light: white;
+  --bg-yellow-light: white;
+  --bg-mc-option: white;
+  
+  /* Border Colors - all black */
+  --border-primary: #000;
+  --border-light: #000;
+  --border-dotted: #000;
+  --border-answer: #000;
+}
+
+/* A4 Template Theme */
+section {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm 20mm 20mm 20mm; /* Reduced back to reasonable top padding */
+  font-family: 'Times New Roman', 'SimSun', serif;
+  font-size: 12pt;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-white);
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  
+  margin: 0;
+  position: relative;
+}
+
+/* Special handling for first page content */
+section:first-of-type {
+  padding-top: 35mm; /* Extra padding only for first page */
+}
+
+/* Print handling to ensure header appears on every page */
+@media print {
+  .header-info,
+  .student-info {
+    position: fixed;
+    print-color-adjust: exact;
+    left: 20mm;
+    right: 20mm;
+  }
+  
+  section {
+    padding-top: 40mm; /* Consistent padding for print */
+  }
+  
+  section:first-of-type {
+    padding-top: 30mm; /* Extra padding only for first page in print */
+  }
+}
+
+/* 全局覆蓋任何居中樣式 */
+section * {
+  text-align: left !important;
+}
+
+/* 特殊情況：如果需要某些元素居中，可以用這個class */
+.center-text {
+  text-align: center !important;
+}
+
+/* 確保所有內容元素都左對齊 */
+section h1, 
+section h2, 
+section h3, 
+section h4, 
+section h5, 
+section h6,
+section p,
+section div,
+section span,
+section li,
+section td,
+section th {
+  text-align: left;
+}
+
+/* Header Information - 頁首資訊 */
+.header-info {
+  position: fixed;
+  top: 10mm;
+  left: 20mm;
+  right: 20mm;
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  color: #000;
+  /* padding-bottom: 3mm; */
+  margin-bottom: 3mm;
+  background: white;
+  z-index: 100;
+  text-align: center;
+}
+
+.school-info {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.exam-info {
+  font-weight: normal;
+  margin-left: 0;
+}
+
+/* Student Information Fields - 學生資訊欄位 (now in header) */
+.student-info {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  font-size: 12pt;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background: white;
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+
+  z-index: 99;
+}
+
+.name-field, .class-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-label {
+  font-weight: normal;
+  min-width: fit-content;
+}
+
+
+
+.field-line {
+  border-bottom: 1px solid #000;
+  min-width: 150px;
+  height: 18px;
+  display: inline-block;
+}
+
+.class-brackets {
+  margin-left: 3px;
+  font-size: 11pt;
+}
+
+/* Main Title */
+h1 {
+  color: #000;
+  padding: 15px 0;
+  margin: 10mm 0 25px 0; /* Added top margin to ensure proper spacing from header */
+  font-size: 16pt;
+  font-weight: bold;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  text-align: center !important;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  z-index: 1; /* Ensure it appears below the fixed header */
+}
+
+/* Section Headings */
+h2 {
+  color: #000;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 25px 0 15px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Question Type Headings */
+h3 {
+  color: #000;
+  padding: 10px 0;
+  margin: 20px 0 15px 0;
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  display: block;
+}
+
+/* Individual Question Headings */
+h4 {
+  color: var(--text-primary);
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 15px 0 8px 0;
+  padding: 0;
+  text-align: left;
+  display: block;
+}
+
+/* Multiple Choice Questions Styling */
+.mc-question {
+  margin: 20px 0;
+  padding: 0;
+  background: white;
+  border: none;
+}
+
+.mc-question p {
+  margin: 8px 0;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+.mc-options {
+  margin: 10px 0 0 15px;
+  padding: 0;
+  list-style: none;
+  counter-reset: mc-counter;
+}
+
+.mc-options li {
+  margin: 6px 0;
+  padding: 0; /* Remove padding to fix wrapping */
+  background: white;
+  border: none;
+  font-size: 12pt;
+  position: relative;
+  list-style: none;
+  counter-increment: mc-counter;
+  
+  /* Use margin instead of padding for proper text flow */
+  margin-left: 25px;
+  text-indent: -25px; /* Pull first line back to align with letter */
+}
+
+.mc-options li::before {
+  content: counter(mc-counter, upper-alpha) ". "; /* Note the space after dot */
+  font-weight: normal;
+  color: #000;
+  
+  /* Don't use absolute positioning - let it flow naturally */
+  display: inline;
+  width: 25px;
+  text-indent: 0; /* Reset text-indent for the letter */
+}
+
+/* Correct Answer Styling */
+.mc-options li.correct {
+  background: white;
+  border: none;
+  font-weight: bold;
+}
+
+.answer-line {
+  margin: 10px 0;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #000;
+}
+
+.answer-line::before {
+  content: "答案：";
+  margin-right: 5px;
+}
+
+/* Long Questions Styling */
+.long-question {
+  margin: 25px 0;
+  padding: 0;
+}
+
+.long-question p {
+  margin: 10px 0;
+  font-size: 12pt;
+  line-height: 1.6;
+}
+
+.long-question .question-text {
+  font-weight: bold;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  background: white;
+  border: none;
+}
+
+/* Answer Space - Guaranteed to work */
+.answer-space {
+  margin: 15px ;
+  padding: 0;
+  width: 165mm;
+  position: relative;
+  height: 25px;
+  overflow: visible;
+  color: #000;
+  font-size: 14pt;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+
+
+/* Answer Content Styling */
+.answer-content {
+  margin: 10px 0;
+  padding: 0;
+  background: white;
+  border: none;
+  font-size: 12pt;
+}
+
+.answer-content strong {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Lists in answers */
+.answer-content ul,
+.answer-content ol {
+  margin: 8px 0 8px 20px;
+  padding-left: 0;
+}
+
+.answer-content li {
+  margin: 6px 0;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+/* Emphasis and Strong Text */
+strong {
+  color: #000;
+  font-weight: bold;
+}
+
+em {
+  color: #000;
+  font-style: italic;
+}
+
+/* Page numbering */
+/* section::after {
+  content: counter(page);
+  position: absolute;
+  bottom: 15mm;
+  right: 20mm;
+  font-size: 10pt;
+  color: var(--text-light);
+}  */
+
+/* Hide the default Marp pagination triangle */
+section[data-marpit-pagination]::after {
+  background: none;
+  content: counter(page);
+  position: absolute;
+  bottom: 15mm;
+  right: 20mm;
+  font-size: 10pt;
+  color: var(--text-light);
+  padding: 0;
+}
+
+
+/* Instructions or Notes */
+.instruction {
+  margin: 15px 0;
+  padding: 0;
+  background: white;
+  border: none;
+  font-size: 11pt;
+  color: #000;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Divider between sections */
+.section-divider {
+  margin: 30px 0;
+  border-bottom: 1px solid #000;
+  height: 1px;
+}
+
+/* Specific styling for answer markers */
+.answer-marker {
+  color: #000;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+/* Print optimization */
+@media print {
+  section {
+    box-shadow: none;
+    margin: 0;
+    padding: 20mm;
+  }
+  
+  .mc-question,
+  .long-question,
+  .answer-content {
+    page-break-inside: avoid;
+  }
+}

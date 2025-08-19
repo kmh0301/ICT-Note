@@ -1,0 +1,334 @@
+/* @theme worksheet */
+
+@charset "UTF-8";
+@import 'uncover';
+
+/* Color Variables - 顏色變數 */
+:root {
+  /* Primary Colors - 主要顏色 */
+  --primary-purple: #8b5a9f;
+  --light-purple: #a67bb0;
+  --accent-gold: #d4af37;
+  
+  /* Text Colors - 文字顏色 */
+  --text-primary: #333;
+  --text-secondary: #999;
+  --text-white: white;
+  
+  /* Background Colors - 背景顏色 */
+  --bg-white: white;
+  --bg-light-gray: #f5f5f5;
+  --bg-medium-gray: #f0f0f0;
+  --bg-stripe: #f9f9f9;
+  --bg-purple-light: #f8f5ff;
+  --bg-yellow-light: #f5e6a3;
+  
+  /* Border Colors - 邊框顏色 */
+  --border-primary: #333;
+  --border-light: #ddd;
+  --border-dotted: #ccc;
+}
+
+/* A4 Template Theme */
+section {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  font-family: 'Avenir','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16pt;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-white);
+  box-sizing: border-box;
+  
+  /* 確保內容從左上角開始，完全不居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  
+  /* 覆蓋任何可能的居中樣式 */
+  margin: 0;
+  position: relative;
+}
+
+/* 全局覆蓋任何居中樣式 */
+section * {
+  text-align: left !important;
+}
+
+/* 特殊情況：如果需要某些元素居中，可以用這個class */
+.center-text {
+  text-align: center !important;
+}
+
+/* 確保所有內容元素都左對齊 */
+section h1, 
+section h2, 
+section h3, 
+section h4, 
+section h5, 
+section h6,
+section p,
+section div,
+section span,
+section li,
+section td,
+section th {
+  text-align: left;
+}
+
+/* Image Constraints - A4內圖片尺寸限制 */
+img {
+  max-width: 500px;
+  height: auto; /* 按比例自動調整高度 */
+  display: block;
+  margin: 15px 0;
+  
+  /* 確保圖片不會超出A4可用寬度 */
+  max-width: min(500px, calc(210mm - 40mm)); /* A4寬度減去左右padding */
+  
+  /* 如果需要居中顯示圖片，取消下面這行的註釋 */
+  /* margin: 15px auto; */
+}
+
+/* 針對小螢幕的響應式調整 */
+@media screen and (max-width: 210mm) {
+  img {
+    max-width: min(500px, calc(100vw - 40mm));
+  }
+}
+
+/* Page Header */
+section::before {
+  content: 'heading';
+  position: absolute;
+  top: 10mm;
+  right: 20mm;
+  font-size: 14pt;
+  color: var(--text-secondary);
+  font-weight: normal;
+}
+
+/* Name and Date Fields */
+.name-date-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 30px 0;
+  font-size: 14pt;
+  color: var(--text-primary);
+}
+
+.name-field, .date-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-line {
+  border-bottom: 1px solid var(--border-primary);
+  min-width: 150px;
+  height: 20px;
+  display: inline-block;
+}
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--border-primary);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* Page Footer - 移到右下角 */
+section::after {
+  content: 'footer';
+  position: absolute;
+  bottom: 15mm;
+  right: 20mm;
+  font-size: 12pt;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+/* Main Heading H1 */
+h1 {
+  background: var(--primary-purple);
+  color: var(--text-white);
+  padding: 12px 20px;
+  margin: 0 -20px 20px -20px;
+  font-size: 16pt;
+  font-weight: bold;
+  border: none;
+  text-align: left;
+  width: calc(100% + 40px); /* 確保全寬度，包含負margin */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Secondary Heading H2 */
+h2 {
+  color: var(--primary-purple);
+  font-size: 16pt;
+  font-weight: normal;
+  margin: 20px 0 15px 0;
+  padding: 0;
+  border-bottom: 2px solid var(--primary-purple);
+  text-align: left;
+  width: 100%; /* 全寬度 */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Tertiary Heading H3 */
+h3 {
+  background: var(--light-purple);
+  color: var(--text-white);
+  padding: 10px 20px;
+  margin: 15px -20px 15px -20px;
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: left;
+  width: calc(100% + 40px); /* 確保全寬度，包含負margin */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Quaternary Heading H4 */
+h4 {
+  color: var(--text-secondary);
+  font-size: 16pt;
+  font-weight: normal;
+  margin: 15px 0 10px 0;
+  padding: 8px 0;
+  border-top: 1px dotted var(--border-dotted);
+  border-bottom: 1px dotted var(--border-dotted);
+  text-align: left;
+  width: 100%; /* 全寬度 */
+  box-sizing: border-box;
+  display: block;
+}
+
+/* Unordered Lists */
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+ul li {
+  margin: 8px 0;
+  list-style-type: disc;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+ul li::marker {
+  color: var(--primary-purple);
+  font-size: 18pt;
+}
+
+/* Ordered Lists */
+ol {
+  margin: 15px 0;
+  padding-left: 25px;
+  text-align: left;
+}
+
+ol li {
+  margin: 8px 0;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+ol li::marker {
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+/* Remarks/Special Content */
+.remark {
+  border: 2px dashed var(--light-purple);
+  padding: 15px;
+  margin: 20px 0;
+  color: var(--light-purple);
+  font-style: italic;
+  text-align: left; /* 改為左對齊 */
+  background: var(--bg-purple-light);
+}
+
+/* Paragraph styling */
+p {
+  margin: 10px 0;
+  text-align: left;  /* 改為左對齊，而不是justify */
+}
+
+/* Code blocks */
+pre {
+  background: var(--bg-light-gray);
+  border-left: 4px solid var(--primary-purple);
+  padding: 15px;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  text-align: left;
+}
+
+/* Inline code */
+code {
+  background: var(--bg-medium-gray);
+  padding: 2px 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14pt;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0;
+  text-align: left;
+}
+
+th {
+  background: var(--primary-purple);
+  color: var(--text-white);
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid var(--border-primary);
+}
+
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-light);
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: var(--bg-stripe);
+}
+
+/* Blockquotes - 改為類似footer的樣式 */
+blockquote {
+  padding: 8px 15px;
+  margin: 15px 0;
+  background: var(--bg-yellow-light);
+  border-left: 4px solid var(--accent-gold);
+  font-size: 14pt;
+  color: var(--text-primary);
+  text-align: left;
+  font-style: normal;
+}
+
+/* Strong and emphasis */
+strong {
+  color: var(--primary-purple);
+  font-weight: bold;
+}
+
+em {
+  color: var(--primary-purple);
+  font-style: italic;
+}

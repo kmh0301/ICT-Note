@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dictation Template Usage Guide</title>
+<style>
+/* Your CSS content here - for demo purposes, I'll use simplified styles */
+body {
+  font-family: 'Times New Roman', 'SimSun', serif;
+  margin: 20px;
+  background: #f5f5f5;
+}
+
+.demo-section {
+  background: white;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.demo-title {
+  background: #e6f3ff;
+  padding: 10px;
+  margin: -20px -20px 15px -20px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.code-block {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+.preview {
+  border: 2px solid #007acc;
+  padding: 15px;
+  margin: 10px 0;
+  background: white;
+}
+
+/* Simplified versions of your actual styles for demo */
+.header-info {
+  text-align: center;
+  font-size: 14pt;
+  margin-bottom: 10px;
+}
+
+.student-info {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 20px;
+}
+
+.field-line {
+  border-bottom: 1px solid #000;
+  min-width: 150px;
+  height: 18px;
+  display: inline-block;
+}
+
+h1 {
+  text-align: center;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 15px 0;
+  font-size: 16pt;
+}
+
+h2 {
+  border-bottom: 1px solid #000;
+  padding: 8px 0;
+  font-size: 14pt;
+}
+
+h3 {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  font-size: 13pt;
+}
+
+.mc-options {
+  list-style: none;
+  counter-reset: mc-counter;
+  margin-left: 15px;
+}
+
+.mc-options li {
+  counter-increment: mc-counter;
+  margin-left: 25px;
+  text-indent: -25px;
+}
+
+.mc-options li::before {
+  content: counter(mc-counter, upper-alpha) ". ";
+}
+
+.mc-options li.correct {
+  font-weight: bold;
+}
+
+.answer-line::before {
+  content: "答案：";
+}
+
+.answer-space {
+  width: 165mm;
+  height: 25px;
+  border-bottom: 1px solid #000;
+  margin: 15px 0;
+}
+</style>
+</head>
+<body>
+
+<h1>📝 Dictation Template Usage Guide</h1>
+
+<!-- Header Section -->
+<div class="demo-section">
+  <div class="demo-title">1. Header Information (Required on every page)</div>
+  
+  <div class="code-block">&lt;div class="header-info"&gt;
+&lt;div class="school-info"&gt;佛教黃鳳翎中學&lt;/div&gt;
+&lt;div class="exam-info"&gt;資訊及通訊科技科—小測&lt;/div&gt;
+&lt;/div&gt;</div>
+
+  <div class="preview">
+    <div class="header-info">
+      <div class="school-info">佛教黃鳳翎中學</div>
+      <div class="exam-info">資訊及通訊科技科—小測</div>
+    </div>
+  </div>
+</div>
+
+<!-- Student Info Section -->
+<div class="demo-section">
+  <div class="demo-title">2. Student Information (Required on every page)</div>
+  
+  <div class="code-block">&lt;div class="student-info"&gt;
+&lt;div class="name-field"&gt;
+&lt;span class="field-label"&gt;姓名：&lt;/span&gt;
+&lt;span class="field-line"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="class-field"&gt;
+&lt;span class="field-label"&gt;班別：&lt;/span&gt;
+&lt;span class="field-line"&gt;&lt;/span&gt;
+&lt;span class="class-brackets"&gt;( )&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;</div>
+
+  <div class="preview">
+    <div class="student-info">
+      <div class="name-field">
+        <span class="field-label">姓名：</span>
+        <span class="field-line"></span>
+      </div>
+      <div class="class-field">
+        <span class="field-label">班別：</span>
+        <span class="field-line"></span>
+        <span class="class-brackets">( )</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Title -->
+<div class="demo-section">
+  <div class="demo-title">3. Main Title (H1) - Centered with borders</div>
+  
+  <div class="code-block"># 默書一：資訊系統與數據基礎</div>
+
+  <div class="preview">
+    <h1>默書一：資訊系統與數據基礎</h1>
+  </div>
+</div>
+
+<!-- Section Headings -->
+<div class="demo-section">
+  <div class="demo-title">4. Section Headings (H2) - Left aligned with bottom border</div>
+  
+  <div class="code-block">## 選擇題
+## 長題目
+## 填充題</div>
+
+  <div class="preview">
+    <h2>選擇題</h2>
+    <h2>長題目</h2>
+  </div>
+</div>
+
+<!-- Subsection Headings -->
+<div class="demo-section">
+  <div class="demo-title">5. Subsection Headings (H3) - For question types</div>
+  
+  <div class="code-block">### 第一部分：基礎概念
+### 第二部分：實際應用</div>
+
+  <div class="preview">
+    <h3>第一部分：基礎概念</h3>
+  </div>
+</div>
+
+<!-- Multiple Choice Questions -->
+<div class="demo-section">
+  <div class="demo-title">6. Multiple Choice Questions - Auto-numbered A, B, C, D</div>
+  
+  <div class="code-block">&lt;div class="mc-question"&gt;
+
+**1.** 資訊系統的五個主要組成部分是以下哪一項？
+
+&lt;ul class="mc-options"&gt;
+&lt;li&gt;數據、程式、互聯網、用戶、專家&lt;/li&gt;
+&lt;li class="correct"&gt;系統功能、數據、流程、科技、從業員&lt;/li&gt;
+&lt;li&gt;硬體、軟體、網路、雲端、分析師&lt;/li&gt;
+&lt;li&gt;輸入、處理、輸出、儲存、傳輸&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="answer-line"&gt;B&lt;/div&gt;
+
+&lt;/div&gt;</div>
+
+  <div class="preview">
+    <div class="mc-question">
+      <strong>1.</strong> 資訊系統的五個主要組成部分是以下哪一項？
+      
+      <ul class="mc-options">
+        <li>數據、程式、互聯網、用戶、專家</li>
+        <li class="correct">系統功能、數據、流程、科技、從業員</li>
+        <li>硬體、軟體、網路、雲端、分析師</li>
+        <li>輸入、處理、輸出、儲存、傳輸</li>
+      </ul>
+      
+      <div class="answer-line">B</div>
+    </div>
+  </div>
+</div>
+
+<!-- Long Questions -->
+<div class="demo-section">
+  <div class="demo-title">7. Long Answer Questions with Answer Lines</div>
+  
+  <div class="code-block">&lt;div class="long-question"&gt;
+
+&lt;div class="question-text"&gt;
+&lt;strong&gt;1.&lt;/strong&gt; 請定義「數據」和「資訊」，並各舉一個例子說明。
+&lt;/div&gt;
+
+&lt;div class="answer-space"&gt;&lt;/div&gt;
+&lt;div class="answer-space"&gt;&lt;/div&gt;
+&lt;div class="answer-space"&gt;&lt;/div&gt;
+
+&lt;/div&gt;</div>
+
+  <div class="preview">
+    <div class="long-question">
+      <div class="question-text">
+        <strong>1.</strong> 請定義「數據」和「資訊」，並各舉一個例子說明。
+      </div>
+      
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+      <div class="answer-space"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Instructions -->
+<div class="demo-section">
+  <div class="demo-title">8. Instructions or Notes</div>
+  
+  <div class="code-block">&lt;div class="instruction"&gt;
+注意：請在答案欄內清楚寫出完整答案，字跡清晰。
+&lt;/div&gt;</div>
+
+  <div class="preview">
+    <div class="instruction">
+      注意：請在答案欄內清楚寫出完整答案，字跡清晰。
+    </div>
+  </div>
+</div>
+
+<!-- Page Break -->
+<div class="demo-section">
+  <div class="demo-title">9. Page Break (Start new page)</div>
+  
+  <div class="code-block">---
+
+# 第二頁內容開始</div>
+
+  <p><strong>Note:</strong> Use <code>---</code> to create a new slide/page in Marp. The header and student info will automatically appear on each page.</p>
+</div>
+
+<!-- Complete Example -->
+<div class="demo-section">
+  <div class="demo-title">10. Complete Marp Document Structure</div>
+  
+  <div class="code-block">---
+marp: true
+theme: Dictation
+paginate: true
+---
+
+&lt;div class="header-info"&gt;
+&lt;div class="school-info"&gt;佛教黃鳳翎中學&lt;/div&gt;
+&lt;div class="exam-info"&gt;資訊及通訊科技科—小測&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="student-info"&gt;
+&lt;div class="name-field"&gt;
+&lt;span class="field-label"&gt;姓名：&lt;/span&gt;
+&lt;span class="field-line"&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="class-field"&gt;
+&lt;span class="field-label"&gt;班別：&lt;/span&gt;
+&lt;span class="field-line"&gt;&lt;/span&gt;
+&lt;span class="class-brackets"&gt;( )&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+# 默書一：資訊系統與數據基礎
+
+## 選擇題
+
+&lt;div class="mc-question"&gt;
+**1.** Your question here?
+&lt;ul class="mc-options"&gt;
+&lt;li&gt;Option 1&lt;/li&gt;
+&lt;li class="correct"&gt;Correct Option&lt;/li&gt;
+&lt;li&gt;Option 3&lt;/li&gt;
+&lt;li&gt;Option 4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="answer-line"&gt;B&lt;/div&gt;
+&lt;/div&gt;
+
+## 長題目
+
+&lt;div class="long-question"&gt;
+&lt;div class="question-text"&gt;
+&lt;strong&gt;1.&lt;/strong&gt; Your long question here.
+&lt;/div&gt;
+&lt;div class="answer-space"&gt;&lt;/div&gt;
+&lt;div class="answer-space"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+---
+
+# Page 2 content starts here...</div>
+</div>
+
+<div style="background: #ffffcc; padding: 15px; margin: 20px 0; border-left: 5px solid #ffcc00;">
+  <h3>📋 Quick Reference:</h3>
+  <ul>
+    <li><strong>H1 (#)</strong>: Main exam title - centered with borders</li>
+    <li><strong>H2 (##)</strong>: Section headings - left aligned with bottom border</li>
+    <li><strong>H3 (###)</strong>: Subsection headings - for question categories</li>
+    <li><strong>.mc-question</strong>: Multiple choice container</li>
+    <li><strong>.mc-options</strong>: Auto-numbered A, B, C, D options</li>
+    <li><strong>.correct</strong>: Add to correct option (makes it bold)</li>
+    <li><strong>.answer-line</strong>: Shows answer with "答案：" prefix</li>
+    <li><strong>.long-question</strong>: Long answer question container</li>
+    <li><strong>.answer-space</strong>: Creates answer lines (165mm width)</li>
+    <li><strong>.instruction</strong>: Italic instructions/notes</li>
+    <li><strong>---</strong>: Page break in Marp</li>
+  </ul>
+</div>
+
+</body>
+</html>

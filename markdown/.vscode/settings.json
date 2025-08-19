@@ -1,0 +1,7 @@
+
+{
+    "markdown.marp.themes": [
+        "./themes/worksheet.css",
+        "./themes/Dictation.css"
+    ]
+}
