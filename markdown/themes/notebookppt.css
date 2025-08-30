@@ -1,0 +1,451 @@
+/* @theme notebookppt */
+
+
+/* CSS Variables for color scheme */
+:root {
+  --color-background: #fdfcff;
+  --color-background-code: #f2f1f4;
+  --color-background-paginate: rgba(32, 34, 40, 0.05);
+  --color-foreground: #202228;
+  --color-highlight: #009dd5;
+  --color-highlight-hover: #1a7a99;
+  --color-highlight-heading: #33a8d1;
+  --color-header: rgba(32, 34, 40, 0.4);
+  --color-header-shadow: rgba(253, 252, 255, 0.8);
+}
+/* General section styling */
+section {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  display: block;
+  place-content: safe flex-start start; /* Default: top-left alignment */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+  height: 720px;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  padding: 30px 50px;
+  position: relative;
+  width: 1280px;
+  z-index: 0;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Add top spacing for all slides except main page */
+section::before {
+  content: '';
+  display: block;
+  height: 50px; /* Adjust this to control top space */
+}
+
+
+
+/* Headings styling */
+
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Start from top */
+  align-items: center;          /* Center horizontally */
+
+}
+/* Main page (first slide) styling */
+section.main {
+  place-content: safe center center; /* Center content horizontally and vertically */
+}
+
+section.main::before {
+  content: none; /* Remove top spacing for main page */
+}
+
+section.main p,
+section.main ul,
+section.main ol {
+  text-align: center;
+}
+
+/* Two-columns layout */
+section.two-columns {
+  display: flex;
+  flex-flow: row nowrap; /* Two columns side by side */
+  align-items: flex-start; /* Align content to top of each column */
+  justify-content: space-between; /* Space columns evenly */
+  gap: 40px; /* Space between columns */
+}
+
+section.two-columns > * {
+  flex: 1; /* Each child takes equal width */
+  margin: 0; /* Reset margins for column content */
+  text-align: left;
+}
+
+section.two-columns h2,
+section.two-columns h3,
+section.two-columns h4,
+section.two-columns h5,
+section.two-columns h6 {
+  margin: 50px 0 15px 0; /* Reset left margin for headings in columns */
+}
+
+/* Ensure paragraphs and lists in columns align properly */
+section.two-columns p,
+section.two-columns ul,
+section.two-columns ol {
+  margin: 30px 0 20px 70px;
+  text-align: left;
+}
+
+/* Section slide styling */
+section.section-slide {
+  place-content: safe center center;
+  background: var(--color-background);
+  font-size: 48px;
+  text-align: center;
+}
+
+section.section-slide::before {
+  content: none;
+}
+section.section-slide h1,
+section.section-slide h2,
+section.section-slide h3,
+section.section-slide h4,
+section.section-slide h5,
+section.section-slide h6 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+section.section-slide p {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+
+/* Text alignment classes */
+.t-c {
+  text-align: center !important;
+  margin-left: 0 !important; /* Reset left margin for centered elements */
+}
+
+.t-l {
+  text-align: left !important;
+  margin-left: 50px !important; /* Match default heading margin */
+}
+
+.t-r {
+  text-align: right !important;
+  margin-left: 0 !important; /* Reset left margin for right-aligned elements */
+}
+
+/* Page number styling */
+section::after {
+  align-items: flex-end;
+  background: linear-gradient(-45deg, var(--color-background-paginate) 50%, transparent 50%);
+  background-size: cover;
+  color: var(--color-foreground);
+  display: flex;
+  font-size: 0.6em;
+  height: 80px;
+  justify-content: flex-end;
+  padding: 30px;
+  text-align: right;
+  text-shadow: 0 0 5px var(--color-background);
+  width: 80px;
+}
+
+/* Inverted color scheme */
+section.invert {
+  --color-background: #202228;
+  --color-background-code: #2d2f35;
+  --color-background-paginate: rgba(255, 255, 255, 0.05);
+  --color-foreground: #fff;
+  --color-highlight: #60d0f0;
+  --color-highlight-hover: #4db8d6;
+  --color-highlight-heading: #73d4f2;
+  --color-header: rgba(255, 255, 255, 0.4);
+  --color-header-shadow: rgba(32, 34, 40, 0.8);
+}
+
+/* First and last child margin adjustments */
+section > *:first-child,
+section[data-header] > :nth-child(2) {
+  margin-top: 0;
+}
+
+section > *:last-child,
+section[data-footer] > :nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+/* Paragraphs and blockquotes */
+section p,
+section blockquote {
+  text-align: left;
+  margin: 0 0 15px;
+  margin-left: 50px;
+}
+
+section h1{
+text-align: center;
+margin: 70px 50px 50px 50px;
+}
+
+/* Headings */
+
+
+section h1 strong,
+section h2 strong,
+section h3 strong,
+section h4 strong,
+section h5 strong,
+section h6 strong {
+  color: var(--color-highlight-heading);
+  font-weight: inherit;
+}
+
+section h1 {
+  font-size: 2em;
+}
+
+section h2 {
+  font-size: 1.7em;
+}
+
+section h3 {
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+section h4 {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+section h5 {
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+section h6 {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+/* Header and Footer */
+section header,
+section footer {
+  color: var(--color-header);
+  font-size: 0.45em;
+  left: 70px;
+  letter-spacing: 1px;
+  position: absolute;
+  right: 70px;
+  text-shadow: 0 1px 0 var(--color-header-shadow);
+  z-index: 1;
+}
+
+section header {
+  top: 30px;
+}
+
+section footer {
+  bottom: 30px;
+}
+
+/* Links */
+section a {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+section a:hover {
+  color: var(--color-highlight-hover);
+  text-decoration: underline;
+}
+
+/* Lists */
+section ul,
+section ol {
+  margin: 0 40px 0;
+  text-align: left;
+}
+
+section > ul,
+section > ol {
+  margin-bottom: 15px;
+}
+
+/* Code */
+section code {
+  font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  letter-spacing: 0;
+}
+
+section > code,
+section *:not(pre) > code {
+  background: var(--color-background-code);
+  color: var(--color-foreground);
+  margin: -0.2em 0.2em 0.2em;
+  padding: 0.2em;
+}
+
+/* Pre-formatted code blocks */
+section pre {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+  font-size: 70%;
+  line-height: 1.15;
+  margin: 15px 0 30px;
+  text-align: left;
+}
+
+section pre > code {
+  background: var(--color-background-code);
+  box-sizing: content-box;
+  color: var(--color-foreground);
+  display: block;
+  margin: 0 auto;
+  min-width: 456px; /* (Slide width - padding * 2) * 40% */
+  padding: 0.4em 0.6em;
+}
+
+/* 4:3 aspect ratio adjustment */
+section[data-size='4:3'] pre > code {
+  min-width: 328px;
+}
+
+/* Tables */
+section table {
+  border-collapse: collapse;
+  margin: 0 auto 15px;
+}
+
+section table > thead > tr > td,
+section table > thead > tr > th,
+section table > tbody > tr > td,
+section table > tbody > tr > th {
+  padding: 0.15em 0.5em;
+}
+
+section table > thead > tr > td,
+section table > thead > tr > th {
+  border-bottom: 3px solid currentcolor;
+}
+
+section table > tbody > tr:not(:last-child) > td,
+section table > tbody > tr:not(:last-child) > th {
+  border-bottom: 1px solid currentcolor;
+}
+
+/* Blockquotes */
+section blockquote {
+  font-size: 90%;
+  line-height: 1.3;
+  padding: 0 2em;
+  position: relative;
+  z-index: 0;
+}
+
+/* Quote marks - you'll need to provide the SVG file or replace with text */
+section blockquote::before,
+section blockquote::after {
+  content: '"';
+  font-size: 2em;
+  font-weight: bold;
+  height: auto;
+  pointer-events: none;
+  position: absolute;
+  width: 1em;
+  z-index: -1;
+  color: var(--color-highlight);
+  opacity: 0.3;
+}
+
+section blockquote::before {
+  left: 0;
+  top: -0.2em;
+}
+
+section blockquote::after {
+  bottom: -0.5em;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+section blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Mark (highlighted text) */
+section mark {
+  color: var(--color-highlight);
+  background: transparent;
+}
+
+/* Auto-scaling parts (Marp-specific) */
+section h1[data-auto-scaling],
+section h2[data-auto-scaling],
+section h3[data-auto-scaling],
+section h4[data-auto-scaling],
+section h5[data-auto-scaling],
+section h6[data-auto-scaling] {
+  max-height: 660px; /* Slide height - padding * 2 */
+}
+
+section pre[data-auto-scaling] {
+  max-height: 570px;
+}
+
+/* Additional utility classes */
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1280px) {
+  section {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  section {
+    font-size: 32px;
+    padding: 20px 50px;
+  }
+  
+  section header,
+  section footer {
+    left: 50px;
+    right: 50px;
+  }
+}
+
+/* Print styles */
+@media print {
+  section {
+    background: white !important;
+    color: black !important;
+  }
+  
+  section.invert {
+    background: white !important;
+    color: black !important;
+  }
+}

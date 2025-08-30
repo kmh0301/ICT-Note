@@ -99,6 +99,28 @@ section th {
   text-align: left;
 }
 
+
+/* Image Constraints - A4內圖片尺寸限制 */
+img {
+  max-width: 500px;
+  height: auto; /* 按比例自動調整高度 */
+  display: block;
+  margin: 15px 0;
+  
+  /* 確保圖片不會超出A4可用寬度 */
+  max-width: min(500px, calc(210mm - 40mm)); /* A4寬度減去左右padding */
+  
+  /* 如果需要居中顯示圖片，取消下面這行的註釋 */
+  /* margin: 15px auto; */
+}
+
+/* 針對小螢幕的響應式調整 */
+@media screen and (max-width: 210mm) {
+  img {
+    max-width: min(500px, calc(100vw - 40mm));
+  }
+}
+
 /* Header Information - 頁首資訊 */
 .header-info {
   position: fixed;

@@ -2,6 +2,7 @@
 {
     "markdown.marp.themes": [
         "./themes/worksheet.css",
-        "./themes/Dictation.css"
+        "./themes/Dictation.css",
+        "./themes/notebookppt.css"
     ]
 }
