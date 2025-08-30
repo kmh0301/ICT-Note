@@ -2,6 +2,7 @@
 marp: true
 theme: Dictation
 paginate: true
+mermaid: true
 ---
 
 <div class="header-info">
@@ -9,7 +10,7 @@ paginate: true
   <div class="exam-info">資訊及通訊科技科——教學筆記</div>
 </div>
 
-# 明德必修A2
+# 明德必修A1重點筆記
 
 ## 資訊處理簡介
 
@@ -22,7 +23,6 @@ paginate: true
 - 解釋資訊處理的各個階段
 - 描述資訊時代及其發展
 - 指出資訊素養的不同範疇
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-04.jpg?height=1273&width=2920&top_left_y=3889&top_left_x=754)
 
 
 ---
@@ -31,50 +31,69 @@ paginate: true
 ### A 系統功能
 資訊系統旨在流程自動化、減少人為錯誤並提升效率。  
 例如，圖書館用資訊系統管理藏書，狀態隨借/還行為即時更新，用戶可查詢何時何地借書。  
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-05.jpg?height=1347&width=2292&top_left_y=1334&top_left_x=252)
 
 
 ### B 數據
 數據存於電腦儲存設備中，可用於輸入/輸出。形式包括文本、圖像、音頻或視頻。  
 例子：醫院資訊系統的病人病歷、天文台的天氣數據。
 
----
-
 
 ### C 科技（硬件）
 
 **硬件**：資訊系統中的實體設備，各有功能：
-- 處理：中央處理器（CPU）
-- 連接：主機板
-- 網通：路由器、交換器、藍牙 USB
-- 輸入：鍵盤、麥克風、條碼掃描器
-- 輸出：顯示器、揚聲器、資訊板
 
 | 功能       | 硬件(舉例)                          |
 |------------|-------------------------------------|
 | 處理       | 中央處理器（CPU）                   |
-| 連接       | 主機板                              |
+| 電子部件之間的連接       | 主機板                              |
 | 網絡通訊   | 家用路由器、交換器、藍牙USB適配器    |
 | 輸入       | 鍵盤、麥克風、條碼掃描器            |
 | 輸出       | 顯示器、揚聲器、資訊板              |
 
+---
 
-
-### 軟件
+## 軟件
 
 **軟件**：電腦需根據軟件指令運算。  
 分為：
-- 系統軟件（如 Windows, macOS, 防毒軟件, 音效卡驅動程式等）
-- 應用軟件（文書處理器、數據庫管理系統等）
 
+<!-- 
+mermaid
+flowchart TD
+    n4["軟件"]
+    D["系統軟件"] 
+    E["應用軟件"]
+    n1["操作系統"]
+    n2["實用程式"] 
+    n3["驅動程式"]
+    
+    n4 -> D & E
+    D -> n1 & n2 & n3
+
+![alt text](<螢幕截圖 2025-08-30 下午11.23.43.png>)
+
+ -->
+
+
+
+
+#### 系統軟件 
+
+- 系統軟件包括以下三種
+  
 | 功能         | 軟件示例                          |
 |--------------|-----------------------------------|
 | 操作系統     | Microsoft Windows, macOS           |
 | 實用程式     | 工作管理員, 防毒軟件               |
 | 驅動程式     | USB快閃記憶體, 打印機等            |
+
+#### 應用軟件（文書處理器、數據庫管理系統等）
+
+
+| 功能         | 軟件示例                          |
+|--------------|-----------------------------------|
 | 應用軟件     | 文書處理器, 數據庫管理系統         |
 
----
 
 ### D 流程
 資訊系統經一系列步驟精確處理數據，並轉換為資訊。  
@@ -84,7 +103,6 @@ paginate: true
 3. 藥劑師根據處方備藥及更新庫存
 4. 系統打印收據
 5. 系統生成月報表
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-07.jpg?height=984&width=3454&top_left_y=3429&top_left_x=239)
 
 ---
 
@@ -103,45 +121,27 @@ paginate: true
 <li>軟件：防毒軟件</li>
 <li class="correct">從業員：文書處理器</li>
 </ul>
-<div class="answer-line">D</div>
-</div>
+<!-- <div class="answer-line">D</div>
+</div> -->
 
 
 ## 1.2 數據和資訊
 
-### A 數據
-數據是一組未經整理的事實，單獨來看通常沒有意義。未處理如「Paris」可指人名或城市名。
+#### 數據
 
----
+- 數據是一組未經整理的事實，單獨來看通常沒有意義。未處理如「Paris」可指人名或城市名。
+<br>
 
-### B 資訊
-數據經處理（加欄名、分類），轉換為資訊，有助決策。
+#### 資訊
 
-| 名 | 姓     | 性別 | 年齡 | 居住城市 | 職業    | 重量 | 分數 | 評級 |
-|----|--------|------|------|----------|---------|------|------|------|
-| Brooklyn | Fisher   | M    | 45   | Sydney   | Boatman | 49   | 44   | F    |
-| Paris    | Merchant | F    | 24   | Olympia  | Baker   | 62   | 81   | B    |
-| Hamilton | Miller   | M    | 37   | Richmond | Blacksmith| 70   | 73   | C    |
+- 數據經處理（加欄名、分類），轉換為資訊，有助決策。
+<br>
 
-
-### C IPO週期
+#### IPO週期
 三步驟：
 1. 輸入數據
 2. 處理數據
 3. 輸出資訊
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-10.jpg?height=1633&width=2500&top_left_y=1274&top_left_x=349)
-
----
-
-## 活動 1.3：分辨數據和資訊
-
-| 項目                   | 數據         | 資訊（經處理）       |
-|------------------------|--------------|----------------------|
-| 某公司的淨收入         | 數據         | 資訊                 |
-| 1A班學生的身高         | 數據         | 資訊（排序）         |
-| 101號室的平均溫度      | 資訊（計算） | 數據                 |
-| 演講片段               | 數據         | 資訊（語音識別）     |
-| 實照中貓的數目         | 資訊（識別） | 數據                 |
 
 ---
 
@@ -155,9 +155,6 @@ paginate: true
 | ASCII | 英文    | 1234 ABCD |
 | Big5  | 中文繁體   | 一二三四甲乙丙丁|
 
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-11.jpg?height=1225&width=1394&top_left_y=3592&top_left_x=785)
-
----
 
 ### 圖像
 
@@ -169,21 +166,12 @@ paginate: true
 | 點陣圖 | 可用小畫家編輯、常為照片 |
 | 向量圖 | 邊緣不糊、檔案小    |
 
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-12.jpg?height=852&width=1788&top_left_y=1098&top_left_x=367)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-12.jpg?height=1178&width=2219&top_left_y=2118&top_left_x=357)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-12.jpg?height=1173&width=2219&top_left_y=3723&top_left_x=362)
-
----
 
 ### 音頻
 數碼音效資料，可儲存編輯；MIDI 檔案儲存音符或取樣，不儲存人聲，檔案小且易於編輯。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-13.jpg?height=1594&width=3402&top_left_y=1652&top_left_x=233)
-
----
 
 ### 視頻
 結合圖像及音效；會壓縮以減少檔案大小，常由相機或剪輯軟件製作。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-14.jpg?height=397&width=2598&top_left_y=758&top_left_x=367)
 
 ---
 
@@ -206,11 +194,6 @@ paginate: true
 - 工具：麥克風、感應器、相機
 - 規模與類型需考慮選擇合適工具
 
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-15.jpg?height=1031&width=2997&top_left_y=1009&top_left_x=231)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-15.jpg?height=890&width=1321&top_left_y=2761&top_left_x=254)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-15.jpg?height=879&width=1552&top_left_y=2772&top_left_x=1668)
-
----
 
 ### 組織
 
@@ -218,34 +201,17 @@ paginate: true
 - 檢驗：檢查填寫方法
 - 轉換：輸入電子表格
 
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-16.jpg?height=984&width=974&top_left_y=1600&top_left_x=354)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-16.jpg?height=999&width=979&top_left_y=1587&top_left_x=1329)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-16.jpg?height=978&width=989&top_left_y=1603&top_left_x=2281)
-
----
-
 ### 儲存
 可儲存於硬碟、USB快閃記憶體、打印副本等。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-16.jpg?height=716&width=862&top_left_y=3705&top_left_x=473)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-16.jpg?height=532&width=800&top_left_y=3823&top_left_x=1434)
-
----
 
 ### 處理
 各種形式的編輯、修改與整理；例：剪輯旅遊素材、加字幕、消除噪音。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-17.jpg?height=989&width=1547&top_left_y=1524&top_left_x=714)
-
----
 
 ### 分析
 從處理過的數據歸納趨勢，例：氣溫資料分析預測氣候。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-17.jpg?height=1136&width=1341&top_left_y=3463&top_left_x=822)
-
----
 
 ### 傳輸
 設備間數據交換，例：HTTP傳輸網站資料；5G促進 IoT/串流發展。
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-18.jpg?height=873&width=1384&top_left_y=462&top_left_x=2430)
 
 ---
 
@@ -257,8 +223,6 @@ paginate: true
 | 照片   | -           | -                  |
 | 視像   | 數碼影片    | 投影機、揚聲器     |
 
----
-
 ## 資訊時代、發展與素養
 
 - 微型電腦、互聯網、搜尋器日益普及
@@ -266,11 +230,6 @@ paginate: true
 - 表現提升，隨時隨地運算及傳輸
 - 應用程式互動設計更便捷
 - 通信網絡（光纖、5G、物聯網）推動資料流通與新技術發展
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-21.jpg?height=973&width=1367&top_left_y=3277&top_left_x=804)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-22.jpg?height=968&width=1442&top_left_y=1082&top_left_x=882)
-![](https://cdn.mathpix.com/cropped/2025_07_21_b6d41007ef28c917c00fg-22.jpg?height=968&width=1436&top_left_y=2780&top_left_x=880)
-
----
 
 ### 資訊素養
 
@@ -278,7 +237,6 @@ paginate: true
 - 數據私隱：保護他人私隱，不隨意分享
 - 可信度：核查資訊真偽來源
 - 提取與組織：整理自有見解
-
 ---
 
 ## 總結

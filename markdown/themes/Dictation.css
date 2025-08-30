@@ -7,7 +7,7 @@
 :root {
   /* All colors set to black for formal dictation */
   --text-primary: #000;
-  --text-secondary: #000;
+  --text-secondary: #010674;
   --text-light: #000;
   --text-white: #000;
   
@@ -19,6 +19,7 @@
   --bg-purple-light: white;
   --bg-yellow-light: white;
   --bg-mc-option: white;
+  --light-purple:#a67bb0;
   
   /* Border Colors - all black */
   --border-primary: #000;
@@ -439,6 +440,65 @@ section[data-marpit-pagination]::after {
   color: #000;
   font-weight: bold;
   font-size: 12pt;
+}
+
+/* Add Mermaid support to your custom theme */
+.mermaid {
+  text-align: center;
+  margin: 1em auto;
+}
+
+/* Optional: Style mermaid diagrams */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* Add this to your existing CSS theme */
+
+/* Force all ul/li elements to align left */
+section ul,
+section ol,
+section li {
+  text-align: left !important;
+  margin-left: 20px; /* Add some left margin for proper indentation */
+}
+
+/* Ensure regular lists (not multiple choice) are properly aligned */
+ul:not(.mc-options),
+ol:not(.mc-options) {
+  text-align: left !important;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+ul:not(.mc-options) li,
+ol:not(.mc-options) li {
+  text-align: left !important;
+  margin: 6px 0;
+  padding: 0;
+  list-style-position: outside;
+}
+
+/* If you're using bullet points, ensure they show properly */
+ul:not(.mc-options) li {
+  list-style-type: disc;
+}
+
+ol:not(.mc-options) li {
+  list-style-type: decimal;
+}
+
+.remark {
+  border: 2px dashed var(--border-primary);
+  padding: 15px;
+  margin: 20px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: left; /* 改為左對齊 */
+  background: var(--bg-purple-light);
 }
 
 /* Print optimization */
