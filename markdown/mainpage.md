@@ -9,10 +9,6 @@ paginate: true
   <div class="exam-info">中一級電腦科</div>
 </div>
 
-# 電腦系統
-
-
-
 <div class="student-info">
     <div class="name-field">
     <span class="field-label">姓名：</span>
@@ -24,6 +20,7 @@ paginate: true
     <span class="class-brackets">( )</span>
 </div>
 
+# 電腦系統
 
 
 

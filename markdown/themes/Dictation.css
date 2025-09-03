@@ -335,25 +335,43 @@ h4 {
   border: none;
 }
 
-/* Answer Space - Guaranteed to work */
+/* Answer Space - UPDATED WITH FIXED LINE HEIGHT */
 .answer-space {
-  margin: 15px ;
+  margin: 8px 0;
   padding: 0;
   width: 165mm;
   position: relative;
-  height: 25px;
+  height: 22px;
+  line-height: 22px; /* Fixed line height matching the height */
   overflow: visible;
   color: #000;
-  font-size: 14pt;
-  font-weight: bold;
+  font-size: 12pt;
+  font-weight: normal;
   border-bottom: 1px solid #000;
   text-align: left;
   box-sizing: border-box;
   display: block;
+  vertical-align: baseline; /* Ensure consistent baseline alignment */
 }
 
-
-
+/* Alternative larger answer space if needed */
+.answer-space-large {
+  margin: 10px 0;
+  padding: 0;
+  width: 165mm;
+  position: relative;
+  height: 28px;
+  line-height: 28px; /* Fixed line height matching the height */
+  overflow: visible;
+  color: #000;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: baseline;
+}
 
 /* Answer Content Styling */
 .answer-content {
