@@ -68,13 +68,41 @@ backgroundImage: url('../themes/img2.png')
 
 **（a）** 分為唯讀記憶體 (ROM) 和隨機存取記憶體 (RAM) 兩種：
 
-| 特性 | ROM (Read-Only Memory) | RAM (Random Access Memory) |
-|------|-----|-----|
-| 主要用途 (Purpose) | 主要儲存了用來啟動電腦的指令 (boot instructions) | 儲存臨時的數據及指令 (temporary data) |
-| 持久性 (Persistence) | 儲存的數據及資料是永久的 (permanent) | 儲存的數據及資料是暫時的 (temporary) |
-| 可修改性 (Modifiable) | 儲存的資料不能隨便修改 (non-modifiable) | 儲存的資料可以讀取及修改 (readable & writable) |
+<table>
+  <thead>
+    <tr>
+      <th>比較項目</th>
+      <th>隨機存取記憶體 (RAM)</th>
+      <th>唯讀記憶體 (ROM)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>儲存的資料</b></td>
+      <td>中央處理器、應用軟件和操作系統之間共用的數據</td>
+      <td>由生產商預先儲存的啟動程序。</td>
+    </tr>
+    <tr>
+      <td><b>易失性</b></td>
+      <td>資料只是暫時儲存，當電腦被關掉或電源中斷時，資料將會消失。</td>
+      <td>資料是永久儲存，當電腦被關掉或電源中斷時，資料也不會消失。</td>
+    </tr>
+    <tr>
+      <td><b>讀寫資料</b></td>
+      <td>可供讀寫；資料是可變的。</td>
+      <td>只供讀取，不可寫入；資料是不可變的。</td>
+    </tr>
+  </tbody>
+</table>
+
+---
 
 **（b）** 儲存容量 (storage capacity) 可以字節 (Byte) 為基本單位，較大的容量可使用KB、MB、GB、TB等單位。
+
+1KB = 1024 Bytes
+1MB = 1024KB
+1GB = 1024MB
+1TB = 1024GB
 
 ---
 
