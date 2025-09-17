@@ -35,7 +35,7 @@ section {
   padding: 20mm 20mm 20mm 20mm; /* Reduced back to reasonable top padding */
   font-family: 'Times New Roman', 'SimSun', serif;
   font-size: 11pt;
-  line-height: 1.3;
+  line-height: 1.2;
   color: var(--text-primary);
   background: var(--bg-white);
   box-sizing: border-box;
