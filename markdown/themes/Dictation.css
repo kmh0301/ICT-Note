@@ -185,14 +185,22 @@ img {
 
 .field-line {
   border-bottom: 1px solid #000;
-  min-width: 150px;
+  min-width: 200px;
+  height: 18px;
+  display: inline-block;
+}
+
+ .field-class {
+  border-bottom: 1px solid #000;
+  min-width: 100px;
   height: 18px;
   display: inline-block;
 }
 
 .class-brackets {
   margin-left: 3px;
-  font-size: 11pt;
+  font-size: 14pt;
+  white-space: pre;
 }
 
 /* Main Title */
@@ -352,6 +360,61 @@ h4 {
   box-sizing: border-box;
   display: block;
   vertical-align: baseline; /* Ensure consistent baseline alignment */
+}
+
+.space-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.answer-space50 {
+  margin: 8px 0;
+  padding: 0;
+  width: 100mm;
+  position: relative;
+  height: 30px;
+  line-height: 30px; /* Fixed line height matching the height */
+  overflow: visible;
+  color: #000;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: baseline;
+}
+
+/* Height classes for easy setting */
+.height-30px { height: 30px; }
+.height-40px { height: 40px; }
+.height-50px { height: 50px; }
+.height-60px { height: 60px; }
+.height-70px { height: 70px; }
+.height-80px { height: 80px; }
+.height-90px { height: 90px; }
+.height-100px { height: 100px; }
+.height-120px { height: 120px; }
+.height-150px { height: 150px; }
+
+.side-box {
+  padding: 2%;
+width: 50mm;
+border: 1px solid #000;
+background-color: #fff;
+flex-shrink: 0;
+}
+
+.full-width-box {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: white;
+  margin-top: 20px;
+}
+
+/* Calculate height based on number of answer spaces */
+.side-box.three-spaces {
+height: calc(4 * 30px + 3 * 16px); /* 3 * (height + margin top+bottom) */
 }
 
 /* Alternative larger answer space if needed */

@@ -1,0 +1,161 @@
+/* @theme UT */
+
+section {
+  width: 210mm;
+  height: 297mm;
+  font-family: "PMingLiU", "Times New Roman", serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  padding: 25mm 20mm 25mm 20mm;
+  margin: 0;
+  color: #000;
+  background: #fff;
+  page-break-after: always;
+}
+
+.title-page {
+  text-align: center;
+  padding-top: 40mm;
+}
+
+.title-page h1, .title-page h2 {
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  line-height: 1.2;
+}
+
+footer {
+  position: fixed;
+  bottom: 25mm;
+  left: 20mm;
+  right: 20mm;
+  font-size: 10pt;
+  color: #808080;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 1.5em 0 0.5em 0;
+}
+
+/* Update your UT.css file with this new rule */
+
+.question-item {
+  margin: 1em 0;
+  font-size: 12pt;
+  
+  /* Make the question-item a flex container */
+  display: flex; 
+  justify-content: space-between; /* Pushes content to the ends */
+}
+/* Update your UT.css file with this new rule */
+
+/* Update your UT.css file with this new rule */
+
+.question-item, .sub-question-item {
+  position: relative; /* This is the key change. */
+  margin: 1em 0;
+  font-size: 12pt;
+  line-height: 1.5;
+  padding-right: 60px; /* Add padding to prevent text from overlapping the points */
+}
+
+.question-item .points, .sub-question-item .points {
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap; /* Prevents the points from wrapping */
+}
+
+.question-item .points {
+  /* No additional styling is needed here, the parent's flexbox handles the positioning */
+}
+/* Add this code to your CSS */
+
+.mcq-options {
+  /* This resets the counter for each new list */
+  counter-reset: mcq-counter;
+}
+
+.mcq-options li {
+  /* This increments the counter for each list item */
+  counter-increment: mcq-counter;
+  position: relative;
+  list-style-type: none;
+  /* Use padding and text-indent to create space for the letter */
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.mcq-options li::before {
+  /* This displays the letter and a period */
+  content: counter(mcq-counter, upper-alpha) ". ";
+  font-weight: normal;
+  color: #000;
+  
+  /* Reset indentation for the letter itself */
+  text-indent: 0;
+}
+
+.sub-question-item {
+  margin: 0.8em 0;
+  font-size: 12pt;
+  padding-left: 1em;
+}
+
+.answer-box {
+  border: 1px solid #000;
+  margin: 1em 0;
+  padding: 1em;
+  min-height: 4em;
+}
+.answer-space {
+  margin: 8px 0;
+  padding: 0;
+  width: 165mm;
+  position: relative;
+  height: 22px;
+  line-height: 22px; /* Fixed line height matching the height */
+  overflow: visible;
+  color: #000;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: baseline; /* Ensure consistent baseline alignment */
+}
+.answer-line {
+  margin: 10px 0;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 12pt;
+}
+
+th, td {
+  border: 1px solid #000;
+  padding: 0.5em;
+  text-align: left;
+  font-size: 12pt;
+}
+
+th {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+p, div, span, li, td, th {
+  font-size: 12pt;
+}

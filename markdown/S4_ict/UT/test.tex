@@ -1,0 +1,906 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{xeCJK}
+\setCJKmainfont{PMingLiU}[
+    UprightFont = *,
+    BoldFont = *,
+    ItalicFont = *
+]
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor} %
+\usepackage{titlesec}
+% Page setup
+\geometry{top=25mm,bottom=25mm,left=20mm,right=20mm}
+
+% Header & footer
+\pagestyle{fancy}
+\fancyhf{}
+% Define a custom gray color
+\definecolor{mygray}{rgb}{0.5, 0.5, 0.5}
+
+% Apply the color to the footer content
+\fancyfoot[L]{\textcolor{mygray}{2025/2026-1st Term UT- S4 ICT}}
+\fancyfoot[C]{\textcolor{mygray}{第 \thepage 頁}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Remove section numbering
+\setcounter{secnumdepth}{0}
+
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Custom commands for underlines
+\newcommand{\answerline}[1]{\underline{\hspace{#1}}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 佛教黃鳳翎中學}\\[0.5em]
+{\Large\bfseries 2025/2026 上學期統測}\\[1em]
+{\Large\bfseries 中四級 \quad 資訊及通訊科技 \quad 時限：60分鐘}\\[1.5em]
+{\Large\bfseries 試題答題簿}
+\end{center}
+
+\vspace{1.5em}
+
+班別：\answerline{3cm} \quad 班號：\answerline{2cm} \quad 考試日期：\answerline{3cm}\\[0.8em]
+姓名：\answerline{8cm} \quad 考試時間：\answerline{3cm}\\[0.8em]
+
+\textbf{本試卷必須用中文作答}
+
+\vspace{1em}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+總　分 & 甲　部 & 乙　部 \\
+\hline
+& & \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\textbf{考生須知：}
+\begin{enumerate}
+\item 本卷分甲、乙兩部。
+\item 甲部為多項選擇題；乙部為問答題。
+\item 考生須在本試題答題簿第1頁之適當位置填寫考生姓名、班別及班號。
+\item 本試卷滿分為50分。
+\item \textbf{本試卷全部試題均須回答。}
+\item 甲部的答案須填畫在多項選擇題的答題紙上，而乙部的答案則須寫在試題答題簿中預留的空位內。
+\end{enumerate}
+
+\newpage
+
+\section{\textbf{甲部 多項選擇題（20分）}}
+
+\textbf{本部共有20題。請選擇最合適的答案。}
+
+\begin{enumerate}
+\item 下列哪一項陳述有關信用卡號碼中的檢查數位是正確的？
+
+\begin{enumerate}[label=\Alph*.]
+\item 它可以偵測到信用卡號碼中的任何及所有錯誤。
+\item 它可以確保信用卡號碼輸入正確。
+\item 它可以更正信用卡號碼中的所有錯誤。
+\item 它可以識別持卡人的銀行。
+\end{enumerate}
+
+\item 字元「W」和「Z」的十六進制 ASCII 代碼分別為 57 和 \answerline{2cm}
+
+\begin{enumerate}[label=\Alph*.]
+\item 3C
+\item 5A
+\item 59
+\item 60
+\end{enumerate}
+
+\item 一個文本包含繁體中文和法文字符，應該使用下列哪一種字符編碼系統？
+
+(1) UTF-8（統一碼）
+
+(2) ASCII
+
+(3) 大五碼
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (3)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 以下哪項 8 位元二進制補碼的數字，在計算過程中不會產生溢出誤差？
+
+(1) 1010 1010 + 0101 0101
+
+(2) 1000 0000 + 1000 0000
+
+(3) 1111 1011 + 1101 1010
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (1) 和 (2)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 8 位元二進制補碼的範圍是多少？
+
+\begin{enumerate}[label=\Alph*.]
+\item $-2^7$ 至 $2^7$
+\item $-2^7$ 至 $2^7 - 1$
+\item $-2^7 - 1$ 至 $2^7 - 1$
+\item $-2^7 + 1$ 至 $2^7 - 1$
+\end{enumerate}
+
+\item 對於聲音檔案而言，其 WAV 檔案的檔案大小大於其 MP3 檔案，因為
+
+(1) WAV 音訊未經壓縮。
+
+(2) WAV 比 MP3 檔案的時間較短。
+
+(3) 可輕鬆編輯和處理 WAV 檔案，且不會造成品質損失。
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (1) 和 (2)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 以下哪些是圖像檔案格式？
+
+(1) HEIC
+
+(2) AI
+
+(3) PNG
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (3)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 下列哪些工具最適合算法設計？
+
+(1) 偽代碼
+
+(2) 腦圖
+
+(3) 流程圖
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (1) 和 (3)
+\item 只有 (1) 和 (2)
+\item 只有 (2) 和 (3)
+\end{enumerate}
+
+\item 以下哪項陳述\textbf{不}正確？
+
+\begin{enumerate}[label=\Alph*.]
+\item 整數可以用於計算
+\item 字符可用來儲存數字
+\item 字串是一串字符
+\item 浮點數（實數）可用來儲存英文字母
+\end{enumerate}
+
+\item 如果 X = 3 和 Y = 5，哪個布爾表達式會產生相同的結果？
+
+(1) ((X < Y) OR (X + Y >= 10)) AND (X > 1)
+
+(2) (X < Y) AND ((X + Y >= 10) OR (X > 1))
+
+(3) ((X < Y) AND (X + Y >= 10)) OR (X > 1)
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1) 和 (2)
+\item 只有 (2) 和 (3)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 以下哪項可視為資訊？
+
+\begin{enumerate}[label=\Alph*.]
+\item 顧客名稱
+\item 產品編號
+\item 顯示去年銷售趨勢的圖表
+\item 電話號碼
+\end{enumerate}
+
+\item 以下哪項學生資訊可以定義為布爾資料類型？
+
+(1) 畢業狀況
+
+(2) 居家地址
+
+(3) 班別
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (3)
+\item 只有 (1) 和 (3)
+\item 只有 (2) 和 (3)
+\end{enumerate}
+
+\item 下列哪項\textbf{不}是一種字符編碼系統？
+
+\begin{enumerate}[label=\Alph*.]
+\item 條碼
+\item ASCII
+\item 統一碼
+\item 國標碼
+\end{enumerate}
+
+\item 餐廳收銀處通常使用下列哪項輸入／輸出設備？
+
+(1) 磁條卡閱讀機
+
+(2) 噴墨打印機
+
+(3) 感熱式打印機
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (3)
+\item 只有 (1) 和 (2)
+\item 只有 (1) 和 (3)
+\end{enumerate}
+
+\item 下列哪項有關噴墨打印機和點陣式打印機的比較是正確的？
+
+(1) 噴墨打印機的輸出質素較點陣式打印機的為高。
+
+(2) 噴墨打印機的打印速度較點陣式打印機的為低。
+
+(3) 噴墨打印機在打印時的噪音較大。
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (2)
+\item 只有 (1) 和 (2)
+\item 只有 (1) 和 (3)
+\end{enumerate}
+
+\item 下列哪項有關 RAM 和 ROM 的特徵是正確的？
+
+\begin{center}
+\begin{tabular}{cc}
+\underline{RAM} & \underline{ROM} \\
+\end{tabular}
+\end{center}
+
+(1) 易失性的 \quad 非易失性的
+
+(2) 允許讀取和寫入 \quad 只允許讀取
+
+(3) 可允許用戶升級 \quad 不允許用戶升級
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (1) 和 (2)
+\item 只有 (2) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 下列哪項存貯設備是可覆寫的？
+
+(1) 隨機存取記憶體
+
+(2) 唯讀記憶體
+
+(3) DVD-RW
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (2)
+\item 只有 (1) 和 (2)
+\item 只有 (1) 和 (3)
+\end{enumerate}
+
+\item 小明的程式未能產生正確輸出，因此他修改了程式的流程圖。以下哪項解難步驟最能貼切地描述他的動作？
+
+\begin{enumerate}[label=\Alph*.]
+\item 分析問題
+\item 設計算法
+\item 開發程式
+\item 測試及除錯
+\end{enumerate}
+
+\item 以下哪項是模組化的好處？
+
+\begin{enumerate}[label=\Alph*.]
+\item 減少程式的執行時間
+\item 使程式不須測試
+\item 使程式可重用
+\item 使用戶更容易使用程式
+\end{enumerate}
+
+\item 以下哪項是下列算法的輸出？
+
+A ← 5
+
+B ← 10
+
+C ← 15 - A * B
+
+輸出 A + B - C
+
+\begin{enumerate}[label=\Alph*.]
+\item 20
+\item 35
+\item 50
+\item 115
+\end{enumerate}
+
+\item 以下哪項是下列算法的輸出？
+
+X ← 2
+
+Y ← 3
+
+Z ← 5
+
+temp ← X
+
+X ← Y
+
+Y ← temp
+
+Z ← Y - X
+
+輸出 X - Y + Z
+
+\begin{enumerate}[label=\Alph*.]
+\item -2
+\item 0
+\item 2
+\item 4
+\end{enumerate}
+
+\item 以下哪組數據類型和數據的組合是\textbf{不}正確的？
+
+\begin{center}
+\begin{tabular}{cc}
+\underline{數據類型} & \underline{數據} \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\Alph*.]
+\item 整數 \quad 1
+\item 布爾 \quad 1
+\item 浮點數 \quad 1.0
+\item 字符 \quad 1.0
+\end{enumerate}
+
+\item 下列算法中，當 X = 3，以下哪項是 Z 的值？
+
+X ← 1
+
+Z ← 7
+
+當 X < 5
+
+X ← X + 1
+
+Z ← Z - X
+
+\begin{enumerate}[label=\Alph*.]
+\item 1
+\item 2
+\item 5
+\item 7
+\end{enumerate}
+
+\item 大部分操作系統在更新最新版本時，都會提醒用戶盡快進行更新。以下哪項\textbf{不是}操作系統提醒用戶的原因？
+
+\begin{enumerate}[label=\Alph*.]
+\item 提供予舊版本操作系統的技術支援將會立刻停止
+\item 堵塞安全性漏洞
+\item 確保操作系統能與其他軟件兼容
+\item 修復操作系統裡的缺陷
+\end{enumerate}
+
+\item 李老師準備將學生的考試成績輸入至學校的數據庫系統。在輸入數據前，李老師打算確認考卷在批改時沒有出錯。以下哪項最適合形容他的這個舉動？
+
+\begin{enumerate}[label=\Alph*.]
+\item 輸入數據兩次
+\item 雙重數據輸入
+\item 校對數據
+\item 數據有效性檢驗
+\end{enumerate}
+
+\item 在某網上購物平台中，一個電郵地址只能用以註冊帳戶一次。以下哪項／些是適合使用於「電郵地址」欄的有效性檢驗？
+
+(1) 格式檢查
+
+(2) 一致性檢查
+
+(3) 唯一性檢查
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (2)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+\item 以下是某局部區域網路（LAN）的設計。X、Y 和 Z 分別是什麼？
+
+% Note: Image would go here - placeholder for network diagram
+[網路圖表位置]
+
+\begin{center}
+\begin{tabular}{ccc}
+\underline{X} & \underline{Y} & \underline{Z} \\
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\Alph*.]
+\item 轉發器 \quad 交換器 \quad 防火牆
+\item 網路接達點 \quad 交換器 \quad 數據機
+\item 交換器 \quad 轉發器 \quad 防火牆
+\item 網路接達點 \quad 防火牆 \quad 交換器
+\end{enumerate}
+
+\item 李老師正在為學校設置網路，以供網上考試之用。他選擇設立有線網絡而非無線網絡。以下哪項是他的主要考慮因素？
+
+\begin{enumerate}[label=\Alph*.]
+\item 有線網絡比無線網絡容易設置。
+\item 就選擇設置地點來說，有線網絡比無線網絡更加靈活。
+\item 有線網絡比無線網絡穩定。
+\item 使用有線網絡比無線網絡容易管理使用者。
+\end{enumerate}
+
+\item 以下哪項是下列算法的輸出？
+
+A ← 7
+
+B ← 8
+
+如果 (A + B <= 15) AND (A * B > 60) 則
+
+A ← A * 3
+
+輸出 A
+
+否則
+
+B ← B * 3
+
+輸出 B
+
+\begin{enumerate}[label=\Alph*.]
+\item 7
+\item 8
+\item 21
+\item 24
+\end{enumerate}
+
+\item 細閱以下算法的流程圖：
+
+% Note: Flowchart image would go here - placeholder
+[流程圖位置]
+
+已知 A = 5、B = 4 和 C = 8，以下哪項是以上算法的輸出？
+
+\begin{enumerate}[label=\Alph*.]
+\item They can form a triangle.
+\item They cannot form a triangle.
+\item 沒有輸出
+\item 出現錯誤
+\end{enumerate}
+
+\item A 是一個由索引 1 開始的陣列。以下哪項是下列算法的輸出？
+
+A ← [3, 6, 9, 12, 15, 18, 21]
+
+sum ← 0
+
+設 i 由 2 至 6
+
+sum ← sum + A[i]
+
+輸出 sum
+
+sum ← sum / 5
+
+輸出 sum
+
+\begin{enumerate}[label=\Alph*.]
+\item 60
+\item 60 12
+\item 6 15 27 42 60 12
+\item 9 18 30 45 63 12
+\end{enumerate}
+
+\item X 是一個由索引 1 開始的陣列。以下哪項是下列算法的目的？
+
+X ← [1, 2, 3, 4, 5, 4, 3, 2, 1]
+
+Y ← True
+
+i ← 1
+
+當 i < 9 AND Y = True
+
+如果 X[i] > X[i+1] 則
+
+Y ← False
+
+i ← i + 1
+
+輸出 i
+
+\begin{enumerate}[label=\Alph*.]
+\item 找出陣列停止由小至大排列的位置索引。
+\item 找出陣列停止由大至小排列的位置索引。
+\item 檢查陣列是否由小至大排列。
+\item 檢查陣列是否由大至小排列。
+\end{enumerate}
+
+\end{enumerate}
+
+\newpage
+
+\section{\textbf{2. 問答題（30分）}}
+
+\textbf{本試卷全部試題均須回答。請填寫最合適的答案。}
+
+\begin{enumerate}
+
+\item 美妮寫了一個算法，偽代碼如下所示：
+
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{行號} & \textbf{偽代碼} \\
+\hline
+1 & S ← 0 \\
+\hline
+2 & N ← 1 \\
+\hline
+3 & 執行 \\
+\hline
+4 & S ← S + N \\
+\hline
+5 & N ← N + 2 \\
+\hline
+6 & 當 N < 11 \\
+\hline
+7 & 輸出S, N \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item 芝芝閱讀了以上的規格後，發現沒有足夠的資訊來比較兩台設備的顯示質素。建議\textbf{兩項}芝芝所需有關設備的顯示器規格，讓她可進行比較。
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\item 芝芝試用上述兩台設備後，發現即使它們的中央處理器和主記憶體的規格有明顯差別，兩者在顯示各種多媒體檔案的性能水平十分接近。為這情況建議一個可能的原因。
+
+\answerline{15cm} （1分）
+
+\item 平板電腦 Y 的用戶可享用由設備開發商提供的 5 GB 免費雲端存貯存服務。當用戶可使用互聯網連線時，他們可把平板電腦內的檔案和應用數據備份至雲端存貯平台上，以及從平台上把檔案和數據下載至平板電腦和桌上電腦。
+
+\begin{enumerate}[label=(\roman*)]
+\item 與microSD卡比較，舉出一個使用雲端存貯平台來貯存文件的\textbf{一個}優點和\textbf{一個}缺點。
+
+\answerline{15cm}
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\item 假設用戶可使用互聯網連線，試建議一種情況，使用雲端存貯服務的效率不及使用microSD卡。試扼要解釋。
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\end{enumerate}
+
+\item 芝芝最後購買了智能電話 X。她發現當透過 4G 網絡於該電話播放網上視像時，電池很快便會耗盡。建議\textbf{兩項}可使智能電話在播放網上視像時耗較少電能的設定。
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\end{enumerate}
+
+\item 以下算法用以遞增／遞減輸入值，直至兩者變為相同數值。
+
+X ← 15
+
+Y ← 1
+
+重複
+
+X ← X - 1
+
+Y ← Y + 1
+
+輸出 X, Y
+
+直至 X = Y
+
+\begin{enumerate}[label=(\alph*)]
+\item 算法首三個輸出是什麼？
+
+第一個輸出： X=\answerline{2cm} \quad Y=\answerline{2cm}
+
+第二個輸出： X=\answerline{2cm} \quad Y=\answerline{2cm}
+
+第三個輸出： X=\answerline{2cm} \quad Y=\answerline{2cm} （4分）
+
+\item X 和 Y 被輸出多少次？它們的最終值是什麼？
+
+\answerline{15cm}
+
+\answerline{15cm} （3分）
+
+\item 算法新增了一個變量 T，用以儲存 X 和 Y 的輸出次數。試完成算法。
+
+\begin{tabular}{|p{13cm}|}
+\hline
+X ← 15 \\
+\\
+Y ← 1 \\
+\\
+T ← \answerline{3cm} \\
+\\
+重複 \\
+\\
+X ← X - 1 \\
+\\
+Y ← Y + 1 \\
+\\
+輸出 X, Y \\
+\\
+T ← \answerline{3cm} \\
+\\
+直至 X = Y \\
+\\
+輸出 T \\
+\hline
+\end{tabular}
+
+（2分）
+
+\item 試運用 while 循環改寫算法。
+
+\begin{tabular}{|p{13cm}|}
+\hline
+X ← 15 \\
+\\
+Y ← 1 \\
+\\
+當 \answerline{3cm} \\
+\\
+X ← X - 1 \\
+\\
+Y ← Y + 1 \\
+\\
+輸出 X, Y \\
+\hline
+\end{tabular}
+
+（1分）
+
+\item 試舉出一組會令算法運行無限次的 X 和 Y 值。
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{2em}
+
+\begin{center}
+\textbf{--- 試卷完 ---}
+\end{center}
+
+\end{document}
+\item 執行程式後，S 和 N 的值是多少？
+
+S: \answerline{2cm} \quad N: \answerline{2cm} \quad （2分）
+
+\item 在第 2 行，如果 'N ← 1' 改為 'N ← 11'，第 5 行會執行多少次？
+
+\answerline{15cm} （1分）
+
+\item 此程式的目的是什麼？
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item 陣列 price 儲存了七份旅遊套票的價錢：
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{price} & 5000 & 5500 & 6000 & 7200 & 8100 & 8800 & 9200 \\
+\hline
+\textbf{索引} & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+\end{tabular}
+\end{center}
+
+試完成以下算法，檢查陣列 price 中的值是否由小至大排列。
+
+\begin{center}
+\begin{tabular}{|l|}
+\hline
+price ← [5000, 5500, 6000, 7200, 8100, 8800, 9200] \\
+\\
+sorted\_list ← \answerline{3cm} \\
+\\
+設 i 由 \answerline{3cm} \\
+\\
+如果 \answerline{5cm} 則 \\
+\\
+sorted\_list ← \answerline{3cm} \\
+\\
+如果 sorted\_list = True \\
+\\
+輸出'這是由小至大排列' \\
+\\
+否則 \\
+\\
+輸出'這不是由小至大排列' \\
+\hline
+\end{tabular}
+\end{center}
+
+（4分）
+
+\item \begin{enumerate}[label=(\alph*)]
+\item \begin{enumerate}[label=(\roman*)]
+\item 試指出一個 PDF 相對於 DOCX 的優點。
+
+\answerline{15cm} （1分）
+
+\item 試指出一個 DOCX 相對於 TXT 的優點。
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item \begin{enumerate}[label=(\roman*)]
+\item 試指出一個 PNG 相對於 JPG 的優點。
+
+\answerline{15cm} （1分）
+
+\item 試指出一個 JPG 相對於 BMP 的優點。
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item 如果只有 25 MB 儲存空間可用於儲存視訊，且每秒視訊需要200 KB，則最長的影片長度是多少？顯示你的計算步驟，並以分鐘為單位表達你的答案。
+
+\answerline{15cm}
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\end{enumerate}
+
+\item 小美正在開發一個程式，下面的流程圖展示了程式的一部分：
+
+% Note: Flowchart image would go here - placeholder
+[流程圖位置]
+
+\begin{enumerate}[label=(\alph*)]
+\item 寫下以下輸入數的流程圖：
+
+(1) A 的輸入值：11，B 的輸入值：7 \quad 輸出： \answerline{2cm}
+
+(2) A 的輸入值：16，B 的輸入值：23 \quad 輸出： \answerline{2cm} （2分）
+
+\item 流程圖中所述算法的目的為何？
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\item 對上述需要輸入兩個值的算法，舉出一項可使用的數據有效性校驗。
+
+\answerline{15cm}
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item 李老師任教的學校嘗試推行混合教學模式。因此，李老師正在使用視像會議平台進行網上授課。
+
+\begin{enumerate}[label=(\alph*)]
+\item 試提出視像會議平台一個能夠協助教學的功能，並簡單解釋該功能如何協助教學。
+
+\answerline{15cm} （2分）
+
+\item 李老師希望在教室的佈告板張貼印有該網上課堂的連結，但學生卻表示要人手輸入連結十分困難。試提出一項改善建議。
+
+\answerline{15cm}
+
+\answerline{15cm} （1分）
+
+\item 小明打算使用平板電腦參與網上會議，試舉出\textbf{兩項}平板電腦內常見的輸入設備。
+
+\answerline{15cm}
+
+\answerline{15cm} （2分）
+
+\item 李老師打算傳送電子郵件向校長和其他老師匯報學生的學習進度。
+
+\begin{enumerate}[label=\roman*.]
+\item 其中一位學生發現李老師只在密件副本欄裏填寫了一個電郵地址。學生認為密件副本的唯一用途是隱藏此欄收件者的電郵地址，避免此欄的收件者互相得知對方的電郵地址，因此只在密件副本欄填寫一個電郵地址毫無作用。試解釋為何此學生的想法是錯誤的。
+
+\answerline{15cm}
+
+\answerline{15cm} （1分）
+
+\item 李老師傳送該電郵時出現了警告，提示她電郵附件的檔案大小過大。試為李老師提供一種替代方式，以將檔案分享予收件者。
+
+\answerline{15cm}
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item 由於學校推行混合教學模式，學生許多時候都不會在教室上課。可是，學生離開教室時卻經常忘記關燈。試提出一種應用物聯網協助節約能源的方式。
+
+\answerline{15cm}
+
+\answerline{15cm} （1分）
+
+\end{enumerate}
+
+\item 芝芝想購買一台流動設備，用來在外出工作時間閱讀電子文件。她的秘書協助她對智能電話 X 和平板電腦 Y 作了一個簡單比較，並將兩台設備的部分規格如下列出。
+
+\begin{center}
+\begin{longtable}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+& \textbf{智能電話 X} & \textbf{平板電腦 Y} \\
+\hline
+中央處理器 & 1.9 GHz 四核心 & 1.4 GHz 雙核心 \\
+\hline
+主記憶體 & 8 GB RAM & 2 GB RAM \\
+\hline
+存貯容量 & 256 GB 快閃記憶體 & 32 GB 快閃記憶體 \\
+\hline
+顯示 & 5" 多觸式 LED 背光屏幕 & 9.7"多觸式 LED 背光屏幕 \\
+\hline
+連通性 & IEEE 802.11 a/b/g/n、藍牙4.0及4G LTE & IEEE 802.11a/b/g/n、藍牙2.1 \\
+\hline
+重量 & 200 g & 650g \\
+\hline
+記憶卡插槽 & 1個適用於microSD卡插槽 & 沒有 \\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
