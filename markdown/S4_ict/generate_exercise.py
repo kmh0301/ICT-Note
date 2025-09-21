@@ -1,7 +1,7 @@
 import csv
 
-def generate_ut_markdown():
-    """Generates the UT.md file from mcq.csv and Lq.csv."""
+def generate_exercise_markdown():
+    """Generates the Exercise.md file from MCQ.csv and LQ.csv with source information."""
     
     # Define a dictionary to store specific answer box heights for long questions
     lq_formats = {
@@ -30,7 +30,7 @@ def generate_ut_markdown():
         }
     }
 
-    with open('UT.md', 'w', encoding='utf-8') as md_file:
+    with open('Exercise.md', 'w', encoding='utf-8') as md_file:
         # Write the YAML frontmatter
         md_file.write("---\n")
         md_file.write("marp: true\n")
@@ -42,12 +42,12 @@ def generate_ut_markdown():
 
         # Write the title page
         md_file.write("# **佛教黃鳳翎中學**\n\n")
-        md_file.write("# **2025/2026 上學期統測**\n\n")
+        md_file.write("# **ICT 練習題集**\n\n")
         md_file.write("---\n\n")
 
         # Write the Multiple-Choice (MCQ) section
-        md_file.write('<div class="section-title"><strong>甲部 多項選擇題（20分）</strong></div>\n')
-        md_file.write('<strong>本部共有20題。請選擇最合適的答案。</strong>\n\n')
+        md_file.write('<div class="section-title"><strong>甲部 多項選擇題</strong></div>\n')
+        md_file.write('<strong>請選擇最合適的答案。</strong>\n\n')
 
         try:
             with open('MCQ.csv', 'r', encoding='utf-8') as csv_file:
@@ -58,6 +58,14 @@ def generate_ut_markdown():
                     # Skip empty rows
                     if not row.get('QuestionText', '').strip():
                         continue
+                    
+                    # Extract source information
+                    question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
+                    book_chapter = row.get('book_chapter', '')
+                    topics = row.get('topics', '')
+                    
+                    # Parse year from QuestionIDwithQuestionyears (e.g., "2016-1-6" -> "2016")
+                    year = question_id_with_years.split('-')[0] if question_id_with_years else ''
                     
                     # Extract data from the CSV format
                     question_text = row['QuestionText']
@@ -71,6 +79,9 @@ def generate_ut_markdown():
                     if question_counter > 1 and question_counter % 5 == 1:
                         md_file.write('---\n\n')
 
+                    # Write source information and question
+                    source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                    md_file.write(f'<div class="question-source">{source_info}</div>\n')
                     md_file.write(f'<div class="question-item">{question_counter}. {question_text} <span class="points">({marks} 分)</span></div>\n')
                     md_file.write('<ul class="mcq-options">\n')
                     md_file.write(f'<li>{option_a}</li>\n')
@@ -90,25 +101,37 @@ def generate_ut_markdown():
 
         # Write the Long-Answer (LQ) section
         md_file.write('---\n\n')
-        md_file.write('<div class="section-title"><strong>乙部 問答題（30分）</strong></div>\n')
-        md_file.write('<strong>本部共有5題。請在適當的答案框內作答。</strong>\n\n')
+        md_file.write('<div class="section-title"><strong>乙部 問答題</strong></div>\n')
+        md_file.write('<strong>請在適當的答案框內作答。</strong>\n\n')
 
         try:
             with open('LQ.csv', 'r', encoding='utf-8') as csv_file:
                 reader = csv.DictReader(csv_file)
+                lq_counter = 1
+                
                 for row in reader:
                     # Skip empty rows
                     if not row.get('QuestionText', '').strip():
                         continue
                     
-                    # Extract question ID from QuestionIDwithQuestionyears (e.g., "2016-1-1" -> "1")
-                    question_id_full = row['QuestionIDwithQuestionyears']
-                    question_id = question_id_full.split('-')[-1] if question_id_full else '1'
+                    # Extract source information
+                    question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
+                    book_chapter = row.get('book_chapter', '')
+                    topics = row.get('topics', '')
+                    
+                    # Parse year and question ID
+                    year = question_id_with_years.split('-')[0] if question_id_with_years else ''
+                    question_id = question_id_with_years.split('-')[-1] if question_id_with_years else str(lq_counter)
+                    
                     question_text = row['QuestionText']
                     total_marks = row['Marks']
                     
                     md_file.write('---\n\n')
-                    md_file.write(f'<div class="question-item">{question_id}. {question_text} <span class="points">({total_marks} 分)</span></div>\n\n')
+                    
+                    # Write source information and question
+                    source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                    md_file.write(f'<div class="question-source">{source_info}</div><br>\n')
+                    md_file.write(f'<div class="question-item">{lq_counter}. {question_text} <span class="points">({total_marks} 分)</span></div>\n\n')
 
                     # Handle long questions with sub-questions (up to 8 sub-questions)
                     sub_questions = []
@@ -125,6 +148,7 @@ def generate_ut_markdown():
                                 'index': i
                             })
 
+                    # Display all sub-questions found
                     for idx, sub in enumerate(sub_questions):
                         # Use letters for sub-question labeling (a, b, c, d, e, f, g, h)
                         letter = chr(ord('a') + idx)
@@ -146,14 +170,16 @@ def generate_ut_markdown():
                             md_file.write(f'<div class="answer-box"><div style="height: {height};"></div></div>\n')
 
                         md_file.write('\n')
+                    
+                    lq_counter += 1
 
         except FileNotFoundError:
             print("Note: 'LQ.csv' not found. Skipping long questions section.")
         except KeyError as e:
             print(f"Error: Missing column in LQ.csv: {e}")
 
-    print("Successfully generated UT.md!")
+    print("Successfully generated Exercise.md!")
 
 # Run the script
 if __name__ == "__main__":
-    generate_ut_markdown()
+    generate_exercise_markdown()
