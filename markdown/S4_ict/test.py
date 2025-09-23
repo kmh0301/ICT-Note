@@ -3,6 +3,75 @@ import subprocess
 import sys
 import os
 
+def get_user_preferences():
+    """Get user preferences for what to include in the generated files."""
+    print("\n=== ICT Exercise Generator Configuration ===")
+    print("Please choose what to include in your exercise files:\n")
+    
+    # Show source information
+    while True:
+        show_source = input("Show source information (year, chapter, topic)? (y/n): ").lower().strip()
+        if show_source in ['y', 'yes', 'n', 'no']:
+            show_source_info = show_source in ['y', 'yes']
+            break
+        print("Please enter 'y' for yes or 'n' for no")
+    
+    # Show answers
+    while True:
+        show_answer = input("Show answers? (y/n): ").lower().strip()
+        if show_answer in ['y', 'yes', 'n', 'no']:
+            show_answers = show_answer in ['y', 'yes']
+            break
+        print("Please enter 'y' for yes or 'n' for no")
+    
+    # Show answer spaces (only ask if not showing answers)
+    if not show_answers:
+        while True:
+            show_space = input("Show answer spaces for long questions? (y/n): ").lower().strip()
+            if show_space in ['y', 'yes', 'n', 'no']:
+                show_answer_spaces = show_space in ['y', 'yes']
+                break
+            print("Please enter 'y' for yes or 'n' for no")
+    else:
+        show_answer_spaces = False  # No need for spaces if showing answers
+    
+    preferences = {
+        'show_source_info': show_source_info,
+        'show_answers': show_answers,
+        'show_answer_spaces': show_answer_spaces
+    }
+    
+    print(f"\n📋 Your preferences:")
+    print(f"  • Source info: {'Yes' if show_source_info else 'No'}")
+    print(f"  • Show answers: {'Yes' if show_answers else 'No'}")
+    print(f"  • Answer spaces: {'Yes' if show_answer_spaces else 'No'}")
+    print()
+    
+    return preferences
+
+def get_lq_answers():
+    """Load LQ answers from CSV for display."""
+    lq_answers = {}
+    try:
+        with open('LQ_Answers.csv', 'r', encoding='utf-8') as csv_file:
+            reader = csv.DictReader(csv_file)
+            for row in reader:
+                question_id = row.get('QuestionIDwithQuestionyears', '')
+                if question_id:
+                    answers = {}
+                    for i in range(1, 9):  # Up to 8 sub-answers
+                        answer_key = f'SubAnswer{i}'
+                        if answer_key in row and row[answer_key].strip():
+                            answers[i] = row[answer_key].strip()
+                    if answers:
+                        lq_answers[question_id] = answers
+    except FileNotFoundError:
+        print("Note: LQ_Answers.csv not found. Long question answers will not be displayed.")
+    except Exception as e:
+        print(f"Error reading LQ answers: {e}")
+    
+    return lq_answers
+
 def install_required_packages():
     """Install required packages if not already installed."""
     packages_to_install = []
@@ -13,13 +82,6 @@ def install_required_packages():
         print("✓ python-docx is already installed")
     except ImportError:
         packages_to_install.append('python-docx')
-    
-    # Check for reportlab
-    try:
-        import reportlab
-        print("✓ reportlab is already installed")
-    except ImportError:
-        packages_to_install.append('reportlab')
     
     # Install missing packages
     for package in packages_to_install:
@@ -37,36 +99,12 @@ def install_required_packages():
     
     return True
 
-def generate_exercise_markdown():
-    """Generates the Exercise.md file from MCQ.csv and LQ.csv with source information."""
+def generate_exercise_markdown(preferences):
+    """Generates the Exercise.md file from MCQ.csv and LQ.csv with user preferences."""
     
-    # Define a dictionary to store specific answer box heights for long questions
-    lq_formats = {
-        '1': {
-            'a': '<div class="answer-box"><div style="height: 4em;"></div></div>',
-            'b': '<div class="answer-box"><div style="height: 3em;"></div></div>',
-            'c': '<div class="answer-box"><div style="height: 3em;"></div></div>'
-        },
-        '2': {
-            'a': '<div class="answer-box"><div style="height: 4em;"></div></div>',
-            'b': '<div class="answer-box"><div style="height: 3em;"></div></div>',
-            'c': '<div class="answer-box"><div style="height: 3em;"></div></div>'
-        },
-        '3': {
-            'a': '<div class="answer-box"><div style="height: 4em;"></div></div>',
-            'b': '<div class="answer-box"><div style="height: 3em;"></div></div>',
-            'c': '<div class="answer-box"><div style="height: 3em;"></div></div>',
-            'd': '<div class="answer-box"><div style="height: 3em;"></div></div>'
-        },
-        '4': {
-            'a': '<div class="answer-box"><div style="height: 3em;"></div></div>',
-            'b': '<div class="answer-box"><div style="height: 4em;"></div></div>'
-        },
-        '5': {
-            'a': '<div class="answer-box"><div style="height: 6em;"></div></div>'
-        }
-    }
-
+    # Load LQ answers if needed
+    lq_answers = get_lq_answers() if preferences['show_answers'] else {}
+    
     try:
         with open('Exercise.md', 'w', encoding='utf-8') as md_file:
             # Write the YAML frontmatter
@@ -79,8 +117,14 @@ def generate_exercise_markdown():
             md_file.write("---\n\n")
 
             # Write the title page
+            title_suffix = ""
+            if preferences['show_answers']:
+                title_suffix = " (答案版)"
+            elif not preferences['show_answer_spaces']:
+                title_suffix = " (純題目版)"
+                
             md_file.write("# **佛教黃鳳翎中學**\n\n")
-            md_file.write("# **ICT 練習題集**\n\n")
+            md_file.write(f"# **ICT 練習題集{title_suffix}**\n\n")
             md_file.write("---\n\n")
 
             # Write the Multiple-Choice (MCQ) section
@@ -113,22 +157,29 @@ def generate_exercise_markdown():
                         option_c = row['OptionC']
                         option_d = row['OptionD']
                         marks = row['Marks']
+                        correct_answer = row.get('answer', '').upper() if preferences['show_answers'] else ''
                         
                         # Add a divider after every 5 questions for visual break
                         if question_counter > 1 and question_counter % 5 == 1:
                             md_file.write('---\n\n')
 
-                        # Write source information and question
-                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                        md_file.write(f'<div class="question-source">{source_info}</div><br>\n')
+                        # Write source information if enabled
+                        if preferences['show_source_info']:
+                            source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                            md_file.write(f'<div class="question-source">{source_info}</div><br>\n')
+                        
                         md_file.write(f'<div class="question-item">{question_counter}. {question_text} <span class="points">({marks} 分)</span></div>\n')
                         md_file.write('<ul class="mcq-options">\n')
-                        md_file.write(f'<li>{option_a}</li>\n')
-                        md_file.write(f'<li>{option_b}</li>\n')
-                        md_file.write(f'<li>{option_c}</li>\n')
-                        md_file.write(f'<li>{option_d}</li>\n')
-                        md_file.write('</ul>\n\n')
                         
+                        # Write options with answer highlighting if enabled
+                        options = [('A', option_a), ('B', option_b), ('C', option_c), ('D', option_d)]
+                        for letter, option_text in options:
+                            if preferences['show_answers'] and letter == correct_answer:
+                                md_file.write(f'<li style="color: red; font-weight: bold;">{option_text} ✓</li>\n')
+                            else:
+                                md_file.write(f'<li>{option_text}</li>\n')
+                        
+                        md_file.write('</ul>\n\n')
                         question_counter += 1
                         
             except FileNotFoundError:
@@ -141,7 +192,10 @@ def generate_exercise_markdown():
             # Write the Long-Answer (LQ) section
             md_file.write('---\n\n')
             md_file.write('<div class="section-title"><strong>乙部 問答題</strong></div>\n')
-            md_file.write('<strong>請在適當的答案框內作答。</strong>\n\n')
+            if preferences['show_answer_spaces']:
+                md_file.write('<strong>請在適當的答案框內作答。</strong>\n\n')
+            else:
+                md_file.write('<strong>請回答以下問題。</strong>\n\n')
 
             # Process LQ questions
             try:
@@ -168,9 +222,11 @@ def generate_exercise_markdown():
                         
                         md_file.write('---\n\n')
                         
-                        # Write source information and question
-                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                        md_file.write(f'<div class="question-source">{source_info}</div><br>\n')
+                        # Write source information if enabled
+                        if preferences['show_source_info']:
+                            source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                            md_file.write(f'<div class="question-source">{source_info}</div><br>\n')
+                        
                         md_file.write(f'<div class="question-item">{lq_counter}. {question_text} <span class="points">({total_marks} 分)</span></div>\n\n')
 
                         # Handle long questions with sub-questions (up to 8 sub-questions)
@@ -190,16 +246,24 @@ def generate_exercise_markdown():
 
                         # Display all sub-questions found
                         for idx, sub in enumerate(sub_questions):
-                            # Use letters for sub-question labeling (a, b, c, d, e, f, g, h)
-                            letter = chr(ord('a') + idx)
-                            
                             md_file.write(f'<div class="sub-question-item">{sub["text"]} <span class="points">({sub["marks"]}分)</span></div>\n')
                             
-                            # Use hardcoded formats for answer spaces
-                            if question_id in lq_formats and letter in lq_formats[question_id]:
-                                md_file.write(lq_formats[question_id][letter] + '\n')
-                            else:
-                                # Default answer box based on marks
+                            # Show answers if enabled
+                            if preferences['show_answers']:
+                                # Look for answer in lq_answers
+                                answer_text = ""
+                                if question_id_with_years in lq_answers and sub['index'] in lq_answers[question_id_with_years]:
+                                    answer_text = lq_answers[question_id_with_years][sub['index']]
+                                elif question_id_with_years in lq_answers and (idx + 1) in lq_answers[question_id_with_years]:
+                                    answer_text = lq_answers[question_id_with_years][idx + 1]
+                                
+                                if answer_text:
+                                    md_file.write(f'<div style="color: red; font-weight: bold; margin: 10px 0; padding: 10px; border-left: 3px solid red;">答案: {answer_text}</div>\n')
+                                else:
+                                    md_file.write('<div style="color: orange; font-style: italic;">答案: [答案未提供]</div>\n')
+                            
+                            # Show answer spaces if enabled
+                            elif preferences['show_answer_spaces']:
                                 marks_value = int(sub["marks"]) if sub["marks"] and sub["marks"].isdigit() else 2
                                 if marks_value >= 4:
                                     height = "5em"
@@ -225,14 +289,17 @@ def generate_exercise_markdown():
         print(f"Error creating Exercise.md: {e}")
         return False
 
-def generate_exercise_docx():
-    """Generates the Exercise.docx file from MCQ.csv and LQ.csv."""
+def generate_exercise_docx(preferences):
+    """Generates the Exercise.docx file from MCQ.csv and LQ.csv with user preferences."""
     
     try:
         # Import docx modules here after installation
         from docx import Document
-        from docx.shared import Inches, Pt
+        from docx.shared import Inches, Pt, RGBColor
         from docx.enum.text import WD_ALIGN_PARAGRAPH
+        
+        # Load LQ answers if needed
+        lq_answers = get_lq_answers() if preferences['show_answers'] else {}
         
         # Create a new Document
         doc = Document()
@@ -247,7 +314,13 @@ def generate_exercise_docx():
         title = doc.add_heading('佛教黃鳳翎中學', level=1)
         title.alignment = WD_ALIGN_PARAGRAPH.CENTER
         
-        subtitle = doc.add_heading('ICT 練習題集', level=2)
+        title_suffix = ""
+        if preferences['show_answers']:
+            title_suffix = " (答案版)"
+        elif not preferences['show_answer_spaces']:
+            title_suffix = " (純題目版)"
+            
+        subtitle = doc.add_heading(f'ICT 練習題集{title_suffix}', level=2)
         subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
         
         doc.add_page_break()
@@ -271,12 +344,14 @@ def generate_exercise_docx():
                     book_chapter = row.get('book_chapter', '')
                     topics = row.get('topics', '')
                     year = question_id_with_years.split('-')[0] if question_id_with_years else ''
+                    correct_answer = row.get('answer', '').upper() if preferences['show_answers'] else ''
                     
-                    # Add source info
-                    source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                    source_para = doc.add_paragraph(source_info)
-                    source_para.runs[0].font.size = Pt(10)
-                    source_para.runs[0].italic = True
+                    # Add source info if enabled
+                    if preferences['show_source_info']:
+                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                        source_para = doc.add_paragraph(source_info)
+                        source_para.runs[0].font.size = Pt(10)
+                        source_para.runs[0].italic = True
                     
                     # Add question
                     question_text = row['QuestionText']
@@ -284,10 +359,20 @@ def generate_exercise_docx():
                     question_para = doc.add_paragraph(f"{question_counter}. {question_text} ({marks} 分)")
                     question_para.runs[0].bold = True
                     
-                    # Add options
-                    for option_letter, option_key in [('A', 'OptionA'), ('B', 'OptionB'), ('C', 'OptionC'), ('D', 'OptionD')]:
-                        option_text = row[option_key]
-                        doc.add_paragraph(f"   {option_letter}. {option_text}")
+                    # Add options with answer highlighting
+                    options = [('A', row['OptionA']), ('B', row['OptionB']), ('C', row['OptionC']), ('D', row['OptionD'])]
+                    for letter, option_text in options:
+                        option_para = doc.add_paragraph(f"   {letter}. {option_text}")
+                        
+                        # Highlight correct answer in red if showing answers
+                        if preferences['show_answers'] and letter == correct_answer:
+                            for run in option_para.runs:
+                                run.font.color.rgb = RGBColor(255, 0, 0)  # Red color
+                                run.bold = True
+                            # Add checkmark
+                            check_run = option_para.add_run(" ✓")
+                            check_run.font.color.rgb = RGBColor(255, 0, 0)
+                            check_run.bold = True
                     
                     doc.add_paragraph()  # Add spacing
                     
@@ -307,7 +392,10 @@ def generate_exercise_docx():
         # LQ Section
         doc.add_page_break()
         doc.add_heading('乙部 問答題', level=1)
-        doc.add_paragraph('請在適當的答案框內作答。').bold = True
+        if preferences['show_answer_spaces']:
+            doc.add_paragraph('請在適當的答案框內作答。').bold = True
+        else:
+            doc.add_paragraph('請回答以下問題。').bold = True
         
         # Process LQ questions
         try:
@@ -325,11 +413,12 @@ def generate_exercise_docx():
                     topics = row.get('topics', '')
                     year = question_id_with_years.split('-')[0] if question_id_with_years else ''
                     
-                    # Add source info
-                    source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                    source_para = doc.add_paragraph(source_info)
-                    source_para.runs[0].font.size = Pt(10)
-                    source_para.runs[0].italic = True
+                    # Add source info if enabled
+                    if preferences['show_source_info']:
+                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
+                        source_para = doc.add_paragraph(source_info)
+                        source_para.runs[0].font.size = Pt(10)
+                        source_para.runs[0].italic = True
                     
                     # Add main question
                     question_text = row['QuestionText']
@@ -354,17 +443,39 @@ def generate_exercise_docx():
                     
                     # Display sub-questions
                     for idx, sub in enumerate(sub_questions):
-                        letter = chr(ord('a') + idx)
                         sub_para = doc.add_paragraph(f"{sub['text']} ({sub['marks']}分)")
                         
-                        # Add answer space based on marks
-                        marks_value = int(sub["marks"]) if sub["marks"] and sub["marks"].isdigit() else 2
-                        lines = max(3, marks_value)  # At least 3 lines, more for higher marks
+                        # Show answers if enabled
+                        if preferences['show_answers']:
+                            # Look for answer in lq_answers
+                            answer_text = ""
+                            if question_id_with_years in lq_answers and sub['index'] in lq_answers[question_id_with_years]:
+                                answer_text = lq_answers[question_id_with_years][sub['index']]
+                            elif question_id_with_years in lq_answers and (idx + 1) in lq_answers[question_id_with_years]:
+                                answer_text = lq_answers[question_id_with_years][idx + 1]
+                            
+                            if answer_text:
+                                answer_para = doc.add_paragraph(f"答案: {answer_text}")
+                                answer_para.runs[0].font.color.rgb = RGBColor(255, 0, 0)  # Red color
+                                answer_para.runs[0].bold = True
+                            else:
+                                answer_para = doc.add_paragraph("答案: [答案未提供]")
+                                answer_para.runs[0].font.color.rgb = RGBColor(255, 165, 0)  # Orange color
+                                answer_para.runs[0].italic = True
                         
-                        for _ in range(lines):
-                            doc.add_paragraph("_" * 80)  # Answer lines
-                        
-                        doc.add_paragraph()  # Spacing after answer area
+                        # Show answer spaces if enabled
+                        elif preferences['show_answer_spaces']:
+                            marks_value = int(sub["marks"]) if sub["marks"] and sub["marks"].isdigit() else 2
+                            lines = max(3, marks_value)  # At least 3 lines, more for higher marks
+                            
+                            # Add answer lines with proper spacing
+                            for line_num in range(lines):
+                                answer_line = doc.add_paragraph()
+                                answer_line.add_run("_" * 60)  # Answer lines
+                                answer_line.paragraph_format.space_before = Pt(6)
+                                answer_line.paragraph_format.space_after = Pt(6)
+                            
+                            doc.add_paragraph()  # Extra spacing after answer area
                     
                     doc.add_page_break()  # New page for each LQ
                     lq_counter += 1
@@ -376,101 +487,32 @@ def generate_exercise_docx():
         
         # Save the document
         doc.save('Exercise.docx')
-        print("Successfully generated Exercise.docx!")
+        print("✓ DOCX file generated successfully!")
         return True
         
-    except Exception as e:
-        print(f"Error creating Exercise.docx: {e}")
+    except ImportError as e:
+        print(f"✗ Cannot generate DOCX: {e}")
+        print("Please install python-docx: pip3 install python-docx")
         return False
-
-def convert_docx_to_pdf():
-    """Convert DOCX to PDF using various methods."""
-    try:
-        # Method 1: Try using docx2pdf (Windows/Mac with Word installed)
-        try:
-            from docx2pdf import convert
-            convert("Exercise.docx", "Exercise.pdf")
-            print("Successfully generated Exercise.pdf using docx2pdf!")
-            return True
-        except ImportError:
-            print("docx2pdf not available, trying alternative method...")
-        
-        # Method 2: Try using python-docx2txt and reportlab
-        try:
-            from reportlab.lib.pagesizes import letter, A4
-            from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-            from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-            from reportlab.lib.units import inch
-            from docx import Document
-            
-            # Read the DOCX file
-            doc = Document('Exercise.docx')
-            
-            # Create PDF
-            pdf_doc = SimpleDocTemplate("Exercise.pdf", pagesize=A4)
-            styles = getSampleStyleSheet()
-            story = []
-            
-            # Custom styles
-            title_style = ParagraphStyle(
-                'CustomTitle',
-                parent=styles['Heading1'],
-                fontSize=18,
-                alignment=1,  # Center
-                spaceAfter=12
-            )
-            
-            question_style = ParagraphStyle(
-                'Question',
-                parent=styles['Normal'],
-                fontSize=12,
-                spaceAfter=6,
-                fontName='Helvetica-Bold'
-            )
-            
-            # Extract text from DOCX and convert to PDF
-            for paragraph in doc.paragraphs:
-                if paragraph.text.strip():
-                    if paragraph.style.name.startswith('Heading'):
-                        story.append(Paragraph(paragraph.text, title_style))
-                    elif any(run.bold for run in paragraph.runs):
-                        story.append(Paragraph(paragraph.text, question_style))
-                    else:
-                        story.append(Paragraph(paragraph.text, styles['Normal']))
-                    story.append(Spacer(1, 6))
-            
-            pdf_doc.build(story)
-            print("Successfully generated Exercise.pdf using reportlab!")
-            return True
-            
-        except ImportError:
-            print("reportlab not available for PDF conversion.")
-        
-        # Method 3: Instructions for manual conversion
-        print("\nPDF conversion libraries not available.")
-        print("To convert to PDF, you can:")
-        print("1. Install docx2pdf: pip install docx2pdf")
-        print("2. Open Exercise.docx in Word and save as PDF")
-        print("3. Use online converters like SmallPDF or ILovePDF")
-        
-        return False
-        
     except Exception as e:
-        print(f"Error converting to PDF: {e}")
+        print(f"✗ Error creating Exercise.docx: {e}")
         return False
 
 def main():
-    """Main function to generate all formats."""
+    """Main function to generate Markdown and DOCX formats with user preferences."""
     print("=== ICT Exercise Generator ===")
-    print("Checking required packages...")
     
-    # Try to install required packages
+    # Get user preferences
+    preferences = get_user_preferences()
+    
+    # Check and install packages for DOCX
+    print("Checking required packages...")
     packages_installed = install_required_packages()
     
     print("\nGenerating exercise files...")
     
     # Generate Markdown (this always works)
-    if generate_exercise_markdown():
+    if generate_exercise_markdown(preferences):
         print("✓ Markdown file generated successfully")
     else:
         print("✗ Failed to generate Markdown file")
@@ -479,26 +521,15 @@ def main():
     # Generate DOCX (only if packages are available)
     if packages_installed:
         try:
-            if generate_exercise_docx():
+            if generate_exercise_docx(preferences):
                 print("✓ DOCX file generated successfully")
             else:
                 print("✗ Failed to generate DOCX file")
-        except ImportError as e:
-            print(f"✗ Cannot generate DOCX: {e}")
-            print("DOCX generation skipped - packages not available")
+        except Exception as e:
+            print(f"✗ DOCX generation failed: {e}")
     else:
-        print("⚠ Skipping DOCX generation - packages not installed")
-        print("To enable DOCX generation, install manually:")
-        print("  pip3 install python-docx")
-    
-    # Convert to PDF (only if DOCX was created)
-    if os.path.exists("Exercise.docx"):
-        if convert_docx_to_pdf():
-            print("✓ PDF file generated successfully")
-        else:
-            print("⚠ PDF conversion not available")
-    else:
-        print("⚠ Skipping PDF generation - no DOCX file available")
+        print("⚠ Skipping DOCX generation - python-docx not installed")
+        print("To enable DOCX generation: pip3 install python-docx")
     
     print("\n=== Generation Complete ===")
     print("Files created:")
@@ -509,20 +540,30 @@ def main():
         files_created.append("- Exercise.md (Markdown format)")
     if os.path.exists("Exercise.docx"):
         files_created.append("- Exercise.docx (Word format)")
-    if os.path.exists("Exercise.pdf"):
-        files_created.append("- Exercise.pdf (PDF format)")
     
     if files_created:
         for file_info in files_created:
             print(file_info)
     else:
         print("No files were created successfully.")
-        
-    # Provide manual installation instructions if needed
-    if not packages_installed:
-        print("\nTo enable full functionality, please install:")
-        print("  pip3 install python-docx reportlab")
-        print("Then run the script again.")
+    
+    # Show configuration summary
+    print(f"\nConfiguration used:")
+    print(f"  • Source info: {'Shown' if preferences['show_source_info'] else 'Hidden'}")
+    print(f"  • Answers: {'Shown' if preferences['show_answers'] else 'Hidden'}")
+    print(f"  • Answer spaces: {'Shown' if preferences['show_answer_spaces'] else 'Hidden'}")
+    
+    # Show note about LQ answers if showing answers but no answer file found
+    if preferences['show_answers']:
+        if not os.path.exists("LQ_Answers.csv"):
+            print("\nNote: Create 'LQ_Answers.csv' file with long question answers for better results.")
+            print("Format: QuestionIDwithQuestionyears,SubAnswer1,SubAnswer2,SubAnswer3,...")
+    
+    # Show tip about converting DOCX to PDF if needed
+    if os.path.exists("Exercise.docx"):
+        print("\nTip: To convert DOCX to PDF:")
+        print("  • Open Exercise.docx in Word/Pages and save as PDF")
+        print("  • Use online converters like SmallPDF or ILovePDF")
 
 # Run the script
 if __name__ == "__main__":

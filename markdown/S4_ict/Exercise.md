@@ -1014,7 +1014,7 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(d) 芝芝應如何儲存掃描後的相片檔案，使她在日後可有效地搜尋它們？試舉出兩個方法。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 ---
 
@@ -1025,7 +1025,7 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c) 永強收到一封垃圾電郵，當中附有一個超連結。當他點擊此超連結時，會有什麼潛在風險？試舉出兩個例子。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 ---
 
@@ -1036,10 +1036,10 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c) 小芬希望會計系統內，有一些設計可減少長時間使用該系統對健康造成的威脅。試描述這些設計的兩個例子。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(d) 試舉出方案R的兩個缺點。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 ---
 
@@ -1047,7 +1047,7 @@ backgroundColor: white
 <div class="question-item">4. 某玩具店的銷售點系統附有條碼掃描器。 (a) (i) 條碼通常包含什麼數據？ <span class="points">(10 分)</span></div>
 
 <div class="sub-question-item">(a) (ii) 除了條碼內的數據外，從銷售點系統的數據庫還可獲取什麼數據？試舉出兩個例子。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 ---
 
@@ -1063,10 +1063,10 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c) 莉莉使用平板電腦拍攝視像，並透過這個應用程式發送給她的朋友志輝。她發覺接收到的視像檔案大小比原來的的小。試舉出這個應用程式縮減視像檔案大小的兩個好處。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(d) 莉莉習慣每天在她的工作地方連續四小時在其平板電腦上使用這個應用程式。試舉出一項她可能會遇到的健康問題，並建議一個舒緩此問題的方法。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(e)(i) 舉出儲存在中央伺服器內的用戶數據，可對莉莉有利的兩個用途。 <span class="points">(2分)</span></div>
 <div class="answer-box"><div style="height: 4em;"></div></div>
@@ -1083,10 +1083,10 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(b) 志明估計1秒視像需25MB儲存空間。王老師只接受不超過30GB檔案大小的視像作品。志明最長可拍攝多久的視像？請展示你的計算，並將你的答案以分鐘顯示。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c)(i) 該網站使用串流方法來傳送視像。這個方法的主要優點是什麼？試簡略說明。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c)(ii) 為什麼該網站在視像設定上提供1280x720、720x405和240x135這些不同的選項？ <span class="points">(2分)</span></div>
 <div class="answer-box"><div style="height: 4em;"></div></div>
@@ -1100,7 +1100,7 @@ backgroundColor: white
 <div class="question-item">8. 某鐵路公司開發一個電腦系統，在車站設置具有觸式顯示屏幕的資訊亭。(a) 資訊亭的顯示屏幕上應顯示以下列車的資訊，並協助乘客查找列車的到達時間和月台編號...試設計資訊亭的互動式版面，並加注釋。 <span class="points">(12 分)</span></div>
 
 <div class="sub-question-item">(b)(i) 舉出快閃記憶體與RAM的一個不同之處。 <span class="points">(1分)</span></div>
-<div class="answer-box"><div style="height: 4em;"></div></div>
+<div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(b)(ii) 舉出快閃記憶體與ROM的一個不同之處。 <span class="points">(1分)</span></div>
 <div class="answer-box"><div style="height: 3em;"></div></div>
@@ -1109,7 +1109,7 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(d) 完成以下算法，以計算從車站A到車站J估計的行車時間。 <span class="points">(4分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 5em;"></div></div>
 
 <div class="sub-question-item">(e) 在循環內使用變量X和Y而不使用常數的主要優點是什麼？ <span class="points">(2分)</span></div>
 <div class="answer-box"><div style="height: 4em;"></div></div>
@@ -1146,7 +1146,7 @@ backgroundColor: white
 <div class="question-item">10. 某個網上購物網站為客戶提供不同類型的服務。(a) 客戶在該網站上可進行一些涉及以下協定的互聯網活動。試為每個協定舉出一個互聯網活動的例子。HTTP、SSL、SMTP <span class="points">(14 分)</span></div>
 
 <div class="sub-question-item">(b)(i) 向不同收件人發送電子郵件時，「收件者」和「副本」之間的主要分別是什麼？ <span class="points">(1分)</span></div>
-<div class="answer-box"><div style="height: 6em;"></div></div>
+<div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(b)(ii) 在此群組電子郵件中，小芬看不到其他收件人的電郵地址。為什麼？ <span class="points">(1分)</span></div>
 <div class="answer-box"><div style="height: 3em;"></div></div>
@@ -1163,13 +1163,13 @@ backgroundColor: white
 <div class="question-item">11. 某中學開發一個綜合網上學生系統，在校園內提供一些工作站讓學生使用及接達此系統。(a)(i) 這些工作站的輸入設備有下列兩個安裝選項。舉出每個選項的優點。觸式屏幕、鍵盤和滑鼠 <span class="points">(8 分)</span></div>
 
 <div class="sub-question-item">(a)(ii) 除了顯示屏和打印機外，建議這些工作站的另一附加輸出設備，並解說其用途。 <span class="points">(1分)</span></div>
-<div class="answer-box"><div style="height: 4em;"></div></div>
+<div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(b) 安裝這些工作站需要網絡界面卡、網絡電纜和交換器。簡略說明這些硬件的用途。 <span class="points">(3分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c) 舉出使用此學生系統勝於閱讀圖書館英文書籍對學習的兩點好處。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(d)(i) 學生可由此系統所接收到的所有電郵，自動轉寄到他們個人電郵戶口。這做法對學生有什麼主要好處？ <span class="points">(1分)</span></div>
 <div class="answer-box"><div style="height: 3em;"></div></div>
@@ -1189,10 +1189,10 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(b)(i) 成批工件處理，並行式處理，以及實時處理，哪種操作模式最能描述志明的工作？簡略說明你的答案。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(b)(ii) 志明瀏覽一網站來下載某免費軟件...舉出這些操作系統的兩項差異。 <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c)(i) 除了家庭收入之外，提出引致數碼隔閡的兩個重要因素。 <span class="points">(2分)</span></div>
 <div class="answer-box"><div style="height: 4em;"></div></div>
@@ -1212,7 +1212,7 @@ backgroundColor: white
 <div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(c)(ii) 他發覺使用磁碟重組軟件也幫助不大。為什麼？ <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c)(iii) 在不改變所分配儲存空間大小的前提下，為吳先生建議一個解決方案。 <span class="points">(1分)</span></div>
 <div class="answer-box"><div style="height: 3em;"></div></div>
@@ -1229,10 +1229,10 @@ backgroundColor: white
 <div class="question-item">14. 王小姐使用數據庫表ACT來儲存她的學校內課外活動的資料... (a) 解釋為什麼TEACHER不能成為ACT的主關鍵碼。利用一個例子來展示你的答案。 <span class="points">(9 分)</span></div>
 
 <div class="sub-question-item">(b) 執行以下SQL語句後的輸出是什麼？SELECT TYPE, SUM(QUOTA) FROM ACT GROUP BY TYPE <span class="points">(2分)</span></div>
-<div class="answer-box"><div style="height: 3em;"></div></div>
+<div class="answer-box"><div style="height: 4em;"></div></div>
 
 <div class="sub-question-item">(c)(i) 王小姐於CODE內定義一項有效性檢驗的規則...在五筆記錄中哪一個CODE的值是無效的？ <span class="points">(1分)</span></div>
-<div class="answer-box"><div style="height: 4em;"></div></div>
+<div class="answer-box"><div style="height: 3em;"></div></div>
 
 <div class="sub-question-item">(c)(ii) QUOTA儲存每項活動的限額。建議兩項在QUOTA上進行的有效性檢驗。 <span class="points">(2分)</span></div>
 <div class="answer-box"><div style="height: 4em;"></div></div>
@@ -1252,7 +1252,7 @@ backgroundColor: white
 <div class="question-item">15. 莉莉設計了一個猜數字遊戲的算法... (a) 假設ANSWER的值是19。為每個值輸出建議一個值來測試這個算法。 <span class="points">(10 分)</span></div>
 
 <div class="sub-question-item">(b)(i) 完成下列算法這些修改。 <span class="points">(4分)</span></div>
-<div class="answer-box"><div style="height: 6em;"></div></div>
+<div class="answer-box"><div style="height: 5em;"></div></div>
 
 <div class="sub-question-item">(b)(ii) 如果刪除行號14「如果(GUESS = ANSWER)則」，這個算法的輸出可能是錯誤的。為什麼？ <span class="points">(1分)</span></div>
 <div class="answer-box"><div style="height: 3em;"></div></div>
