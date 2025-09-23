@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Place all \usepackage commands in the preamble ---
+\usepackage{xeCJK}
+\setCJKmainfont{PMingLiU}[
+    UprightFont = *,
+    BoldFont = *,
+    ItalicFont = *
+]
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{datatool} % <-- This should be here
+\usepackage{ifthen}  % <-- You need this package for \ifthenelse
+
+% Page setup
+\geometry{top=25mm,bottom=25mm,left=20mm,right=20mm}
+
+% Header & footer
+\pagestyle{fancy}
+\fancyhf{}
+% Define a custom gray color
+\definecolor{mygray}{rgb}{0.5, 0.5, 0.5}
+
+% Apply the color to the footer content
+\fancyfoot[L]{\textcolor{mygray}{2025/2026-1st Term UT- S4 ICT}}
+\fancyfoot[C]{\textcolor{mygray}{第 \thepage 頁}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Remove section numbering
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Custom commands for underlines
+\newcommand{\answerline}[1]{\underline{\hspace{#1}}}
+
+% Load the CSV file here, after all packages
+\DTLloaddb[noheader=false]{mcqdb}{questions.csv}
+
+\begin{document}
+
+% --- Your document content starts here ---
+\begin{center}
+{\Large\bfseries 佛教黃鳳翎中學}\\[0.5em]
+{\Large\bfseries 2025/2026 上學期統測}\\[1em]
+% ... rest of your document content
+\end{center}
+
+\newpage
+
+\section{\textbf{甲部 多項選擇題（20分）}}
+
+\textbf{本部共有20題。請選擇最合適的答案。}
+
+\begin{enumerate}
+    % Loop through the database and create a new item for each question
+    \DTLforeach*{mcqdb}{%
+    \QuestionID=QuestionID,
+    \QuestionText=QuestionText,
+    \OptionA=OptionA,
+    \OptionB=OptionB,
+    \OptionC=OptionC,
+    \OptionD=OptionD,
+    \Marks=Marks,
+    \Type=Type%
+    }{%
+        % This condition ensures only questions with 'MC' type are processed
+        \ifthenelse{\equal{\Type}{MC}}{%
+            \item \QuestionText\quad (\Marks 分)
+            \begin{enumerate}[label=\Alph*.]
+                \item \OptionA
+                \item \OptionB
+                \item \OptionC
+                \item \OptionD
+            \end{enumerate}
+        }{}
+    }
+\end{enumerate}
+
+\newpage
+% ... rest of your document content
+
+\end{document}

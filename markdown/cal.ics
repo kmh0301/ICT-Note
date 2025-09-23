@@ -1,0 +1,60 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PGDE Course//Calendar//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+DTSTART:20251215T140000Z
+DTEND:20251215T150000Z
+SUMMARY:PGDE5211 Individual Essay Due
+DESCRIPTION:Individual essay submission deadline (50%)\nMax 3000 words\nSubmit via Blackboard by 10 PM\nFile format: Course Code-Name-ID\nAPA 7 style required
+UID:pgde-individual-essay-20251215@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251215T140000Z
+DTEND:20251215T150000Z
+SUMMARY:PGDE Group Essay Due
+DESCRIPTION:Group reflexive essay submission deadline (50%)\n2500-3000 words\nSubmit via Blackboard by 10 PM\nTopic related to schooling aspects
+UID:pgde-group-essay-20251215@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251011T120000Z
+DTEND:20251011T130000Z
+SUMMARY:ICT Group Work A Due
+DESCRIPTION:Preliminary Study on Senior Secondary ICT Core Curriculum (10%)\nVideo presentation max 12 minutes\nUpload to OneDrive and submit link to Blackboard
+UID:ict-group-work-20251011@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251219T120000Z
+DTEND:20251219T130000Z
+SUMMARY:Reflective Paper Due
+DESCRIPTION:Individual reflective paper (50%)\n2500-4000 words\nDue by 8:00 PM\nAPA style 7th edition
+UID:reflective-paper-20251219@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20250926T090000Z
+DTEND:20250926T120000Z
+SUMMARY:Moral Pedagogy 1 - Group Assignment A2a
+DESCRIPTION:Topic: Reason autonomy and discourse\nGroup Assignment A2a Worksheet due in class
+UID:moral-pedagogy-1-20250926@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART:20251017T090000Z
+DTEND:20251017T120000Z
+SUMMARY:Moral Pedagogy 3 - Group Assignment A2b
+DESCRIPTION:Topic: Liveliness life-stories and narrative\nGroup Assignment A2b Worksheet due in class
+UID:moral-pedagogy-3-20251017@calendar
+DTSTAMP:20250915T090000Z
+END:VEVENT
+
+END:VCALENDAR

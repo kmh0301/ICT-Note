@@ -1,0 +1,92 @@
+% !TEX program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+% --- Place all \usepackage commands in the preamble ---
+\usepackage{xeCJK}
+\setCJKmainfont{PMingLiU}[
+    UprightFont = *,
+    BoldFont = *,
+    ItalicFont = *
+]
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{ifthen}
+\usepackage{tikz} % Added for drawing answer lines/boxes
+
+% Page setup
+\geometry{top=25mm,bottom=25mm,left=20mm,right=20mm}
+
+% Header & footer
+\pagestyle{fancy}
+\fancyhf{}
+% Define a custom gray color
+\definecolor{mygray}{rgb}{0.5, 0.5, 0.5}
+
+% Apply the color to the footer content
+\fancyfoot[L]{\textcolor{mygray}{2025/2026-1st Term UT- S4 ICT}}
+\fancyfoot[C]{\textcolor{mygray}{第 \thepage 頁}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Remove section numbering
+\setcounter{secnumdepth}{0}
+
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Custom commands for answer lines and boxes
+\newcommand{\answerline}[1]{\par\vspace{0.5em}\noindent\rule{\linewidth}{0.4pt}\vspace{0.5em}}
+\newcommand{\shortanswerline}[1]{\par\vspace{0.5em}\noindent\rule{#1}{0.4pt}\vspace{0.5em}}
+\newcommand{\answerbox}[1]{\par\vspace{0.5em}\noindent\rule{\linewidth}{#1}\vspace{0.5em}}
+\newenvironment{myquestionbox}[1]{%
+    \par\vspace{1em}\hrule\vspace{1em}
+    \textbf{答案框（共#1分）}\par
+    \vspace{1em}\hrule\vspace{1em}
+}{%
+    \par\vspace{1em}\hrule\vspace{1em}
+}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries 佛教黃鳳翎中學}\\[0.5em]
+{\Large\bfseries 2025/2026 上學期統測}\\[1em]
+\end{center}
+
+\newpage
+
+\section{\textbf{甲部 多項選擇題（20分）}}
+\textbf{本部共有20題。請選擇最合適的答案。}
+
+\begin{enumerate}
+% --- PLACEHOLDER FOR MCQ QUESTIONS ---
+\questionsplacehodler
+\end{enumerate}
+
+\newpage
+
+\section{\textbf{乙部 問答題（30分）}}
+\textbf{本部共有5題。請在適當的答案框內作答。}
+\begin{enumerate}
+% --- PLACEHOLDER FOR Q&A QUESTIONS ---
+\qaquestionsplacehodler
+\end{enumerate}
+\newpage
+
+% Example for manual long question with answer space
+% \item 某個問題，請在下面作答。（5分）
+% \begin{myquestionbox}{5}
+% \answerline{}
+% \answerline{}
+% \end{myquestionbox}
+
+\end{document}

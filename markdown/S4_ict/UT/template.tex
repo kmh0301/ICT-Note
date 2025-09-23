@@ -1,0 +1,562 @@
+% =====================================================
+% ICT考試卷LaTeX模板
+% 適用於佛教黃鳳翎中學資訊及通訊科技科
+% =====================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{xeCJK}
+\setCJKmainfont{PMingLiU}[
+    UprightFont = *,
+    BoldFont = *,
+    ItalicFont = *
+]
+
+% 確保字體大小與Word 12號字體一致
+\usepackage{anyfontsize}
+\renewcommand{\normalsize}{\fontsize{12pt}{14.4pt}\selectfont}
+\renewcommand{\large}{\fontsize{14pt}{16.8pt}\selectfont}
+\renewcommand{\Large}{\fontsize{16pt}{19.2pt}\selectfont}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{graphicx}
+
+% Page setup
+\geometry{top=25mm,bottom=25mm,left=20mm,right=20mm}
+
+% Header & footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{第 \thepage 頁，共 \pageref{LastPage} 頁}
+
+% Remove section numbering
+\setcounter{secnumdepth}{0}
+
+% Custom commands for underlines
+\newcommand{\answerline}[1]{\underline{\hspace{#1}}}
+
+% =====================================================
+% 模板變數區 (AI生成題目時需要填入的內容)
+% =====================================================
+
+% 考試基本資訊
+\newcommand{\examyear}{2025/2026}           % 學年
+\newcommand{\semester}{上學期}              % 學期
+\newcommand{\examtype}{統測}                % 考試類型
+\newcommand{\gradelevel}{中四級}            % 年級
+\newcommand{\subject}{資訊及通訊科技}       % 科目
+\newcommand{\timelimit}{60分鐘}             % 時限
+\newcommand{\examdate}{17/06/2025}          % 考試日期
+\newcommand{\examtime}{8:30am -- 10:00am}   % 考試時間
+
+% 分數分配
+\newcommand{\totalscore}{50}               % 總分
+\newcommand{\mcqscore}{32}                 % 選擇題分數
+\newcommand{\essayscore}{18}               % 問答題分數
+\newcommand{\mcqcount}{32}                 % 選擇題數量
+
+\begin{document}
+
+% =====================================================
+% 考試卷頭部 - 使用標準12pt字體
+% =====================================================
+\begin{center}
+{\fontsize{14pt}{16.8pt}\selectfont\bfseries 佛教黃鳳翎中學}\\[0.5em]
+{\fontsize{14pt}{16.8pt}\selectfont\bfseries \examyear{} \semester{}\examtype{}}\\[1em]
+{\fontsize{14pt}{16.8pt}\selectfont\bfseries \gradelevel{} \quad \subject{} \quad 時限：\timelimit{}}\\[1.5em]
+{\fontsize{14pt}{16.8pt}\selectfont\bfseries 試題答題簿}
+\end{center}
+
+\vspace{1.5em}
+
+% 確保所有正文使用12pt字體
+\fontsize{12pt}{14.4pt}\selectfont
+
+班別：\answerline{3cm} \quad 班號：\answerline{2cm} \quad 考試日期：\examdate{}\\[0.8em]
+姓名：\answerline{8cm} \quad 考試時間：\examtime{}\\[0.8em]
+
+\textbf{本試卷必須用中文作答}
+
+\vspace{1em}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+總　分 & 甲　部 & 乙　部 \\
+\hline
+& & \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+\textbf{考生須知：}
+\begin{enumerate}
+\item 本卷分甲、乙兩部。
+\item 甲部為多項選擇題；乙部為問答題。
+\item 考生須在本試題答題簿第1頁之適當位置填寫考生姓名、班別及班號。
+\item 本試卷滿分為\totalscore{}分。
+\item \textbf{本試卷全部試題均須回答。}
+\item 甲部的答案須填畫在多項選擇題的答題紙上，而乙部的答案則須寫在試題答題簿中預留的空位內。
+\end{enumerate}
+
+\newpage
+
+% =====================================================
+% 甲部：多項選擇題 - 確保12pt字體
+% =====================================================
+\section{\textbf{\fontsize{12pt}{14.4pt}\selectfont 1. 多項選擇題（\mcqscore{}分）}}
+
+\textbf{\fontsize{12pt}{14.4pt}\selectfont 本部共有\mcqcount{}題。請選擇最合適的答案。}
+
+% 確保所有選擇題內容使用12pt字體
+\fontsize{12pt}{14.4pt}\selectfont
+
+% MCQ模板 - AI可以複製此結構來生成題目
+% =====================================================
+% 標準選擇題格式：
+\begin{enumerate}
+
+% 題目1 - 單選題範例
+\item [題目文字]
+
+\begin{enumerate}[label=\Alph*.]
+\item [選項A]
+\item [選項B]
+\item [選項C]
+\item [選項D]
+\end{enumerate}
+
+% 題目2 - 帶填空的選擇題範例
+\item [題目文字] \answerline{2cm}
+
+\begin{enumerate}[label=\Alph*.]
+\item [選項A]
+\item [選項B]
+\item [選項C]
+\item [選項D]
+\end{enumerate}
+
+% 題目3 - 多個子項目的選擇題範例
+\item [題目文字]
+
+(1) [子項目1]
+
+(2) [子項目2]
+
+(3) [子項目3]
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (2)
+\item 只有 (1) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+% 題目4 - 表格比較題範例
+\item [題目文字]
+
+\begin{center}
+\begin{tabular}{cc}
+\underline{項目A} & \underline{項目B} \\
+\end{tabular}
+\end{center}
+
+(1) [比較項目1]
+
+(2) [比較項目2]
+
+(3) [比較項目3]
+
+\begin{enumerate}[label=\Alph*.]
+\item 只有 (1)
+\item 只有 (1) 和 (2)
+\item 只有 (2) 和 (3)
+\item (1)、(2) 和 (3)
+\end{enumerate}
+
+% 題目5 - 算法/代碼題範例
+\item [題目描述]
+
+[偽代碼內容]
+
+\begin{enumerate}[label=\Alph*.]
+\item [選項A - 數值]
+\item [選項B - 數值]
+\item [選項C - 數值]
+\item [選項D - 數值]
+\end{enumerate}
+
+% 以下為佔位符，AI生成時應替換為實際題目
+% 題目6-32使用相同格式
+\item [題目6內容...]
+% ... 繼續到第32題
+
+\end{enumerate}
+
+\newpage
+
+% =====================================================
+% 乙部：問答題 - 確保12pt字體
+% =====================================================
+\section{\textbf{\fontsize{12pt}{14.4pt}\selectfont 2. 問答題（\essayscore{}分）}}
+
+\textbf{\fontsize{12pt}{14.4pt}\selectfont 本試卷全部試題均須回答。請填寫最合適的答案。}
+
+% 確保所有問答題內容使用12pt字體
+\fontsize{12pt}{14.4pt}\selectfont
+
+\begin{enumerate}
+
+% 問答題模板 - AI可以參考此結構
+% =====================================================
+
+% 題目1 - 算法分析題範例
+\item [題目描述]
+
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{行號} & \textbf{偽代碼} \\
+\hline
+1 & [代碼行1] \\
+\hline
+2 & [代碼行2] \\
+\hline
+3 & [代碼行3] \\
+\hline
+% ... 更多行
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item [子題目a]
+
+[答案格式說明]: \answerline{2cm} \quad [更多答案位置]: \answerline{2cm} \quad （[分數]分）
+
+\item [子題目b]
+
+\answerline{15cm} （[分數]分）
+
+\item [子題目c]
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+% 題目2 - 填空完成算法題範例
+\item [題目描述]
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{[陣列名稱]} & [值1] & [值2] & [值3] & [值4] & [值5] & [值6] & [值7] \\
+\hline
+\textbf{索引} & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+\end{tabular}
+\end{center}
+
+[算法完成指示]
+
+\begin{tabular}{|p{13cm}|}
+\hline
+[算法框架] \\
+\\
+[變數1] ← \answerline{3cm} \\
+\\
+設 i 由 \answerline{3cm} \\
+\\
+如果 \answerline{5cm} 則 \\
+\\
+[變數1] ← \answerline{3cm} \\
+\\
+[其餘算法邏輯] \\
+\hline
+\end{tabular}
+
+（[分數]分）
+
+% 題目3 - 多部分問答題範例
+\item \begin{enumerate}[label=(\alph*)]
+\item \begin{enumerate}[label=(\roman*)]
+\item [子題目i]
+
+\answerline{15cm} （[分數]分）
+
+\item [子題目ii]
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+\item [子題目b - 計算題]
+
+[計算指示]
+
+\answerline{15cm}
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+% 題目4 - 流程圖分析題範例
+\item [題目描述]
+
+% 流程圖位置佔位符
+[流程圖位置]
+
+\begin{enumerate}[label=(\alph*)]
+\item [子題目 - 輸入輸出分析]
+
+(1) [條件1]: 輸出： \answerline{2cm}
+
+(2) [條件2]: 輸出： \answerline{2cm} （[分數]分）
+
+\item [子題目 - 算法目的]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [子題目 - 數據驗證]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+% 題目5 - 應用情境題範例
+\item [情境描述]
+
+\begin{enumerate}[label=(\alph*)]
+\item [功能分析子題]
+
+\answerline{15cm} （[分數]分）
+
+\item [改善建議子題]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [技術規格子題]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [多重子題]
+
+\begin{enumerate}[label=\roman*.]
+\item [複雜分析題]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [替代方案題]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+\item [IoT應用題]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+% 題目6 - 設備比較題範例（含規格表）
+\item [情境描述]
+
+\begin{center}
+\begin{longtable}{|p{3cm}|p{5cm}|p{5cm}|}
+\hline
+& \textbf{[設備A名稱]} & \textbf{[設備B名稱]} \\
+\hline
+[規格項目1] & [規格值A1] & [規格值B1] \\
+\hline
+[規格項目2] & [規格值A2] & [規格值B2] \\
+\hline
+[規格項目3] & [規格值A3] & [規格值B3] \\
+\hline
+[規格項目4] & [規格值A4] & [規格值B4] \\
+\hline
+[規格項目5] & [規格值A5] & [規格值B5] \\
+\hline
+[規格項目6] & [規格值A6] & [規格值B6] \\
+\hline
+[規格項目7] & [規格值A7] & [規格值B7] \\
+\hline
+\end{longtable}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+\item [規格比較分析]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [性能分析]
+
+\answerline{15cm} （[分數]分）
+
+\item [儲存比較題]
+
+\begin{enumerate}[label=(\roman*)]
+\item [優缺點比較]
+
+\answerline{15cm}
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [效率比較情境]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+\item [節能建議]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+% 題目7 - 算法迭代分析題範例
+\item [算法描述]
+
+[偽代碼內容]
+
+\begin{enumerate}[label=(\alph*)]
+\item [輸出序列分析]
+
+第一個輸出： [變數1]=\answerline{2cm} \quad [變數2]=\answerline{2cm}
+
+第二個輸出： [變數1]=\answerline{2cm} \quad [變數2]=\answerline{2cm}
+
+第三個輸出： [變數1]=\answerline{2cm} \quad [變數2]=\answerline{2cm} （[分數]分）
+
+\item [執行次數和最終值分析]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\item [算法完成 - 添加計數器]
+
+\begin{tabular}{|p{13cm}|}
+\hline
+[原算法框架] \\
+\\
+[新變數] ← \answerline{3cm} \\
+\\
+[迭代結構] \\
+\\
+[計數邏輯] \\
+\\
+[變數更新] ← \answerline{3cm} \\
+\\
+[其餘算法] \\
+\hline
+\end{tabular}
+
+（[分數]分）
+
+\item [循環結構轉換]
+
+\begin{tabular}{|p{13cm}|}
+\hline
+[算法變數初始化] \\
+\\
+當 \answerline{3cm} \\
+\\
+[循環體內容] \\
+\hline
+\end{tabular}
+
+（[分數]分）
+
+\item [邊界情況分析]
+
+\answerline{15cm}
+
+\answerline{15cm} （[分數]分）
+
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{2em}
+
+\begin{center}
+\textbf{--- 試卷完 ---}
+\end{center}
+
+\end{document}
+
+% =====================================================
+% AI使用指南
+% =====================================================
+% 
+% 1. 考試基本信息修改：
+%    - 修改文檔頂部的 \newcommand 定義
+%    - \examyear, \semester, \examtype, \gradelevel, \subject, \timelimit
+%    - \examdate, \examtime, \totalscore, \mcqscore, \essayscore, \mcqcount
+%
+% 2. 字體大小確保：
+%    - 所有正文內容強制使用12pt字體大小（相當於Word 12號字體）
+%    - 標題使用14pt字體（相當於Word 14號字體）
+%    - 使用 \fontsize{12pt}{14.4pt}\selectfont 確保字體大小一致性
+%
+% 3. 選擇題生成：
+%    - 替換 [題目文字] 為實際題目內容
+%    - 替換 [選項A], [選項B], [選項C], [選項D] 為實際選項
+%    - 對於多子項題目，替換 [子項目1], [子項目2], [子項目3]
+%    - 根據需要調整選項組合（如"只有 (1)"、"只有 (1) 和 (3)"等）
+%
+% 3. 問答題生成：
+%    - 替換 [題目描述] 為實際題目內容
+%    - 替換 [子題目a], [子題目b] 等為實際子題目
+%    - 替換 [分數] 為實際分數分配
+%    - 根據需要添加或刪除子題目
+%    - 對於表格題，替換表格內容
+%    - 對於算法題，替換偽代碼內容
+%
+% 4. 特殊格式：
+%    - 流程圖：使用 [流程圖位置] 佔位符，需要插入實際圖片
+%    - 網路圖：使用相同的圖片佔位符
+%    - 算法框：使用 tabular 環境保持格式
+%    - 長答案行：使用 \answerline{15cm}
+%    - 短答案行：使用 \answerline{2cm} 或 \answerline{3cm}
+%
+% 5. 常用ICT主題：
+%    - 數據表示和編碼
+%    - 算法和程序設計
+%    - 硬件和軟件
+%    - 網絡和通訊
+%    - 數據管理和數據庫
+%    - 資訊系統和應用
+%    - 多媒體和文件格式
+%    - 資訊安全和私隱
+%    - 新興科技（IoT、AI、雲計算等）

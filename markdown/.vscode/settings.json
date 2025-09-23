@@ -3,9 +3,10 @@
     "markdown.marp.themes": [
         "./themes/worksheet.css",
         "./themes/Dictation.css",
-        "./themes/notebookppt.css"
+        "./themes/UT.css",
+        "./themes/exam.css"
     ],
-    "markdown.marp.enableHtml": true,
+    "markdown.marp.html": true,
     "markdown.marp.allowLocalFiles": true,
     "markdown.marp.exportType": "pdf"
 
