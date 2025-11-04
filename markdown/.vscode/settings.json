@@ -4,7 +4,8 @@
         "./themes/worksheet.css",
         "./themes/Dictation.css",
         "./themes/UT.css",
-        "./themes/exam.css"
+        "./themes/exam.css",
+        "./themes/notes.css"
     ],
     "markdown.marp.html": true,
     "markdown.marp.allowLocalFiles": true,
