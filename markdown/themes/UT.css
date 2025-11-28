@@ -1,126 +1,178 @@
 /* @theme UT */
+/* @theme UT */
 
+/* --- Base Page Setup (A4 Size) --- */
 section {
+  /* A4 size */
   width: 210mm;
   height: 297mm;
+  /* Font settings as specified */
   font-family: "PMingLiU", "Times New Roman", serif;
   font-size: 12pt;
   line-height: 1.5;
-  padding: 25mm 20mm 25mm 20mm;
+  
+  /* CRITICAL CHANGE 1: Use Flexbox on the main page/section */
+  display: flex;
+  justify-content: center; /* Horizontally centers all child elements */
+  align-items: flex-start; /* Aligns content to the top */
+  
+  /* Resetting padding, as we will manage it inside the main-content wrapper */
+  padding: 0;
   margin: 0;
   color: #000;
   background: #fff;
   page-break-after: always;
+  box-sizing: border-box; 
 }
 
+/* CRITICAL CHANGE 2: New wrapper to contain ALL content and apply margins */
+.main-content {
+    /* Set the width to be the A4 width minus the left/right padding (210mm - 40mm = 170mm) */
+    width: 170mm; 
+    /* Apply the vertical padding (top and bottom) */
+    padding-top: 25mm;
+    padding-bottom: 25mm;
+    /* Ensure content flows correctly */
+    box-sizing: border-box;
+}
+
+
+/* --- Title Page / Header Block Styling --- */
+
+/* The title-page class is still used on the slide, but it primarily acts as the flex item within the section */
 .title-page {
-  text-align: center;
-  padding-top: 40mm;
+  /* The main-content wrapper handles the margins and centering now */
+  /* This prevents the slide from having unexpected width/padding */
+  padding-top: 0; 
+  text-align: left; /* Keep default text flow for non-header content */
 }
 
-.title-page h1, .title-page h2 {
+/* Use a simple wrapper for the header that relies on the parent center alignment */
+.header-block {
+  /* All h1/h2 tags will be centered because they are inside a block with text-align: center */
+  text-align: center; 
+  margin: 0 0 2em 0; 
+  width: 100%; /* Ensure it spans the full 170mm width */
+}
+
+/* (Keep h1, h2, student-info-table, etc., as they were previously defined) */
+/* (Your footer and section::after rules are fine as they use absolute/fixed positioning) */
+/* Styles for the main school/exam titles */
+.header-block h1 {
   font-size: 18pt;
   font-weight: bold;
+  margin: 0 0 0.2em 0;
+  line-height: 1.2;
+}
+
+.header-block h2 {
+  font-size: 14pt;
+  font-weight: normal;
   margin: 0 0 0.5em 0;
   line-height: 1.2;
 }
 
+.header-block .exam-info {
+  font-size: 12pt;
+  margin-bottom: 1em;
+}
+
+/* Student Information Table (for the Name/Class/No. section) */
+.student-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.student-info-table td {
+  border: none;
+  padding: 0 0 0.5em 0;
+  font-size: 12pt;
+}
+
+.student-info-table .label {
+  width: 50px;
+  font-weight: bold;
+}
+
+.student-info-table .answer-line {
+  border-bottom: 1px solid #000;
+  padding-left: 5px;
+  width: auto;
+}
+
+/* --- Footer and Page Numbering --- */
 footer {
   position: fixed;
-  bottom: 25mm;
+  bottom: 15mm; /* Adjust position for better print margin */
   left: 20mm;
   right: 20mm;
   font-size: 10pt;
-  color: #808080;
+  color: #000; /* Ensure black for printing */
   display: flex;
   justify-content: space-between;
+  text-align: right;
 }
 
+/* Add page numbering using Marp's global page count variable */
+section::after {
+  content: attr(data-marp-page);
+  position: absolute;
+  bottom: 15mm;
+  right: 20mm;
+  font-size: 10pt;
+  color: #000;
+}
+
+/* --- Question and Points Styling --- */
 .section-title {
   font-size: 12pt;
   font-weight: bold;
   margin: 1.5em 0 0.5em 0;
+  text-decoration: underline; /* Common for section titles */
 }
 
-/* Update your UT.css file with this new rule */
-
-.question-item {
-  margin: 1em 0;
-  font-size: 12pt;
-  
-  /* Make the question-item a flex container */
-  display: flex; 
-  justify-content: space-between; /* Pushes content to the ends */
-}
-/* Update your UT.css file with this new rule */
-
-/* Update your UT.css file with this new rule */
-
+/* Base style for question items */
 .question-item, .sub-question-item {
-  position: relative; /* This is the key change. */
-  margin: 1em 0;
+  position: relative;
+  margin: 1.5em 0; /* Increased margin for better spacing */
   font-size: 12pt;
   line-height: 1.5;
-  padding-right: 60px; /* Add padding to prevent text from overlapping the points */
+  padding-right: 60px; /* Space for the points */
+  min-height: 1.5em; /* Ensure minimum space */
 }
 
+/* Style and position the points box */
 .question-item .points, .sub-question-item .points {
   position: absolute;
   top: 0;
   right: 0;
-  white-space: nowrap; /* Prevents the points from wrapping */
+  font-weight: bold;
+  white-space: nowrap;
+  /* Add parentheses/brackets around the points */
 }
 
-.question-item .points {
-  /* No additional styling is needed here, the parent's flexbox handles the positioning */
-}
-/* Add this code to your CSS */
-
-.mcq-options {
-  /* This resets the counter for each new list */
-  counter-reset: mcq-counter;
-}
-
-.mcq-options li {
-  /* This increments the counter for each list item */
-  counter-increment: mcq-counter;
-  position: relative;
-  list-style-type: none;
-  /* Use padding and text-indent to create space for the letter */
-  padding-left: 20px;
-  text-indent: -20px;
-}
-
-.mcq-options li::before {
-  /* This displays the letter and a period */
-  content: counter(mcq-counter, upper-alpha) ". ";
-  font-weight: normal;
-  color: #000;
-  
-  /* Reset indentation for the letter itself */
-  text-indent: 0;
-}
-
+/* Style for sub-questions */
 .sub-question-item {
   margin: 0.8em 0;
-  font-size: 12pt;
-  padding-left: 1em;
+  padding-left: 2em; /* Indent sub-questions */
 }
 
+/* --- Answer and Fill-in-the-blank Styling --- */
 .answer-box {
   border: 1px solid #000;
   margin: 1em 0;
   padding: 1em;
   min-height: 4em;
 }
+
 .answer-space {
   margin: 8px 0;
   padding: 0;
   width: 165mm;
   position: relative;
   height: 22px;
-  line-height: 22px; /* Fixed line height matching the height */
-  overflow: visible;
+  line-height: 22px;
   color: #000;
   font-size: 12pt;
   font-weight: normal;
@@ -128,8 +180,8 @@ footer {
   text-align: left;
   box-sizing: border-box;
   display: block;
-  vertical-align: baseline; /* Ensure consistent baseline alignment */
 }
+
 .answer-line {
   margin: 10px 0;
   font-size: 12pt;
@@ -137,6 +189,29 @@ footer {
   color: #000;
 }
 
+/* --- Multiple Choice Question (MCQ) Styling --- */
+.mcq-options {
+  counter-reset: mcq-counter;
+  margin: 1em 0 1em 20px; /* Added left margin for indentation */
+}
+
+.mcq-options li {
+  counter-increment: mcq-counter;
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+  text-indent: -20px;
+  margin: 0.5em 0;
+}
+
+.mcq-options li::before {
+  content: counter(mcq-counter, upper-alpha) ". ";
+  font-weight: normal;
+  color: #000;
+  text-indent: 0;
+}
+
+/* --- Table Styling --- */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -149,6 +224,8 @@ th, td {
   padding: 0.5em;
   text-align: left;
   font-size: 12pt;
+  /* Use vertical-align: top; for table cells to match exam papers */
+  vertical-align: top; 
 }
 
 th {
@@ -156,6 +233,12 @@ th {
   background-color: #f5f5f5;
 }
 
+/* --- General Text and Alignment --- */
 p, div, span, li, td, th {
   font-size: 12pt;
+  line-height: 1.5;
+}
+
+.center-text {
+  text-align: center;
 }

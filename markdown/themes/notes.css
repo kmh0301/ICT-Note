@@ -348,3 +348,182 @@ section[data-marpit-pagination]::after {
   color: #718096;
   padding: 0;
 }
+
+
+/* Print handling to ensure header appears on every page */
+@media print {
+  .header-info,
+  .student-info {
+    position: fixed;
+    print-color-adjust: exact;
+    left: 20mm;
+    right: 20mm;
+  }
+  
+  section {
+    padding-top: 40mm; /* Consistent padding for print */
+  }
+  
+  section:first-of-type {
+    padding-top: 30mm; /* Extra padding only for first page in print */
+  }
+}
+
+/* 針對小螢幕的響應式調整 */
+@media screen and (max-width: 210mm) {
+  img {
+    max-width: min(500px, calc(100vw - 40mm));
+  }
+}
+
+/* Header Information - 頁首資訊 */
+.header-info {
+  position: fixed;
+  top: 10mm;
+  left: 20mm;
+  right: 20mm;
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  color: #000;
+  /* padding-bottom: 3mm; */
+  margin-bottom: 3mm;
+  background: white;
+  z-index: 100;
+  text-align: center;
+}
+
+.school-info {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.exam-info {
+  font-weight: normal;
+  margin-left: 0;
+}
+
+/* Student Information Fields - 學生資訊欄位 (now in header) */
+.student-info {
+  position: fixed;
+  top: 28mm;
+  left: 20mm;
+  right: 20mm;
+  font-size: 12pt;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background: white;
+  padding-top: 3mm;
+  padding-bottom: 3mm;
+
+  z-index: 99;
+}
+
+.name-field, .class-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.field-label {
+  font-weight: normal;
+  min-width: fit-content;
+}
+
+
+
+.field-line {
+  border-bottom: 1px solid #000;
+  min-width: 200px;
+  height: 18px;
+  display: inline-block;
+}
+
+ .field-class {
+  border-bottom: 1px solid #000;
+  min-width: 100px;
+  height: 18px;
+  display: inline-block;
+}
+
+.class-brackets {
+  margin-left: 3px;
+  font-size: 14pt;
+  white-space: pre;
+}
+
+/* Answer Space - UPDATED WITH FIXED LINE HEIGHT */
+.answer-space {
+  margin: 8px 0;
+  padding: 0;
+  width: 165mm;
+  position: relative;
+  height: 22px;
+  line-height: 22px; /* Fixed line height matching the height */
+  overflow: visible;
+  color: #000;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: baseline; /* Ensure consistent baseline alignment */
+}
+
+.space-container {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.answer-space50 {
+  margin: 8px 0;
+  padding: 0;
+  width: 100mm;
+  position: relative;
+  height: 30px;
+  line-height: 30px; /* Fixed line height matching the height */
+  overflow: visible;
+  color: #000;
+  font-size: 12pt;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  text-align: left;
+  box-sizing: border-box;
+  display: block;
+  vertical-align: baseline;
+}
+
+/* Height classes for easy setting */
+.height-30px { height: 30px; }
+.height-40px { height: 40px; }
+.height-50px { height: 50px; }
+.height-60px { height: 60px; }
+.height-70px { height: 70px; }
+.height-80px { height: 80px; }
+.height-90px { height: 90px; }
+.height-100px { height: 100px; }
+.height-120px { height: 120px; }
+.height-150px { height: 150px; }
+.height-350px { height: 350px; }
+
+.side-box {
+  padding: 2%;
+width: 50mm;
+border: 1px solid #000;
+background-color: #fff;
+flex-shrink: 0;
+}
+
+.full-width-box {
+  width: 100%;
+  border: 1px solid #000;
+  background-color: white;
+  margin-top: 20px;
+}
+

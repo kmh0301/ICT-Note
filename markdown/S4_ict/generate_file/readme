@@ -1,0 +1,154 @@
+## 📄 程式一：統測 Markdown 生成器 (`generate_ut_markdown.py` 對應版本)
+
+這個 `README` 檔適用於您提供的**第一個**程式碼片段，用於生成學校統測（Unit Test）試卷。
+
+# 📚 統測試卷 Markdown 生成器 (UT Markdown Generator)
+
+這個 Python 腳本旨在自動化生成一個 **Marp 兼容的 Markdown 文件 (`UT.md`)**，用於製作**佛教黃鳳翎中學 2025/2026 上學期統測**的試卷。
+
+生成的 Markdown 文件配合 Marp（Markdown Presentation Ecosystem）及其自定義主題，可以方便地輸出為帶有特定樣式和答案框的打印版試卷。
+
+-----
+
+## 🛠️ 使用準備
+
+要運行此腳本，您需要：
+
+1.  **Python 3**（腳本只需要內建的 `csv` 模塊）。
+2.  **兩個 CSV 檔案**：
+      * `MCQ.csv`（多項選擇題數據）
+      * `LQ.csv`（問答題數據）
+
+**請確保這兩個 CSV 文件與 Python 腳本位於同一目錄下。**
+
+-----
+
+## 🚀 使用方法
+
+1.  **準備 CSV 文件：** 確保 `MCQ.csv` 和 `LQ.csv` 格式正確，並包含所需的欄位名稱（詳見下方）。
+
+2.  **運行腳本：** 在您的終端機中執行 Python 腳本：
+
+    ```bash
+    python generate_ut_markdown.py
+    ```
+
+3.  **檢查輸出：** 成功運行後，一個名為 **`UT.md`** 的新文件將會在同一目錄下生成。
+
+4.  **生成試卷：** 使用 Marp 工具（例如 VS Code Marp 擴展）配合您的自定義 **`UT` 主題**，將 `UT.md` 導出為 PDF 或 HTML 文件進行打印。
+
+-----
+
+## 📊 CSV 檔案格式要求
+
+### 1\. `MCQ.csv`（甲部：多項選擇題）
+
+| 欄位名稱 (Header) | 描述 | 範例數據 |
+| :--- | :--- | :--- |
+| **QuestionText** | 題目內容。 | 以下哪項是正確的？ |
+| **OptionA** | 選項 A 的內容。 | A. 答案一 |
+| **OptionB** | 選項 B 的內容。 | B. 答案二 |
+| **OptionC** | 選項 C 的內容。 | C. 答案三 |
+| **OptionD** | 選項 D 的內容。 | D. 答案四 |
+| **Marks** | 該題的分數。 | 2 |
+
+### 2\. `LQ.csv`（乙部：問答題）
+
+| 欄位名稱 (Header) | 描述 | 範例數據 |
+| :--- | :--- | :--- |
+| **QuestionIDwithQuestionyears** | 完整的題目 ID。腳本會取最後一個部分作為題號（如 `2016-1-3` $\to$ Q3）。 | 2016-1-3 |
+| **QuestionText** | 題目的主幹內容。 | 試說明以下概念。 |
+| **Marks** | 該題的總分數。 | 8 |
+| **SubQuestion1** 到 **SubQuestion8** | 子問題的內容。 | (a) 概念一 |
+| **SubMarks1** 到 **SubMarks8** | 子問題對應的分數。 | 4 |
+
+-----
+
+-----
+
+## 📄 程式二：ICT 練習題生成器 (`main()` 對應版本)
+
+這個 `README` 檔適用於您提供的**第二個**程式碼片段，用於生成帶有更多選項的 ICT 練習題。
+
+# 💻 ICT 練習題生成器 (Markdown & DOCX)
+
+這個 Python 腳本是一個進階的 ICT 練習題自動化工具。它從 CSV 文件中讀取題目數據，並根據用戶選擇的配置，輸出以下兩種格式的練習題文件：
+
+1.  **Marp Markdown (`Exercise.md`)**：用於自定義排版和導出試卷。
+2.  **Microsoft Word (`Exercise.docx`)**：方便教師進行後續編輯和打印。
+
+-----
+
+## 🛠️ 使用準備
+
+### 1\. 程式環境
+
+  * **Python 3**
+  * **`python-docx` 庫：** 用於生成 Word 文件。如果您的環境中缺少此庫，腳本會嘗試自動安裝。若安裝失敗，請手動運行以下命令：
+    ```bash
+    pip install python-docx
+    ```
+
+### 2\. 檔案路徑配置
+
+本腳本依賴於開頭定義的兩個目錄變量來存取輸入和輸出檔案：
+
+```python
+# 腳本開頭的配置（請確保路徑正確！）
+CSV_FOLDER = '/Users/sallypang/Documents/GitHub/ICT-Note/markdown/S4_ict/generate_file/csv'
+RESULT_FOLDER = '/Users/sallypang/Documents/GitHub/ICT-Note/markdown/S4_ict/generate_file/result'
+```
+
+| 目錄 | 用途 |
+| :--- | :--- |
+| **`CSV_FOLDER`** | **輸入目錄。** 存放 `MCQ.csv`、`LQ.csv` 及可選的 `LQ_Answers.csv`。 |
+| **`RESULT_FOLDER`** | **輸出目錄。** 生成的 `Exercise.md` 和 `Exercise.docx` 將存放於此。 |
+
+### 3\. CSV 檔案格式
+
+您需要以下 CSV 文件，並確保它們包含所有必需的欄位：
+
+| 文件名 | 必需欄位 | 額外欄位 (用於顯示源信息) |
+| :--- | :--- | :--- |
+| **`MCQ.csv`** | `QuestionText`, `OptionA` to `OptionD`, `Marks`, `answer` | `QuestionIDwithQuestionyears`, `book_chapter`, `topics` |
+| **`LQ.csv`** | `QuestionText`, `Marks`, `SubQuestion1` to `SubQuestion8`, `SubMarks1` to `SubMarks8` | `QuestionIDwithQuestionyears`, `book_chapter`, `topics` |
+| **`LQ_Answers.csv`** | `QuestionIDwithQuestionyears`, `SubAnswer1` to `SubAnswer8` | **可選**（僅在選擇「顯示答案」時需要） |
+
+-----
+
+## 💡 如何運行和配置
+
+1.  **準備檔案：** 將您的 CSV 檔案放置在 `CSV_FOLDER` 指定的路徑中。
+
+2.  **執行腳本：** 在終端機中運行主程式：
+
+    ```bash
+    python your_script_name.py
+    ```
+
+3.  **選擇配置：** 腳本會提示您進行以下配置：
+
+      * **Show source information (y/n)? (顯示來源信息，如年份、章節、主題)**
+      * **Show answers (y/n)? (顯示答案)**
+      * **Show answer spaces (y/n)? (顯示問答題的答題空間)**
+          * *注意：此選項僅在您選擇**不**顯示答案時才會出現。*
+
+4.  **選擇 CSV：** 接著，您會被提示選擇要使用的 `MCQ.csv` 和 `LQ.csv` 檔案。
+
+5.  **完成：** 腳本會在 `RESULT_FOLDER` 中生成 `Exercise.md` 和 `Exercise.docx` 兩個文件。
+
+-----
+
+## ✨ 輸出文件特點
+
+### 📄 Markdown (`Exercise.md`)
+
+  * 使用 Marp 的 YAML Frontmatter。
+  * 利用自定義 HTML 類別（例如 `section-title`、`question-item`、`answer-box`）進行排版。
+  * **需要配合自定義的 Marp 主題 (`theme: UT`) 才能正確顯示樣式和答題框。**
+
+### 📝 Word (`Exercise.docx`)
+
+  * MCQ 答案（如果啟用）會以**紅色粗體**標註。
+  * LQ 答案（如果啟用）會以**紅色粗體**顯示在題目下方。
+  * 答題空間（如果啟用）會以多行**下劃線**的形式表示，行數基於題目分數計算。

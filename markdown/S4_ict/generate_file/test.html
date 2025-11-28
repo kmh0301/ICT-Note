@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛教黃鳳翎中學 - 考試封面</title>
+    <style>
+        /* General Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f0f0f0; /* Light gray background for screen viewing */
+            font-family: "PMingLiU", "MingLiU", "Times New Roman", serif; /* Standard HK Exam Fonts */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* A4 Page Specification */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            padding: 25mm 20mm; /* Standard Exam Margins */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 16pt;
+            font-weight: normal;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        /* Student Info Section */
+        .student-info {
+            width: 100%;
+            margin: 30px 0;
+            font-size: 14pt;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .info-group {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .label {
+            font-weight: bold;
+            margin-right: 5px;
+            white-space: nowrap;
+        }
+
+        .input-line {
+            border-bottom: 1px solid black;
+            height: 1.2em;
+            display: inline-block;
+        }
+
+        /* Exam Logistics (Date, Time) */
+        .logistics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 12pt;
+        }
+
+        .logistics-table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        /* Instructions Section */
+        .instructions {
+            font-size: 12pt;
+            line-height: 1.6;
+            margin-top: 30px;
+        }
+
+        .instructions h3 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .instructions ol {
+            padding-left: 2em;
+            list-style-type: cjk-ideographic; /* Chinese numbering (一, 二...) */
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .sub-list {
+            list-style-type: none;
+            padding-left: 1em;
+            margin-top: 5px;
+        }
+
+        /* Score Box */
+        .score-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .score-box {
+            width: 100px;
+            height: 60px;
+            border: 2px solid black;
+            margin-top: 5px;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="header">
+            <h1>佛教黃鳳翎中學 </h1>
+            <h2>2025/2026 上學期考試 </h2>
+            <h2>中四級資訊及通訊科技 </h2>
+            <h2>試題答題簿 </h2>
+        </div>
+
+        <div class="student-info">
+            <div class="info-row">
+                <div class="info-group" style="width: 45%;">
+                    <span class="label">班別:</span> 
+                    <div class="input-line" style="width: 100%;"></div>
+                </div>
+                <div class="info-group" style="width: 45%;">
+                    <span class="label">班號:</span> 
+                    <div class="input-line" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="info-row">
+                <div class="info-group" style="width: 100%;">
+                    <span class="label">姓名:</span> 
+                    <div class="input-line" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 12pt; margin: 10px 0;">本試卷必須用中文作答</p>
+
+        <table class="logistics-table">
+            <tr>
+                <td width="33%">考試日期: 2026年 月 日</td>
+                <td width="33%">考試時間: 8:30 - 9:30</td>
+                <td width="33%">時限: 30分鐘 </td>
+            </tr>
+        </table>
+
+        <div class="score-section">
+            <span style="font-weight: bold; font-size: 14pt;">總分 </span>
+            <div class="score-box"></div>
+        </div>
+
+        <div class="instructions">
+            <h3>考生須知: </h3>
+            <ol>
+                <li>在本試題簿及答題紙上的適當位置,填寫姓名、班別及班號。 </li>
+                <li>本試卷包括六部份: 
+                    <ul class="sub-list">
+                        <li>甲部選擇題,佔全卷10分; </li>
+                        <li>乙部供詞填充題,佔全卷20分; </li>
+                        <li>丙部填表題,佔全卷14分; </li>
+                        <li>丁部配對題,佔全卷4分;</li>
+                        <li>戊部問答題,佔全卷12分。</li>
+                        <li>己部 課外題,答對課外題可得額外2分</li>
+                    </ul>
+                </li>
+                <li>全卷總分為60分。己部為課外題,作答此題可額外得分</li>
+                <li>所有答案必須寫在本試題答題簿上。</li>
+            </ol>
+        </div>
+    </div>
+
+</body>
+</html>
