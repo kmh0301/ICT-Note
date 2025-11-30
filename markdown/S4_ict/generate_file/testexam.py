@@ -1,60 +1,66 @@
-import csv
+import json
 import subprocess
 import sys
 import os
 import glob
+from docx import Document
 from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.section import WD_SECTION_START
-from docx import Document # Import Document for DOCX generation
 
 # --- CONFIGURATION ---
-CSV_FOLDER = '/Users/sallypang/Documents/GitHub/ICT-Note/markdown/S4_ict/generate_file/csv'
+# Rename CSV_FOLDER to DATA_FOLDER since we use JSON now
+DATA_FOLDER = '/Users/sallypang/Documents/GitHub/ICT-Note/markdown/S4_ict/generate_file/json' 
 RESULT_FOLDER = '/Users/sallypang/Documents/GitHub/ICT-Note/markdown/S4_ict/generate_file/result'
 # --- END CONFIGURATION ---
 
-# --- Utility Functions (keep as is) ---
-def choose_csv_file(prompt="Select CSV file"):
-    # ... (Implementation remains the same)
-    csv_files = glob.glob(os.path.join(CSV_FOLDER, '*.csv'))
-    csv_names = [os.path.basename(f) for f in csv_files]
-    if not csv_names:
-        print("No CSV files found in the folder.")
+# --- Utility Functions ---
+def choose_json_file(prompt="Select JSON file"):
+    """Lists JSON files in the folder and asks user to pick one."""
+    if not os.path.exists(DATA_FOLDER):
+        print(f"Error: Folder not found: {DATA_FOLDER}")
         sys.exit(1)
+        
+    json_files = glob.glob(os.path.join(DATA_FOLDER, '*.json'))
+    json_names = [os.path.basename(f) for f in json_files]
+    
+    if not json_names:
+        print(f"No JSON files found in {DATA_FOLDER}.")
+        sys.exit(1)
+        
     print(f"\n{prompt}:")
-    for idx, fname in enumerate(csv_names, 1):
+    for idx, fname in enumerate(json_names, 1):
         print(f"  {idx}. {fname}")
+        
     while True:
-        choice = input("Enter file name (e.g., MCQ.csv): ").strip()
-        if choice in csv_names:
-            return os.path.join(CSV_FOLDER, choice)
-        print("Not found - please type one of the names above.")
+        choice = input("Enter file name (e.g., exam_data.json) or number: ").strip()
+        # Handle number input
+        if choice.isdigit():
+            idx = int(choice) - 1
+            if 0 <= idx < len(json_names):
+                return os.path.join(DATA_FOLDER, json_names[idx])
+        # Handle name input
+        if choice in json_names:
+            return os.path.join(DATA_FOLDER, choice)
+        print("Not found - please try again.")
 
-def load_lq_answers(lq_answers_path):
-    # ... (Implementation remains the same)
-    lq_answers = {}
-    if not lq_answers_path or not os.path.exists(lq_answers_path):
-        # print("Note: LQ_Answers.csv not found. Long question answers will not be displayed.")
-        return lq_answers
+def load_exam_data(json_path):
+    """Loads the JSON file and splits it into MC and LQ lists."""
     try:
-        with open(lq_answers_path, 'r', encoding='utf-8') as csv_file:
-            reader = csv.DictReader(csv_file)
-            for row in reader:
-                question_id = row.get('QuestionIDwithQuestionyears', '')
-                if question_id:
-                    answers = {}
-                    for i in range(1, 9):
-                        answer_key = f'SubAnswer{i}'
-                        if answer_key in row and row[answer_key].strip():
-                            answers[i] = row[answer_key].strip()
-                    if answers:
-                        lq_answers[question_id] = answers
+        with open(json_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        mc_questions = [q for q in data if q.get('type') == 'MC']
+        lq_questions = [q for q in data if q.get('type') == 'LQ']
+        
+        return mc_questions, lq_questions
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {e}")
+        sys.exit(1)
     except Exception as e:
-        print(f"Error reading LQ answers: {e}")
-    return lq_answers
+        print(f"Error reading file: {e}")
+        sys.exit(1)
 
 def install_required_packages():
-    # ... (Implementation remains the same)
     packages_to_install = []
     try:
         import docx
@@ -66,499 +72,332 @@ def install_required_packages():
             print(f"Installing {package}...")
             subprocess.check_call([sys.executable, "-m", "pip", "install", package])
             print(f"✓ Successfully installed {package}")
-        except subprocess.CalledProcessError as e:
+        except subprocess.CalledProcessError:
             print(f"✗ Failed to install {package}")
             print("Please try installing manually: pip3 install python-docx")
             return False
     return True
 
-# --- CORE FUNCTION 1: Get User Preferences (Updated) ---
 def get_user_preferences():
-    """Gets user configuration for exercise generation, including exam details."""
-    print("\n=== ICT Exercise Generator Configuration ===")
+    """Gets user configuration for exercise generation."""
+    print("\n=== ICT Exercise Generator (JSON Version) ===")
     
     # 1. Output Preferences
-    print("\nPlease choose what to include in your exercise files:")
-    while True:
-        show_source = input("Show source information (year, chapter, topic)? (y/n): ").lower().strip()
-        if show_source in ['y', 'yes', 'n', 'no']:
-            show_source_info = show_source in ['y', 'yes']
-            break
-        print("Please enter 'y' for yes or 'n' for no")
-    while True:
-        show_answer = input("Show answers? (y/n): ").lower().strip()
-        if show_answer in ['y', 'yes', 'n', 'no']:
-            show_answers = show_answer in ['y', 'yes']
-            break
-        print("Please enter 'y' for yes or 'n' for no")
+    print("\nPlease choose what to include:")
+    show_source = input("Show source info (year/topic)? (y/n) [n]: ").lower().strip() == 'y'
+    show_answers = input("Show answers? (y/n) [n]: ").lower().strip() == 'y'
+    
+    show_answer_spaces = False
     if not show_answers:
-        while True:
-            show_space = input("Show answer spaces for long questions? (y/n): ").lower().strip()
-            if show_space in ['y', 'yes', 'n', 'no']:
-                show_answer_spaces = show_space in ['y', 'yes']
-                break
-            print("Please enter 'y' for yes or 'n' for no")
-    else:
-        show_answer_spaces = False
+        show_answer_spaces = input("Show answer spaces for long questions? (y/n) [y]: ").lower().strip() != 'n'
         
-    # 2. Exam Details (NEW INPUTS)
+    # 2. Exam Details
     print("\n--- Exam Paper Details ---")
-    exam_duration_input = input("Enter Exam Duration (e.g., 40 分鐘): ").strip()
-    exam_date_input = input("Enter Exam Date (e.g., 2024年2月29日): ").strip()
-    total_marks_input = input("Enter Total Marks (e.g., 50 分): ").strip()
+    exam_duration = input("Enter Exam Duration (e.g., 40 分鐘) [40 分鐘]: ").strip() or "40 分鐘"
+    exam_date = input("Enter Exam Date (e.g., 2026年2月29日): ").strip() or "2026年2月29日"
+    total_marks = input("Enter Total Marks (e.g., 50 分) [50 分]: ").strip() or "50 分"
         
-    # 3. Compile Preferences
-    preferences = {
-        'show_source_info': show_source_info,
+    return {
+        'show_source_info': show_source,
         'show_answers': show_answers,
         'show_answer_spaces': show_answer_spaces,
-        # Store user input formatted for display
-        'exam_duration': f"考試時間：{exam_duration_input}",
-        'exam_date': f"考試日期：{exam_date_input}",
-        'total_marks': f"總分: {total_marks_input}"
+        'exam_duration': f"考試時間：{exam_duration}",
+        'exam_date': f"考試日期：{exam_date}",
+        'total_marks': f"總分: {total_marks}"
     }
+# --- Sub-Question Auto-numbering and Cleaning Logic ---
+def get_auto_numbered_sub_text(sub_text, sub_idx):
+    """
+    Cleans the sub-question text from existing complex numbering (e.g., (a), (b)(i)) 
+    and prepends the new index-based alphabetical numbering (a), (b), etc.
+    """
     
-    # 4. Print Summary
-    print(f"\n📋 Your preferences:")
-    print(f"  • Source info: {'Yes' if show_source_info else 'No'}")
-    print(f"  • Show answers: {'Yes' if show_answers else 'No'}")
-    print(f"  • Answer spaces: {'Yes' if show_answer_spaces else 'No'}")
-    print(f"  • Duration: {preferences['exam_duration']}")
-    print(f"  • Date: {preferences['exam_date']}")
-    print(f"  • Total Marks: {preferences['total_marks']}")
-    return preferences
+    # 1. Generate the new prefix: (a), (b), (c)...
+    prefix_char = chr(97 + sub_idx) # 97 is ASCII for 'a'
+    new_prefix = f'({prefix_char}) '
+    
+    cleaned_text = sub_text.strip()
+    
+    # 2. Attempt to strip complex existing prefixes (e.g., "(a)", "(b) (i)")
+    # We look for something starting with '(' and containing ')' near the start.
+    if cleaned_text.startswith('('):
+        # Find the end of the *first* parenthetical group
+        end_paren_index = cleaned_text.find(')')
+        
+        if end_paren_index > 0 and end_paren_index < 10: 
+            # Check if the text continues after the parenthesis (e.g., space or text)
+            potential_rest_of_text = cleaned_text[end_paren_index + 1:].lstrip()
+            
+            # If the next characters are also part of a prefix like ` (i) ` or just space, 
+            # skip those too to get to the actual question text.
+            if potential_rest_of_text.startswith('(') and ')' in potential_rest_of_text:
+                # Handle complex cases like "(b) (i)"
+                second_end_paren = potential_rest_of_text.find(')')
+                if second_end_paren > 0:
+                    cleaned_text = potential_rest_of_text[second_end_paren + 1:].lstrip()
+                else:
+                    cleaned_text = potential_rest_of_text
+            else:
+                # Handle simple cases like "(a)"
+                cleaned_text = potential_rest_of_text
+        
+    # 3. Prepend the new, cleaned prefix
+    return f'{new_prefix}{cleaned_text}'
 
-# --- CORE FUNCTION 2: Generate Markdown (Updated) ---
-def generate_exercise_markdown(preferences, mcq_csv_path, lq_csv_path, lq_answers_path):
-    """
-    Generates the Exercise.md file using Marp format, matching the layout of the PDF front page.
-    """
-    import os
-    lq_answers = load_lq_answers(lq_answers_path)
+
+# --- CORE FUNCTION 1: Generate Markdown ---
+def generate_exercise_markdown(preferences, mc_questions, lq_questions):
+    if not os.path.exists(RESULT_FOLDER):
+        os.makedirs(RESULT_FOLDER)
+        
     markdown_path = os.path.join(RESULT_FOLDER, 'Exercise.md')
     
-    # --- Configuration (using preferences for dynamic parts) ---
+    # Configuration
     SCHOOL_NAME = "佛教黃鳳翎中學"
     EXAM_TITLE = "2025/2026 上學期考試"
     SUBJECT = "中四級資訊及通訊科技"
-    ANSWER_BOOK = "試題答題簿"
     
-    # Static details from PDF source
-    EXAM_DATE_LINE = "考試日期:2026年月日"
-    EXAM_TIME_LINE = "考試時間:8:30 - 9:30"
-    DURATION_LINE = "時限:30分鐘"
-    TOTAL_MARKS_LINE = "總分"
-    
-    # --- End Configuration ---
-
     try:
         with open(markdown_path, 'w', encoding='utf-8') as md_file:
-            # --- YAML frontmatter ---
-            md_file.write("---\n")
-            md_file.write("marp: true\n")
-            md_file.write("theme: testexam\n") # IMPORTANT: Using the new theme name
-            md_file.write("class: title-page\n") 
-            md_file.write("paginate: false\n")
-            md_file.write("backgroundColor: white\n")
-            md_file.write("---\n\n")
+            # --- YAML Frontmatter ---
+            md_file.write("---\nmarp: true\ntheme: testexam\nclass: title-page\npaginate: false\nbackgroundColor: white\n---\n\n")
 
-            # --- Slide 1: Custom Exam Front Page (Matching PDF Structure) ---
+            # --- Slide 1: Front Page ---
+            title_suffix = " (答案版)" if preferences['show_answers'] else ""
             
-            title_suffix = ""
-            if preferences['show_answers']:
-                title_suffix = " (答案版)"
-
-            # 1. Header (School Name)
             md_file.write(f'<div class="school-name">{SCHOOL_NAME}</div>\n') 
-            
-            # 2. Main Title and Subject
-            md_file.write(f'<div class="exam-title-main">{EXAM_TITLE}</div>\n') 
+            md_file.write(f'<div class="exam-title-main">{EXAM_TITLE}{title_suffix}</div>\n') 
             md_file.write(f'<div class="subject-title">{SUBJECT}</div>\n') 
-            md_file.write(f'<div class="answer-book">{ANSWER_BOOK}</div>\n\n') 
+            md_file.write(f'<div class="answer-book">試題答題簿</div>\n\n') 
             
-            # 3. Student Info (Left aligned text)
+            # Student Info & Details
             md_file.write('<div class="student-info-block">\n')
             md_file.write('  <p class="info-line">班別: _______________</p>\n') 
             md_file.write('  <p class="info-line">班號: _______________</p>\n')
             md_file.write('  <p class="info-line">姓名: _______________</p>\n')
             md_file.write('</div>\n\n')
 
-            # 4. Dates and Total Marks (Right aligned text)
             md_file.write('<div class="date-marks-block">\n')
-            md_file.write(f'  <p class="date-line">{EXAM_DATE_LINE}</p>\n')
-            md_file.write(f'  <p class="date-line">{EXAM_TIME_LINE}</p>\n')
-            md_file.write(f'  <p class="date-line">{DURATION_LINE}</p>\n')
-            # Use a two-column structure for Total Marks/Total Score box
+            md_file.write(f'  <p class="date-line">{preferences["exam_date"]}</p>\n')
+            md_file.write(f'  <p class="date-line">{preferences["exam_duration"]}</p>\n')
             md_file.write('  <table><tr>\n')
-            md_file.write(f'    <td class="total-marks-label">{TOTAL_MARKS_LINE}</td>\n')
+            md_file.write(f'    <td class="total-marks-label">{preferences["total_marks"]}</td>\n')
             md_file.write('    <td class="score-box"></td>\n')
             md_file.write('  </tr></table>\n')
             md_file.write('</div>\n\n')
-
-            # 5. Candidate Instructions Block
-            md_file.write('<div class="instructions-title">考生須知:</div>\n')
-            md_file.write('<ol class="instructions-list">\n')
-            md_file.write('  <li>在本試題簿及答題紙上的適當位置,填寫姓名、班別及班號。</li>\n')
-            md_file.write('  <li>本卷分甲、乙兩部。\n')
-            md_file.write('    <ul>\n')
-            md_file.write('      <li>甲部為多項選擇題</li>\n')
-            md_file.write('      <li>乙部為問答題\n')
-            md_file.write('    </ul>\n')
-            md_file.write('  </li>\n')
-            md_file.write(f'  <li>全卷總分為{TOTAL_MARKS_LINE}分。</li>\n')
-            md_file.write('  <li>甲部的答案須填畫在多項選擇題的答題紙上，而乙部的答案則須寫在試題答題簿中預留的空位內。</li>\n')
-            md_file.write('</ol>\n')
             
-            md_file.write("---\n\n") # Start next slide
-            
-            # --- MCQ Section Title ---
-            md_file.write('\n')
-            md_file.write('<div class="section-title">**甲部 多項選擇題**</div>\n')
-            md_file.write('**請選擇最合適的答案。**\n\n')
             md_file.write("---\n\n") 
             
-            # --- MCQ Questions Logic (rest remains the same) ---
-            try:
-                with open(mcq_csv_path, 'r', encoding='utf-8') as csv_file:
-                    reader = csv.DictReader(csv_file)
-                    question_counter = 1
-                    for row in reader:
-                        if not row.get('QuestionText', '').strip():
-                            continue
-                        # ... (rest of MCQ logic) ...
-                        question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
-                        book_chapter = row.get('book_chapter', '')
-                        topics = row.get('topics', '')
-                        year = question_id_with_years.split('-')[0] if question_id_with_years else ''
-                        question_text = row['QuestionText']
-                        option_a = row['OptionA']
-                        option_b = row['OptionB']
-                        option_c = row['OptionC']
-                        option_d = row['OptionD']
-                        marks = row['Marks']
-                        correct_answer = row.get('answer', '').upper() if preferences['show_answers'] else ''
-                        
-                        if question_counter > 1:
-                             md_file.write('---\n')
-                        
-                        if preferences['show_source_info']:
-                            source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                            md_file.write(f'<p style="font-size: 0.7em; color: gray;">{source_info}</p>\n') 
-                        
-                        md_file.write(f'## **{question_counter}. {question_text}** <span class="points">({marks} 分)</span>\n')
-                        
-                        options = [('A', option_a), ('B', option_b), ('C', option_c), ('D', option_d)]
-                        md_file.write('<ul>\n') 
-                        for letter, option_text in options:
-                            if preferences['show_answers'] and letter == correct_answer:
-                                md_file.write(f'<li style="color: red; font-weight: bold;">{option_text} ✓</li>\n')
-                            else:
-                                md_file.write(f'<li>{option_text}</li>\n')
-                        md_file.write('</ul>\n\n')
-                        
-                        question_counter += 1
-                        
-            except FileNotFoundError:
-                print(f"Error: File {mcq_csv_path} not found.")
-                return False
-            except KeyError as e:
-                print(f"Error: Missing column in MCQ file: {e}")
-                return False
+            # --- SECTION A: MCQ ---
+            if mc_questions:
+                md_file.write('<div class="section-title">**甲部 多項選擇題**</div>\n')
+                md_file.write('**請選擇最合適的答案。**\n\n')
+                
+                for idx, q in enumerate(mc_questions, 1):
+                    if idx > 1: md_file.write('---\n')
+                    
+                    if preferences['show_source_info']:
+                        source_info = f"({q.get('id', '')}_{q.get('book_chapter', '')}_{q.get('topics', '')})"
+                        md_file.write(f'<p style="font-size: 0.7em; color: gray;">{source_info}</p>\n')
+                    
+                    md_file.write(f'## **{idx}. {q["text"]}** <span class="points">({q["marks"]} 分)</span>\n')
+                    
+                    md_file.write('<ul>\n')
+                    options = q.get('options', {})
+                    correct_ans = q.get('answer', '').upper()
+                    
+                    for letter in ['A', 'B', 'C', 'D']:
+                        opt_text = options.get(letter, '')
+                        if preferences['show_answers'] and letter == correct_ans:
+                            md_file.write(f'<li style="color: red; font-weight: bold;">{letter}. {opt_text} ✓</li>\n')
+                        else:
+                            md_file.write(f'<li>{letter}. {opt_text}</li>\n')
+                    md_file.write('</ul>\n\n')
 
-            # --- LQ Section Title ---
-            md_file.write('---\n')
-            md_file.write('\n')
-            md_file.write('<div class="section-title">**乙部 問答題**</div>\n')
-            if preferences['show_answer_spaces']:
-                md_file.write('**請在適當的答案框內作答。**\n\n')
-            else:
-                md_file.write('**請回答以下問題。**\n\n')
-            
-            # --- LQ Questions Logic (rest remains the same) ---
-            try:
-                with open(lq_csv_path, 'r', encoding='utf-8') as csv_file:
-                    reader = csv.DictReader(csv_file)
-                    lq_counter = 1
-                    for row in reader:
-                        if not row.get('QuestionText', '').strip():
-                            continue
+            # --- SECTION B: LQ ---
+            if lq_questions:
+                md_file.write('---\n\n<div class="section-title">**乙部 問答題**</div>\n')
+                md_file.write('請在適當的答案框內作答。\n\n' if preferences['show_answer_spaces'] else '請回答以下問題。\n\n')
+                
+                for idx, q in enumerate(lq_questions, 1):
+                    
+                    if preferences['show_source_info']:
+                        source_info = f"({q.get('id', '')}_{q.get('book_chapter', '')})"
+                        md_file.write(f'<p style="font-size: 0.7em; color: gray;">{source_info}</p>\n')
                         
-                        question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
-                        # ... (rest of LQ logic) ...
-                        book_chapter = row.get('book_chapter', '')
-                        topics = row.get('topics', '')
-                        year = question_id_with_years.split('-')[0] if question_id_with_years else ''
-                        question_text = row['QuestionText']
-                        total_marks = row['Marks']
+                    md_file.write(f'## **{idx}. {q["text"]}** <span class="points">({q["marks"]} 分)</span>\n\n')
+                    
+                    # Dynamic Sub-questions handling (Auto-numbering implemented here)
+                    sub_qs = q.get('sub_questions', [])
+                    for sub_idx, sub in enumerate(sub_qs):
                         
-                        md_file.write('---\n') 
+                        # Apply auto-numbering and cleaning logic
+                        full_sub_text = get_auto_numbered_sub_text(sub.get('text', ''), sub_idx)
                         
-                        if preferences['show_source_info']:
-                            source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                            md_file.write(f'<p style="font-size: 0.7em; color: gray;">{source_info}</p>\n')
-                            
-                        md_file.write(f'## **{lq_counter}. {question_text}** <span class="points">({total_marks} 分)</span>\n\n')
+                        sub_marks = sub.get('marks', '')
+                        sub_ans = sub.get('answer', '')
                         
-                        sub_questions = []
-                        for i in range(1, 9): 
-                            sub_text = row.get(f'SubQuestion{i}', '') or ''
-                            sub_marks = row.get(f'SubMarks{i}', '') or ''
-                            sub_text = sub_text.strip() if sub_text else ''
-                            sub_marks = sub_marks.strip() if sub_marks else ''
-                            if sub_text:
-                                sub_questions.append({
-                                    'text': sub_text,
-                                    'marks': sub_marks,
-                                    'index': i
-                                })
-                                
-                        for idx, sub in enumerate(sub_questions):
-                            md_file.write(f'### **{sub["text"]}** <span class="points">({sub["marks"]}分)</span>\n')
-                            
-                            if preferences['show_answers']:
-                                answer_text = ""
-                                if question_id_with_years in lq_answers and sub['index'] in lq_answers[question_id_with_years]:
-                                    answer_text = lq_answers[question_id_with_years][sub['index']]
-                                elif question_id_with_years in lq_answers and (idx + 1) in lq_answers[question_id_with_years]:
-                                    answer_text = lq_answers[question_id_with_years][idx + 1]
-                                
-                                if answer_text:
-                                    md_file.write(f'<div style="color: red; font-weight: bold; margin: 10px 0; padding: 10px; border-left: 3px solid red;">答案: {answer_text}</div>\n')
-                                else:
-                                    md_file.write('<div style="color: orange; font-style: italic;">答案: [答案未提供]</div>\n')
-                                    
-                            elif preferences['show_answer_spaces']:
-                                marks_value = int(sub["marks"]) if sub["marks"] and sub["marks"].isdigit() else 2
-                                if marks_value >= 4:
-                                    height = "5em"
-                                elif marks_value >= 2:
-                                    height = "4em"
-                                else:
-                                    height = "3em"
-                                md_file.write(f'<div style="border: 1px solid #ccc; margin-top: 5px; margin-bottom: 10px; padding: 5px;"><div style="height: {height};"></div></div>\n')
-                                
-                            md_file.write('\n')
-                            
-                        lq_counter += 1
+                        md_file.write(f'### **{full_sub_text}** <span class="points">({sub_marks}分)</span>\n')
                         
-            except FileNotFoundError:
-                print(f"Note: File {lq_csv_path} not found. Skipping long questions section.")
-            except KeyError as e:
-                print(f"Error: Missing column in LQ file: {e}")
-        
-        print("Successfully generated Exercise.md!")
+                        if preferences['show_answers']:
+                            if sub_ans:
+                                md_file.write(f'<div style="color: red; font-weight: bold; border-left: 3px solid red; padding-left: 10px;">答案: {sub_ans}</div>\n')
+                            else:
+                                md_file.write('<div style="color: orange;">[未提供答案]</div>\n')
+                        elif preferences['show_answer_spaces']:
+                            # Estimate space based on marks
+                            try:
+                                m_val = int(sub_marks)
+                            except:
+                                m_val = 2
+                            height = "5em" if m_val >= 4 else "3em"
+                            md_file.write(f'<div style="border: 1px solid #ccc; margin: 5px 0 15px 0;"><div style="height: {height};"></div></div>\n')
+                        
+                        md_file.write('---\n')
+
+        print("✓ Exercise.md generated successfully")
         return True
     except Exception as e:
-        print(f"Error creating Exercise.md: {e}")
+        print(f"Error creating Markdown: {e}")
         return False
 
-# --- CORE FUNCTION 3: Generate DOCX (Updated) ---
-def generate_exercise_docx(preferences, mcq_csv_path, lq_csv_path, lq_answers_path):
-    """
-    Generates the Exercise.docx file using python-docx.
-    (Updated to use user input for exam details and correct school name)
-    """
-    import os
-    
-    SCHOOL_NAME = "佛教黃鳳翎中學" 
-    EXAM_DURATION = preferences['exam_duration']
-    EXAM_DATE = preferences['exam_date']
-    TOTAL_MARKS = preferences['total_marks']
-
-    lq_answers = load_lq_answers(lq_answers_path)
+# --- CORE FUNCTION 2: Generate DOCX ---
+def generate_exercise_docx(preferences, mc_questions, lq_questions):
+    if not os.path.exists(RESULT_FOLDER):
+        os.makedirs(RESULT_FOLDER)
+        
     docx_path = os.path.join(RESULT_FOLDER, 'Exercise.docx')
+    SCHOOL_NAME = "佛教黃鳳翎中學"
+    
     try:
         doc = Document()
-        style = doc.styles['Normal']
-        font = style.font
-        font.name = 'Arial'
-        font.size = Pt(12)
-        
-        # --- A4 SIZE AND MARGINS SETUP ---
+        # Setup styles/margins... (kept basic for brevity)
         section = doc.sections[0]
         section.page_width = Inches(8.27)
         section.page_height = Inches(11.69)
         section.top_margin = Inches(1)
         section.bottom_margin = Inches(1)
-        section.left_margin = Inches(1)
-        section.right_margin = Inches(1)
         
-        # Title page
-        title_suffix = ""
-        if preferences['show_answers']:
-            title_suffix = " (答案版)"
-        elif not preferences['show_answer_spaces']:
-            title_suffix = " (純題目版)"
-            
-        # 1. School Name Header
+        style = doc.styles['Normal']
+        style.font.name = 'Arial'
+        style.font.size = Pt(12)
+
+        # Header
         title = doc.add_heading(SCHOOL_NAME, level=1)
         title.alignment = WD_ALIGN_PARAGRAPH.CENTER
         
-        # 2. Main Title and Subtitle
-        subtitle = doc.add_heading(f'ICT 練習題集{title_suffix}', level=2)
+        subtitle_text = "ICT 練習題集" + (" (答案版)" if preferences['show_answers'] else "")
+        subtitle = doc.add_heading(subtitle_text, level=2)
         subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
         
-        # 3. Exam Details Paragraph (DOCX version of the Marp details)
-        details_para = doc.add_paragraph(f"{EXAM_DATE} | {EXAM_DURATION} | {TOTAL_MARKS}")
-        details_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        
+        info = f"{preferences['exam_date']} | {preferences['exam_duration']} | {preferences['total_marks']}"
+        doc.add_paragraph(info).alignment = WD_ALIGN_PARAGRAPH.CENTER
         doc.add_page_break()
 
-        # ... (MCQ Section Logic) ...
-        doc.add_heading('甲部 多項選擇題', level=1)
-        doc.add_paragraph('請選擇最合適的答案。').bold = True
-        try:
-            with open(mcq_csv_path, 'r', encoding='utf-8') as csv_file:
-                reader = csv.DictReader(csv_file)
-                question_counter = 1
-                for row in reader:
-                    if not row.get('QuestionText', '').strip():
-                        continue
-                    # ... (MCQ details generation) ...
-                    question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
-                    book_chapter = row.get('book_chapter', '')
-                    topics = row.get('topics', '')
-                    year = question_id_with_years.split('-')[0] if question_id_with_years else ''
-                    correct_answer = row.get('answer', '').upper() if preferences['show_answers'] else ''
-                    if preferences['show_source_info']:
-                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                        source_para = doc.add_paragraph(source_info)
-                        source_para.runs[0].font.size = Pt(10)
-                        source_para.runs[0].italic = True
-                    question_text = row['QuestionText']
-                    marks = row['Marks']
-                    question_para = doc.add_paragraph(f"{question_counter}. {question_text} ({marks} 分)")
-                    question_para.runs[0].bold = True
-                    options = [('A', row['OptionA']), ('B', row['OptionB']), ('C', row['OptionC']), ('D', row['OptionD'])]
-                    for letter, option_text in options:
-                        option_para = doc.add_paragraph(f"   {letter}. {option_text}")
-                        if preferences['show_answers'] and letter == correct_answer:
-                            for run in option_para.runs:
-                                run.font.color.rgb = RGBColor(255, 0, 0)
-                                run.bold = True
-                            check_run = option_para.add_run(" ✓")
-                            check_run.font.color.rgb = RGBColor(255, 0, 0)
-                            check_run.bold = True
-                    doc.add_paragraph()
-                    if question_counter % 5 == 0:
-                        doc.add_page_break()
-                    question_counter += 1
-        except FileNotFoundError:
-            return False
-        except KeyError:
-            return False
+        # --- MCQ ---
+        if mc_questions:
+            doc.add_heading('甲部 多項選擇題', level=1)
+            doc.add_paragraph('請選擇最合適的答案。').bold = True
+            
+            for idx, q in enumerate(mc_questions, 1):
+                # Source info
+                if preferences['show_source_info']:
+                    source_txt = f"({q.get('id', '')} {q.get('topics', '')})"
+                    p = doc.add_paragraph(source_txt)
+                    p.runs[0].font.size = Pt(9)
+                    p.runs[0].font.color.rgb = RGBColor(128, 128, 128)
+
+                # Question
+                p = doc.add_paragraph(f"{idx}. {q['text']} ({q['marks']} 分)")
+                p.runs[0].bold = True
+                
+                # Options
+                options = q.get('options', {})
+                correct_ans = q.get('answer', '').upper()
+                
+                for letter in ['A', 'B', 'C', 'D']:
+                    opt_text = options.get(letter, '')
+                    p_opt = doc.add_paragraph(f"   {letter}. {opt_text}")
+                    
+                    if preferences['show_answers'] and letter == correct_ans:
+                        for run in p_opt.runs:
+                            run.font.color.rgb = RGBColor(255, 0, 0)
+                            run.bold = True
+                        p_opt.add_run(" ✓").font.color.rgb = RGBColor(255, 0, 0)
+                
+                doc.add_paragraph() # Spacer
+                # Removed page break here as it can make DOCX too fragmented, let it flow naturally
 
         doc.add_page_break()
-        # ... (LQ Section Logic) ...
-        doc.add_heading('乙部 問答題', level=1)
-        if preferences['show_answer_spaces']:
-            doc.add_paragraph('請在適當的答案框內作答。').bold = True
-        else:
-            doc.add_paragraph('請回答以下問題。').bold = True
-        try:
-            with open(lq_csv_path, 'r', encoding='utf-8') as csv_file:
-                reader = csv.DictReader(csv_file)
-                lq_counter = 1
-                for row in reader:
-                    if not row.get('QuestionText', '').strip():
-                        continue
-                    question_id_with_years = row.get('QuestionIDwithQuestionyears', '')
-                    book_chapter = row.get('book_chapter', '')
-                    topics = row.get('topics', '')
-                    year = question_id_with_years.split('-')[0] if question_id_with_years else ''
-                    if preferences['show_source_info']:
-                        source_info = f"({year}_{question_id_with_years}_{book_chapter}_{topics})"
-                        source_para = doc.add_paragraph(source_info)
-                        source_para.runs[0].font.size = Pt(10)
-                        source_para.runs[0].italic = True
-                    question_text = row['QuestionText']
-                    total_marks = row['Marks']
-                    question_para = doc.add_paragraph(f"{lq_counter}. {question_text} ({total_marks} 分)")
-                    question_para.runs[0].bold = True
-                    sub_questions = []
-                    for i in range(1,9):
-                        sub_text = row.get(f'SubQuestion{i}', '') or ''
-                        sub_marks = row.get(f'SubMarks{i}', '') or ''
-                        sub_text = sub_text.strip() if sub_text else ''
-                        sub_marks = sub_marks.strip() if sub_marks else ''
-                        if sub_text:
-                            sub_questions.append({
-                                'text': sub_text,
-                                'marks': sub_marks,
-                                'index': i
-                            })
-                    for idx, sub in enumerate(sub_questions):
-                        sub_para = doc.add_paragraph(f"{sub['text']} ({sub['marks']}分)")
-                        if preferences['show_answers']:
-                            answer_text = ""
-                            if question_id_with_years in lq_answers and sub['index'] in lq_answers[question_id_with_years]:
-                                answer_text = lq_answers[question_id_with_years][sub['index']]
-                            elif question_id_with_years in lq_answers and (idx+1) in lq_answers[question_id_with_years]:
-                                answer_text = lq_answers[question_id_with_years][idx+1]
-                            if answer_text:
-                                answer_para = doc.add_paragraph(f"答案: {answer_text}")
-                                answer_para.runs[0].font.color.rgb = RGBColor(255, 0, 0)
-                                answer_para.runs[0].bold = True
-                            else:
-                                answer_para = doc.add_paragraph("答案: [答案未提供]")
-                                answer_para.runs[0].font.color.rgb = RGBColor(255, 165, 0)
-                                answer_para.runs[0].italic = True
-                        elif preferences['show_answer_spaces']:
-                            marks_value = int(sub["marks"]) if sub["marks"] and sub["marks"].isdigit() else 2
-                            lines = max(3, marks_value)
-                            for line_num in range(lines):
-                                answer_line = doc.add_paragraph()
-                                answer_line.add_run("_" * 60)
-                                answer_line.paragraph_format.space_before = Pt(6)
-                                answer_line.paragraph_format.space_after = Pt(6)
-                            doc.add_paragraph()
-                    doc.add_page_break()
-                    lq_counter += 1
-        except FileNotFoundError:
-            pass # Handled in load_lq_answers
+
+        # --- LQ ---
+        if lq_questions:
+            doc.add_heading('乙部 問答題', level=1)
+            doc.add_paragraph('請在適當的答案框內作答。' if preferences['show_answer_spaces'] else '請回答以下問題。').bold = True
+            
+            for idx, q in enumerate(lq_questions, 1):
+                if preferences['show_source_info']:
+                    source_txt = f"({q.get('id', '')})"
+                    p = doc.add_paragraph(source_txt)
+                    p.runs[0].font.size = Pt(9)
+                    p.runs[0].font.color.rgb = RGBColor(128, 128, 128)
+                    
+                p = doc.add_paragraph(f"{idx}. {q['text']} ({q['marks']} 分)")
+                p.runs[0].bold = True
+                
+                # Sub-questions Loop (Auto-numbering implemented here)
+                for sub_idx, sub in enumerate(q.get('sub_questions', [])):
+                    
+                    # Apply auto-numbering and cleaning logic
+                    full_sub_text = get_auto_numbered_sub_text(sub.get('text', ''), sub_idx)
+                    
+                    # Add sub-question text
+                    p_sub = doc.add_paragraph(f"{full_sub_text} ({sub.get('marks', '')}分)")
+                    
+                    if preferences['show_answers']:
+                        ans = sub.get('answer', '[答案未提供]')
+                        p_ans = doc.add_paragraph(f"答案: {ans}")
+                        p_ans.runs[0].font.color.rgb = RGBColor(255, 0, 0)
+                    elif preferences['show_answer_spaces']:
+                        # Draw lines
+                        try:
+                            lines = max(3, int(sub['marks']))
+                        except:
+                            lines = 3
+                        for _ in range(lines):
+                            p_line = doc.add_paragraph("_" * 60)
+                            p_line.paragraph_format.line_spacing = Pt(18)
+                
+                doc.add_page_break()
+
         doc.save(docx_path)
-        print("✓ DOCX file generated successfully!")
+        print("✓ Exercise.docx generated successfully")
         return True
     except Exception as e:
-        print(f"✗ Error creating Exercise.docx: {e}")
+        print(f"Error creating DOCX: {e}")
         return False
-
-
-# --- Main Execution Block (Updated) ---
+    
+# --- Main Execution ---
 def main():
-    print("=== ICT Exercise Generator ===")
+    install_required_packages()
     
-    # 1. Get ALL preferences and exam details
-    preferences = get_user_preferences()
+    # 1. Select JSON File (One file containing both MC and LQ)
+    json_path = choose_json_file()
     
-    print("\nChoosing MCQ and LQ CSV files:")
-    mcq_csv_path = choose_csv_file("Select MCQ csv file")
-    lq_csv_path = choose_csv_file("Select LQ csv file")
-    lq_answers_path = os.path.join(CSV_FOLDER, 'LQ_Answers.csv')
-
-    print("\nGenerating exercise files...")
+    # 2. Load and parse Data
+    mc_data, lq_data = load_exam_data(json_path)
+    print(f"Loaded {len(mc_data)} MCQs and {len(lq_data)} LQs.")
     
-    # 2. Pass the full preferences dictionary to the generator functions
-    result_md = generate_exercise_markdown(preferences, mcq_csv_path, lq_csv_path, lq_answers_path)
-    print("✓ Markdown file generated successfully" if result_md else "✗ Failed to generate Markdown file")
-
-    # DOCX
-    try:
-        import docx
-        result_docx = generate_exercise_docx(preferences, mcq_csv_path, lq_csv_path, lq_answers_path)
-        print("✓ DOCX file generated successfully" if result_docx else "✗ Failed to generate DOCX file")
-    except ImportError:
-        print("⚠ DOCX file not created: python-docx not installed. Run pip3 install python-docx first.")
-
+    # 3. Get Preferences
+    prefs = get_user_preferences()
+    
+    print("\nGenerating files...")
+    # 4. Generate
+    generate_exercise_markdown(prefs, mc_data, lq_data)
+    generate_exercise_docx(prefs, mc_data, lq_data)
+    
     print("\n=== Generation Complete ===")
-    markdown_path = os.path.join(RESULT_FOLDER, "Exercise.md")
-    docx_path = os.path.join(RESULT_FOLDER, "Exercise.docx")
-    files_created = []
-    if os.path.exists(markdown_path):
-        files_created.append("- Exercise.md (Markdown format)")
-    if os.path.exists(docx_path):
-        files_created.append("- Exercise.docx (Word format)")
-    print('\n'.join(files_created) if files_created else "No files were created successfully.")
+    print(f"Files saved in: {RESULT_FOLDER}")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,702 @@
+[
+  {
+    "type": "MC",
+    "id": "MC_R_01",
+    "text": "某快遞公司開始使用 QR Code（二維碼）來追蹤包裹，取代傳統的 Barcode（條碼）。以下哪項關於 QR Code 相較於 Barcode 的優點是正確的？\n(1) QR Code 在數據儲存密度上更高\n(2) QR Code 即使輕微損壞或部分遮擋，仍能成功掃描\n(3) QR Code 掃描時通常需要更精確的角度和距離",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (1) 和 (2)",
+      "C": "只有 (2) 和 (3)",
+      "D": "只有 (1)、(2) 和 (3)"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_02",
+    "text": "小明在手機上玩一款賽車遊戲，他透過傾斜手機來控制賽車的方向盤。這種操控方式主要依賴手機內的哪種 輸入設備？",
+    "marks": "1",
+    "options": {
+      "A": "全球定位系統 (GPS)",
+      "B": "觸控面板",
+      "C": "陀螺儀 (Gyroscope)",
+      "D": "距離感應器"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_03",
+    "text": "當用戶撥打或接聽電話，將手機貼近耳朵時，屏幕會自動變黑，以防止臉部誤觸。此功能是通過哪個 感應器 來實現的？",
+    "marks": "1",
+    "options": {
+      "A": "加速計 (Accelerometer)",
+      "B": "光距離感應器 (Proximity Sensor)",
+      "C": "數碼相機",
+      "D": "麥克風"
+    },
+    "answer": "B"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_04",
+    "text": "在選購電腦顯示器時，以下哪些規格參數是決定其影像輸出品質的關鍵因素？\n(1) 螢幕刷新率\n(2) 像素密度（解像度）\n(3) 螢幕尺寸\n(4) 影像連接器界面 (如 HDMI, DisplayPort)",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1)、(2) 和 (3)",
+      "B": "只有 (1)、(3) 和 (4)",
+      "C": "只有 (2)、(3) 和 (4)",
+      "D": "以上皆是"
+    },
+    "answer": "B"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_05",
+    "text": "對於需要大量、快速地打印黑白文字合同的大型企業來說，激光打印機 通常比噴墨打印機更受青睞。這是因為激光打印機具備以下哪項優勢？",
+    "marks": "1",
+    "options": {
+      "A": "耗電量更低",
+      "B": "能夠打印出更豐富的色彩",
+      "C": "單位頁面的打印成本更低",
+      "D": "具備更好的流動性"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_06",
+    "text": "假設兩款單核心處理器 X 和 Y，X 的時鐘頻率 (Clock Rate) 明顯高於 Y。以下哪項結論不一定正確？",
+    "marks": "1",
+    "options": {
+      "A": "處理器 X 在單位時間內執行的指令週期數更多。",
+      "B": "處理器 Y 可能比處理器 X 更節能。",
+      "C": "處理器 X 的運算能力 (Performance) 一定高於處理器 Y。",
+      "D": "兩個處理器在每個時鐘周期所處理的指令數量可能不同。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_07",
+    "text": "關於電腦系統中的位址匯流排 (Address Bus)，以下哪項描述是正確的？\n(1) 它用於將 CPU 處理的數據傳輸到記憶體。\n(2) 它是單向傳輸，從 CPU 流向記憶體。\n(3) 它的寬度決定了 CPU 可以存取主記憶體的最大容量。",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (2) 和 (3)",
+      "C": "只有 (1) 和 (3)",
+      "D": "只有 (1)、(2) 和 (3)"
+    },
+    "answer": "B"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_08",
+    "text": "以下哪些因素的規格越高，通常會導致中央處理器 (CPU) 的整體處理能力越強？\n(1) 核心數量\n(2) 時鐘頻率\n(3) 快取記憶體容量",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1) 和 (2)",
+      "B": "只有 (2) 和 (3)",
+      "C": "只有 (1) 和 (3)",
+      "D": "以上皆是"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_09",
+    "text": "關於 集成圖形處理器 (IGP) 和 獨立圖形卡 (dGPU) 的比較，以下哪項陳述是錯誤的？",
+    "marks": "1",
+    "options": {
+      "A": "獨立圖形卡通常擁有專門的高速記憶體 (VRAM)。",
+      "B": "集成圖形處理器通常會佔用部分電腦主記憶體 (RAM) 來進行圖形處理。",
+      "C": "獨立圖形卡不會用到電腦的主記憶體。",
+      "D": "對於執行要求嚴苛的 3D 遊戲或視頻渲染，獨立圖形卡的性能遠超集成圖形處理器。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_10",
+    "text": "小紅的筆記本電腦經常在開啟多個應用程式或瀏覽器分頁時變得反應遲鈍。以下哪項升級措施最有機會顯著改善此問題？",
+    "marks": "1",
+    "options": {
+      "A": "將 500GB 傳統硬碟 (HDD) 升級到 1TB 固態硬碟 (SSD)。",
+      "B": "將雙核 CPU 升級到四核 CPU。",
+      "C": "將 4GB 記憶體 (RAM) 升級到 8GB 記憶體。",
+      "D": "將集成顯卡更換為入門級獨立顯卡。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_11",
+    "text": "操作系統 (OS) 製造商不斷發佈安全更新和補丁，並敦促用戶盡快安裝。以下哪項不是操作系統發佈這些更新的常見原因？",
+    "marks": "1",
+    "options": {
+      "A": "消除系統中已發現的軟件缺陷 (Bugs)。",
+      "B": "解決與新硬件或新應用程式的兼容性問題。",
+      "C": "向用戶宣佈舊版本系統的技術支援將立刻終止。",
+      "D": "修復可能被惡意攻擊者利用的安全性漏洞。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_12",
+    "text": "噹噹打開電腦的「任務管理器」來檢查資源用量，此時電腦剛完成啟動且沒有運行任何用戶應用程式。他將看到什麼情況？\n(1) 處理器用量會顯示為零。\n(2) 處理器用量雖然很低，但會顯示出非零數值。\n(3) 記憶體用量會顯示出非零數值。",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (2)",
+      "C": "只有 (1) 和 (3)",
+      "D": "只有 (2) 和 (3)"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_13",
+    "text": "莉莉想從電腦移除一款遊戲，她直接在檔案總管中將遊戲的安裝資料夾從硬碟中刪除。為什麼不建議使用這種方法來解除安裝應用程式？",
+    "marks": "1",
+    "options": {
+      "A": "程式檔案在電腦重啟後會再次自動出現。",
+      "B": "應用程式在系統中留下的相關配置檔和登錄檔可能不會被清除。",
+      "C": "刪除檔案會造成電腦病毒感染。",
+      "D": "這種方法不能節省硬碟空間。"
+    },
+    "answer": "B"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_14",
+    "text": "以下哪些電腦周邊設備在連接到電腦後，通常需要特定的驅動程式 (Driver) 才能充分發揮其全部功能？\n(1) 高階掃描器\n(2) 中央處理器 (CPU)\n(3) USB 接口鍵盤\n(4) 獨立顯示器",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1) 和 (3)",
+      "B": "只有 (2) 和 (4)",
+      "C": "只有 (1) 和 (4)",
+      "D": "只有 (1)、(2) 和 (4)"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_15",
+    "text": "某公司的薪金計算系統被設定為在每個月的最後一天午夜自動運行，處理當月的所有工時記錄並生成工資單。這種作業方式最符合以下哪種處理模式？",
+    "marks": "1",
+    "options": {
+      "A": "成批工件處理 (Batch Processing)",
+      "B": "實時處理 (Real-time Processing)",
+      "C": "並行式處理 (Parallel Processing)",
+      "D": "分布式處理 (Distributed Processing)"
+    },
+    "answer": "A"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_16",
+    "text": "在資訊系統開發團隊中，系統分析師 (System Analyst) 的核心職責是什麼？",
+    "marks": "1",
+    "options": {
+      "A": "負責編寫程式碼，將系統設計轉化為實際的軟件。",
+      "B": "為資訊系統的最終使用者提供技術支援。",
+      "C": "評估用戶需求，設計系統規範，並確定開發所需的資源。",
+      "D": "負責數據庫的維護和數據安全管理。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_17",
+    "text": "以下哪項活動體現了將數據 (Data) 轉化為資訊 (Information) 的過程？",
+    "marks": "1",
+    "options": {
+      "A": "使用麥克風將聲音轉換為二進制代碼。",
+      "B": "在問卷中記錄受訪者的原始答案。",
+      "C": "根據某城市過去一個月的氣溫記錄，計算出當月的平均氣溫。",
+      "D": "拍下一張高清的風景照片。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_18",
+    "text": "以下哪種操作不涉及模擬信號和數碼信號之間的相互轉換？",
+    "marks": "1",
+    "options": {
+      "A": "使用數碼相機拍攝和儲存照片。",
+      "B": "使用數據機 (Modem) 透過電話線傳輸資料。",
+      "C": "使用文字編輯軟件修改一個純文字檔案。",
+      "D": "播放儲存在電腦上的 MP3 音樂。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_19",
+    "text": "某電郵地址輸入欄位使用格式檢查 (Format Check) 來確保輸入中至少包含一個 '@' 符號。根據此規則，以下哪個電郵地址會被視為無效？\n(1) peter@corp.net\n(2) susan.lee@corpmail\n(3) user-namecorp.com",
+    "marks": "1",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (2)",
+      "C": "只有 (1) 和 (2)",
+      "D": "只有 (3)"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_20",
+    "text": "一個在線調查要求用戶從「強烈同意」、「同意」、「中立」、「不同意」、「強烈不同意」五個選項中選擇一個。以下哪種用戶界面設計最適合用於這種單一選擇的輸入？",
+    "marks": "1",
+    "options": {
+      "A": "單選框 (Radio Button)",
+      "B": "複選框 (Checkbox)",
+      "C": "下拉列表 (Dropdown List)",
+      "D": "文字框 (Text Box)"
+    },
+    "answer": "A"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_21",
+    "text": "關於數據類型的描述，以下哪項陳述是正確的？",
+    "marks": "1",
+    "options": {
+      "A": "浮點數 (Real Number) 不能包含負數。",
+      "B": "布爾值 (Boolean) 只能表示真 (True) 或假 (False) 兩種狀態。",
+      "C": "整數 (Integer) 不能包含負數。",
+      "D": "數字 `5.0` 在某些情況下可以被視為字串 (String)。"
+    },
+    "answer": "D"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_22",
+    "text": "某應用程式要求用戶設置一個由 5 個英文字母（A-Z，不區分大小寫）組成的密碼。若每個位置都可以獨立選擇，那麼總共可以表示多少個不同的密碼組合？",
+    "marks": "1",
+    "options": {
+      "A": "26 × 5",
+      "B": "2^26",
+      "C": "26^5",
+      "D": "5^26"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_23",
+    "text": "試找出十進制數字 -64 的 8 位元二進制補碼 (Two's Complement) 表示法。",
+    "marks": "1",
+    "options": {
+      "A": "1100 0000",
+      "B": "0100 0000",
+      "C": "1011 1111",
+      "D": "0011 1111"
+    },
+    "answer": "A"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_24",
+    "text": "以下哪種 8 位元二進制補碼的數字計算情況，不可能導致溢出誤差 (Overflow Error)？",
+    "marks": "1",
+    "options": {
+      "A": "兩個正數相加，結果超出最大正數範圍。",
+      "B": "兩個負數相加，結果超出最小負數範圍。",
+      "C": "將一個正數和一個負數相加。",
+      "D": "將一個負數減去一個正數。"
+    },
+    "answer": "C"
+  },
+  {
+    "type": "MC",
+    "id": "MC_R_25",
+    "text": "觀察下圖所示的圖像放大效果 ，當左側的圖像被放大時，右側的放大區域呈現出鋸齒狀 (Jaggies) 或清晰的像素塊。以下哪句關於此圖像的描述是正確的？",
+    "marks": "1",
+    "options": {
+      "A": "此圖像必定是點陣圖 (Bitmap)。",
+      "B": "此圖像必定是向量圖 (Vector Graphics)。",
+      "C": "放大時出現鋸齒狀說明它使用了無損壓縮。",
+      "D": "此圖像的色深一定是 1 位元。"
+    },
+    "answer": "A"
+  },
+  {
+    "id": "Sim_MC_01",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Input Devices, RFID, Barcode",
+    "text": "某大型超級市場在貨架標籤上採用 RFID (無線射頻識別) 技術取代傳統條碼。以下哪項/些是 RFID 相較於條碼的優點？\n(1) RFID 標籤必須在視線範圍內才能讀取\n(2) RFID 可以同時讀取多個標籤\n(3) RFID 標籤可儲存更多數據且可被更新",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (2)",
+      "C": "只有 (1) 和 (3)",
+      "D": "只有 (2) 和 (3)"
+    },
+    "answer": "D",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_02",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Input Devices, Sensors",
+    "text": "志明正在使用運動手錶記錄他的步數和跑步距離。該手錶主要依賴以下哪項傳感器來計算步數？",
+    "options": {
+      "A": "氣壓計",
+      "B": "加速計 (Accelerometer)",
+      "C": "光距離感應器",
+      "D": "溫度計"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_03",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Input Devices, Biometrics",
+    "text": "許多銀行應用程式支援「生物特徵認證」登入。以下哪項不屬於生物特徵輸入設備的應用？",
+    "options": {
+      "A": "使用指紋解鎖手機",
+      "B": "使用人臉識別確認付款",
+      "C": "輸入一次性密碼 (OTP) 登入",
+      "D": "透過虹膜掃描進入數據中心"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_04",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Scanners, Specifications",
+    "text": "在購買掃描器將舊照片數碼化時，以下哪項規格最能直接影響數碼影像的清晰度和細緻度？",
+    "options": {
+      "A": "每分鐘頁數 (PPM)",
+      "B": "光學解像度 (dpi)",
+      "C": "緩衝記憶體大小",
+      "D": "預熱時間"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_05",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Output Devices, Printers",
+    "text": "某會計部需要打印大量含複寫功能的發票 (即打印一張時，底下的副本也會印上字跡)。以下哪種打印機最適合？",
+    "options": {
+      "A": "噴墨打印機",
+      "B": "激光打印機",
+      "C": "點陣式打印機",
+      "D": "3D 打印機"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_06",
+    "type": "MC",
+    "book_chapter": "Ch2",
+    "topics": "CPU Components, Registers",
+    "text": "關於電腦系統中的「寄存器」(Registers)，以下哪項描述是正確的？",
+    "options": {
+      "A": "它們位於硬碟中，用於儲存操作系統",
+      "B": "它們位於 RAM 中，存取速度比 Cache 慢",
+      "C": "它們位於 CPU 內部，用於暫存指令或數據，存取速度極快",
+      "D": "它們是唯讀的，不能被寫入"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_07",
+    "type": "MC",
+    "book_chapter": "Ch2",
+    "topics": "CPU Architecture, Buses",
+    "text": "以下哪項關於「數據匯流排」(Data Bus) 的描述是正確的？\n(1) 它是雙向傳輸的\n(2) 它的寬度決定了 CPU 一次能傳送的數據量\n(3) 它用於傳送記憶體地址位置",
+    "options": {
+      "A": "只有 (1)",
+      "B": "只有 (2)",
+      "C": "只有 (1) 和 (2)",
+      "D": "只有 (2) 和 (3)"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_08",
+    "type": "MC",
+    "book_chapter": "Ch2",
+    "topics": "Memory, RAM, Virtual Memory",
+    "text": "美玲發現她的電腦在開啟高清影片編輯軟件時非常緩慢。朋友建議她「增加 RAM」。這項升級如何改善效能？",
+    "options": {
+      "A": "增加硬碟的儲存空間",
+      "B": "減少 CPU 從硬碟讀取數據的次數 (減少分頁/虛擬記憶體的使用)",
+      "C": "提高互聯網的下載速度",
+      "D": "提高 CPU 的時鐘頻率"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_09",
+    "type": "MC",
+    "book_chapter": "Ch4",
+    "topics": "Processing Modes, Real-time",
+    "text": "以下哪項工作最適合使用「實時處理」(Real-time processing) 模式？",
+    "options": {
+      "A": "計算全校學生的考試平均分",
+      "B": "列印每月電費單",
+      "C": "飛機的自動導航系統控制",
+      "D": "備份每日的數據庫"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_10",
+    "type": "MC",
+    "book_chapter": "Ch3",
+    "topics": "Utilities, Disk Management",
+    "text": "用戶可以透過「磁碟重組工具」(Disk Defragmenter) 來提升電腦效能。它的主要原理是什麼？",
+    "options": {
+      "A": "刪除不必要的垃圾檔案以釋放空間",
+      "B": "重新排列硬碟上的檔案片段，使它們連續存放以縮短讀取時間",
+      "C": "壓縮檔案以減少佔用空間",
+      "D": "掃描並移除電腦病毒"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_11",
+    "type": "MC",
+    "book_chapter": "Ch3",
+    "topics": "Operating Systems, User Interface",
+    "text": "操作系統(OS) 提供多種用戶界面。以下哪項是「命令行界面」(CLI) 相對於「圖形用戶界面」(GUI) 的優點？",
+    "options": {
+      "A": "對於初學者來說更容易學習",
+      "B": "佔用較少的系統資源 (如記憶體和圖像處理能力)",
+      "C": "可以顯示豐富的圖像和多媒體",
+      "D": "不需要使用鍵盤輸入指令"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_12",
+    "type": "MC",
+    "book_chapter": "Ch5",
+    "topics": "Data Representation, Two's Complement",
+    "text": "將十進制數字 -100 轉換為 8 位元二進制補碼 (Two's Complement)，結果是甚麼？",
+    "options": {
+      "A": "1001 1100",
+      "B": "1110 0100",
+      "C": "1001 1011",
+      "D": "0110 0100"
+    },
+    "answer": "A",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_13",
+    "type": "MC",
+    "book_chapter": "Ch5",
+    "topics": "Data Representation, Integer Range",
+    "text": "在 8 位元二進制補碼系統中，可表示的最小和最大整數範圍是多少？",
+    "options": {
+      "A": "-128 至 +127",
+      "B": "-127 至 +128",
+      "C": "0 至 255",
+      "D": "-256 至 +255"
+    },
+    "answer": "A",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_14",
+    "type": "MC",
+    "book_chapter": "Ch5",
+    "topics": "Data Representation, Overflow",
+    "text": "以下哪項有關「溢出誤差」(Overflow Error) 的情況必然不會發生？",
+    "options": {
+      "A": "兩個正數相加",
+      "B": "兩個負數相加",
+      "C": "一個正數與一個負數相加",
+      "D": "一個正數減去一個負數"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_15",
+    "type": "MC",
+    "book_chapter": "Ch6",
+    "topics": "Multimedia, Vector Graphics",
+    "text": "比較點陣圖 (Bitmap) 和向量圖 (Vector Graphics)，以下哪項是向量圖的特點？",
+    "options": {
+      "A": "適合用於色彩豐富的照片",
+      "B": "檔案大小通常與圖像尺寸成正比",
+      "C": "放大時不會出現鋸齒狀 (失真)",
+      "D": "每個像素的顏色都被獨立儲存"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_16",
+    "type": "MC",
+    "book_chapter": "Ch2",
+    "topics": "Memory, Virtual Memory",
+    "text": "某電腦顯示「虛擬記憶體不足」的警告訊息。這通常意味著甚麼？",
+    "options": {
+      "A": "硬碟空間已滿",
+      "B": "RAM 已被耗盡，且硬碟上用於交換的空間也不足",
+      "C": "CPU 過熱",
+      "D": "顯示卡驅動程式過期"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_17",
+    "type": "MC",
+    "book_chapter": "Ch4",
+    "topics": "Data vs Information",
+    "text": "以下哪項是將「資訊」轉換為「數據」的例子？",
+    "options": {
+      "A": "根據銷售報告決定下季度的入貨量",
+      "B": "在表格中記錄每位參賽者的跑得時間 (例如：10.5秒, 11.2秒)",
+      "C": "繪製氣溫變化的折線圖",
+      "D": "分析問卷調查結果並撰寫總結"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_18",
+    "type": "MC",
+    "book_chapter": "Ch4",
+    "topics": "Data Validation, Range Check",
+    "text": "在電子試算表中，若要確保用戶在「年齡」欄位輸入的數值介乎 12 至 18 之間，應使用哪種驗證檢查？",
+    "options": {
+      "A": "格式檢查 (Format Check)",
+      "B": "範圍檢查 (Range Check)",
+      "C": "存在檢查 (Presence Check)",
+      "D": "檢驗數位 (Check Digit)"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_19",
+    "type": "MC",
+    "book_chapter": "Ch4",
+    "topics": "Data Validation, Format Check",
+    "text": "志強在網上填寫表格時，在「電郵地址」一欄錯誤輸入了 \"chan_gmail.com\" (漏了@)。系統彈出錯誤提示。這是因為系統進行了甚麼檢查？",
+    "options": {
+      "A": "格式檢查",
+      "B": "範圍檢查",
+      "C": "一致性檢查",
+      "D": "長度檢查"
+    },
+    "answer": "A",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_20",
+    "type": "MC",
+    "book_chapter": "Ch7",
+    "topics": "Networking, Hardware, Modem",
+    "text": "以下哪項設備負責將數碼訊號轉換為模擬訊號，以便通過電話線傳輸數據？",
+    "options": {
+      "A": "路由器 (Router)",
+      "B": "數據機 (Modem)",
+      "C": "網絡交換器 (Switch)",
+      "D": "網絡介面卡 (NIC)"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_21",
+    "type": "MC",
+    "book_chapter": "Ch5",
+    "topics": "Data Representation, Character Sets, Unicode",
+    "text": "哪種編碼標準最適合用於包含繁體中文、簡體中文、日文及韓文的多語言網頁？",
+    "options": {
+      "A": "ASCII",
+      "B": "Big5",
+      "C": "GB2312",
+      "D": "Unicode (UTF-8)"
+    },
+    "answer": "D",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_22",
+    "type": "MC",
+    "book_chapter": "Ch6",
+    "topics": "Multimedia, File Size Calculation",
+    "text": "假設一張未經壓縮的圖像，解像度為 1024 x 1024，色深為 16 位元。其檔案大小約為多少？\n(計算提示: 1024x1024x16 bits / 8 / 1024 / 1024)",
+    "options": {
+      "A": "1 MB",
+      "B": "2 MB",
+      "C": "16 MB",
+      "D": "2 KB"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_23",
+    "type": "MC",
+    "book_chapter": "Ch3",
+    "topics": "Operating Systems, Drivers",
+    "text": "以下哪項不是驅動程式 (Driver) 的功能？",
+    "options": {
+      "A": "作為硬件與操作系統之間的翻譯員",
+      "B": "讓操作系統能夠控制特定的硬件設備",
+      "C": "掃描電腦中的惡意軟件",
+      "D": "確保硬件能發揮其應有功能"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_24",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Input/Output, Plug and Play",
+    "text": "「隨插即用」(Plug and Play) 裝置的主要特點是什麼？",
+    "options": {
+      "A": "不需要任何電力供應",
+      "B": "連接後操作系統會自動偵測並嘗試安裝驅動程式",
+      "C": "只能使用 USB 接口連接",
+      "D": "必須在關機狀態下連接"
+    },
+    "answer": "B",
+    "marks": 1
+  },
+  {
+    "id": "Sim_MC_25",
+    "type": "MC",
+    "book_chapter": "Ch2",
+    "topics": "Memory, RAM vs ROM",
+    "text": "關於 RAM (隨機存取記憶體) 與 ROM (唯讀記憶體) 的比較，下列何者正確？",
+    "options": {
+      "A": "RAM 是非易失性，ROM 是易失性",
+      "B": "電腦關機後，RAM 內的資料會消失，但 ROM 內的資料保留",
+      "C": "用戶可以隨意寫入資料進 ROM",
+      "D": "RAM 儲存 BIOS，而 ROM 儲存正在執行的程式"
+    },
+    "answer": "B",
+    "marks": 1
+  }
+]

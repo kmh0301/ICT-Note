@@ -1,0 +1,37 @@
+[
+  {
+    "id": "2019-Q1",
+    "type": "MC",
+    "book_chapter": "Ch1",
+    "topics": "Hardware",
+    "text": "Which of the following is an input device?",
+    "options": {
+      "A": "Monitor",
+      "B": "Printer",
+      "C": "Mouse",
+      "D": "Speaker"
+    },
+    "answer": "C",
+    "marks": 1
+  },
+  {
+    "id": "2020-Q2",
+    "type": "LQ",
+    "book_chapter": "Ch2",
+    "topics": "Networking",
+    "text": "Describe the function of a Router.",
+    "marks": 6,
+    "sub_questions": [
+      {
+        "text": "State one function of a router.",
+        "marks": 2,
+        "answer": "To forward data packets between networks."
+      },
+      {
+        "text": "Compare a router and a switch.",
+        "marks": 4,
+        "answer": "A router connects different networks..."
+      }
+    ]
+  }
+]
