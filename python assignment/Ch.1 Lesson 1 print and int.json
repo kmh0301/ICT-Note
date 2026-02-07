@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "Python 基礎：print() 與 int() 的使用",
+        "content": "<h3>第一課：顯示訊息與轉換整數</h3><p>在這項練習中，你將學習如何使用 <code>print()</code> 函數來顯示結果，以及如何將數字字串轉換為整數。</p><h4>任務目標：</h4><ol><li>定義一個字串變數 <code>num_str = \"100\"</code>。</li><li>使用 <code>int()</code> 將其轉換為整數並存入變數 <code>num</code>。</li><li>計算 <code>num + 50</code> 的結果。</li><li>使用 <code>print()</code> 顯示最終結果。</li></ol>",
+        "language": "python",
+        "code_template": "# 1. 定義字串\nnum_str = \"100\"\n\n# 2. 將字串轉換為整數 (使用 int)\n\n\n# 3. 計算 num + 50\n\n\n# 4. 顯示結果 (使用 print)\n",
+        "modal_solution": "num_str = \"100\"\nnum = int(num_str)\nresult = num + 50\nprint(result)\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "",
+                "output": "150",
+                "name": "預期輸出",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

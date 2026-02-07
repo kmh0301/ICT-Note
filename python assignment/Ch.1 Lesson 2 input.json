@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "Python 基礎：input() 的輸入使用",
+        "content": "<h3>第二課：獲取用戶輸入</h3><p>在這項練習中，你將學習如何使用 <code>input()</code> 函數從用戶那裡獲取數據，並結合 <code>int()</code> 進行運算。</p><h4>任務目標：</h4><p>編寫一個程式，執行以下動作：</p><ol><li>讀取用戶輸入的第一個數字（代表年齡）。</li><li>將輸入轉換為整數。</li><li>在 <code>print()</code> 中計算並顯示「10年後的年齡」（即輸入加10）。</li></ol>",
+        "language": "python",
+        "code_template": "# 1. 使用 input() 讀取用戶輸入，並使用 int() 轉換\nage = \n\n# 2. 計算並顯示 10 年後的年齡\n",
+        "modal_solution": "age = int(input())\nprint(age + 10)\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "15",
+                "output": "25",
+                "name": "輸入 15 的結果",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "20",
+                "output": "30",
+                "name": "輸入 20 的結果",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

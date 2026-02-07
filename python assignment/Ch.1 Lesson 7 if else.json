@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第七課：Python if...else 語句練習",
+        "content": "<h3>第七課：if...else 語句 (二選一)</h3><p>這項練習將教你如何使用 <code>else</code> 來處理條件不成立時的情況。</p><h4>任務目標：</h4><ol><li>顯示「Please input your mark.」。</li><li>從輸入中讀取一個分數 <b>mark</b>。</li><li>如果 <b>mark</b> 大於或等於 50，請顯示「Pass.」。</li><li>否則 (else)，請顯示「Fail.」。</li></ol>",
+        "language": "python",
+        "code_template": "print('Please input your mark.')\nmark = int(input())\n\n# 如果及格顯示 Pass.，否則顯示 Fail.\n",
+        "modal_solution": "print('Please input your mark.')\nmark = int(input())\nif mark >= 50:\n    print('Pass.')\nelse:\n    print('Fail.')\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "55",
+                "output": "Please input your mark.\nPass.",
+                "name": "測試案例 1: 及格",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "49",
+                "output": "Please input your mark.\nFail.",
+                "name": "測試案例 2: 不及格",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

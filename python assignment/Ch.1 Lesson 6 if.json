@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第六課：Python if 語句練習",
+        "content": "<h3>第六課：if 語句 (單一條件)</h3><p>在這項練習中，你將學習如何使用 <code>if</code> 語句來對特定條件做出反應。</p><h4>任務目標：</h4><ol><li>設定變數 <code>mark = 50</code>。</li><li>如果 <b>mark</b> 大於或等於 50，請顯示「Pass」。</li></ol>",
+        "language": "python",
+        "code_template": "mark = 50\n\n# 如果 mark 大於或等於 50，顯示 Pass\n",
+        "modal_solution": "mark = 50\nif mark >= 50:\n    print(\"Pass\")\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "",
+                "output": "Pass",
+                "name": "預期輸出",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

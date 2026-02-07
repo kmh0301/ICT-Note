@@ -1,0 +1,37 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第四課：Python 算術運算符 (Arithmetic Operators)",
+        "content": "<h3>第四課：算術運算符</h3><p>請編寫一個 Python 程式，從輸入中讀取兩個整數 <b>a</b> 和 <b>b</b>（每行一個）。</p><p>按順序打印以下運算後的結果，每個結果佔一行：</p><ol><li>加法 (Addition): a + b</li><li>減法 (Subtraction): a - b</li><li>乘法 (Multiplication): a * b</li><li>除法 (Division): a / b</li><li>取模/餘數 (Modulo): a % b</li><li>整除 (Floor Division): a // b</li><li>指數/冪運算 (Exponentiation): a ** b</li></ol>",
+        "language": "python",
+        "code_template": "a = int(input())\nb = int(input())\n\n# 在下方編寫你的運算程式碼\n",
+        "modal_solution": "a = int(input())\nb = int(input())\n\nprint(a + b)\nprint(a - b)\nprint(a * b)\nprint(a / b)\nprint(a % b)\nprint(a // b)\nprint(a ** b)\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "10\n3",
+                "output": "13\n7\n30\n3.3333333333333335\n1\n3\n1000",
+                "name": "測試案例 1: a=10, b=3",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "5\n5",
+                "output": "10\n0\n25\n1.0\n0\n1\n3125",
+                "name": "測試案例 2: a=5, b=5",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

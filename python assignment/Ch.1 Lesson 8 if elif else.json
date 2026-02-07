@@ -1,0 +1,45 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第八課：Python if...elif...else 語句練習",
+        "content": "<h3>第八課：if...elif...else 語句 (多重條件)</h3><p>最後，我們學習如何使用 <code>elif</code> 來處理多個不同的等級區分。</p><h4>任務目標：</h4><ol><li>顯示「Please input your mark.」。</li><li>從輸入中讀取一個分數 <b>mark</b>。</li><li>如果 <b>mark</b> 大於或等於 80，顯示「Credit.」。</li><li>如果 <b>mark</b> 大於或等於 50，顯示「Pass.」。</li><li>否則 (小於 50)，顯示「Fail.」。</li></ol>",
+        "language": "python",
+        "code_template": "print('Please input your mark.')\nmark = float(input())\n\n# 根據分數顯示 Credit., Pass. 或 Fail.\n",
+        "modal_solution": "print('Please input your mark.')\nmark = float(input())\nif mark >= 80:\n    print(\"Credit.\")\nelif mark >= 50:\n    print(\"Pass.\")\nelse:\n    print(\"Fail.\")\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "enable_auto_mark_complete": null,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "code_template_readonly_ranges": null,
+        "testcases": [
+            {
+                "input": "85",
+                "output": "Please input your mark.\nCredit.",
+                "name": "測試案例 1: 優良 (Credit)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "60",
+                "output": "Please input your mark.\nPass.",
+                "name": "測試案例 2: 及格 (Pass)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "40",
+                "output": "Please input your mark.\nFail.",
+                "name": "測試案例 3: 不及格 (Fail)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}
