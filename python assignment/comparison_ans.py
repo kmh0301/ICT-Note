@@ -8,3 +8,4 @@ print(a >= b)  # 大於或等於
 print(a <= b)  # 小於或等於
 print(a == b)  # 等於
 print(a != b)  # 不等於
+

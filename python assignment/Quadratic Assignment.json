@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "Python 一元二次方程求根計算器",
+        "content": "<h3>任務：一元二次方程求根計算器</h3><p>請編寫一個 Python 程式，根據用戶輸入的係數 <b>a</b>, <b>b</b>, <b>c</b>，使用求根公式計算方程 $ax^2 + bx + c = 0$ 的根。</p><h4>功能要求：</h4><ol><li>顯示「Please input a:」並讀取數值。</li><li>顯示「Please input b:」並讀取數值。</li><li>顯示「Please input c:」並讀取數值。</li><li>計算判別式 $\\Delta = b^2 - 4ac$。</li><li>根據判別式結果判斷並輸出：<ul><li>如果 $\\Delta > 0$：顯示「Two real roots: [根1] and [根2]」</li><li>如果 $\\Delta = 0$：顯示「One real root: [根]」</li><li>如果 $\\Delta < 0$：顯示「No real roots」</li></ul></li></ol><h4>提示：</h4><p>在 Python 中，你可以使用 <code>** 0.5</code> 來計算一個變數的平方根（例如：<code>delta ** 0.5</code>）。</p>",
+        "language": "python",
+        "code_template": "print(\"Please input a:\")\na = float(input())\nprint(\"Please input b:\")\nb = float(input())\nprint(\"Please input c:\")\nc = float(input())\n\n# 在下方編寫判別式計算與 if 判斷邏輯\n# 提示：使用 ** 0.5 來計算平方根\n",
+        "modal_solution": "print(\"Please input a:\")\na = float(input())\nprint(\"Please input b:\")\nb = float(input())\nprint(\"Please input c:\")\nc = float(input())\n\ndelta = b**2 - 4*a*c\n\nif delta > 0:\n    x1 = (-b + (delta ** 0.5)) / (2*a)\n    x2 = (-b - (delta ** 0.5)) / (2*a)\n    print(f\"Two real roots: {x1} and {x2}\")\nelif delta == 0:\n    x = -b / (2*a)\n    print(f\"One real root: {x}\")\nelse:\n    print(\"No real roots\")\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "testcases": [
+            {
+                "input": "1\n-3\n2",
+                "output": "Two real roots: 2.0 and 1.0",
+                "name": "測試 1: 兩個實根 (a=1, b=-3, c=2)",
+                "match_type": "C",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "1\n-2\n1",
+                "output": "One real root: 1.0",
+                "name": "測試 2: 一個實根 (a=1, b=-2, c=1)",
+                "match_type": "C",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "1\n1\n1",
+                "output": "No real roots",
+                "name": "測試 3: 無實根 (a=1, b=1, c=1)",
+                "match_type": "C",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

@@ -14,6 +14,7 @@ paginate: true
 <span class="field-label">姓名：</span>
 <span class="field-line"></span>
 </div>
+
 <div class="class-field">
 <span class="field-label">班別：</span>
 <span class="field-line"></span>

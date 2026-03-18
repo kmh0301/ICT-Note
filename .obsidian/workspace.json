@@ -1,134 +1,100 @@
 {
   "main": {
-    "id": "d83b0704425a06ed",
+    "id": "7998604b27e145e7",
     "type": "split",
     "children": [
       {
-        "id": "d0b2639d52ee1642",
-        "type": "split",
+        "id": "00746e3439d4b3fa",
+        "type": "tabs",
         "children": [
           {
-            "id": "6eeeb6e25694f027",
-            "type": "split",
-            "dimension": 77.77777777777779,
-            "children": [
-              {
-                "id": "b0d8f5f1f58ae246",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "67dc40693c4035a2",
-                    "type": "leaf",
-                    "state": {
-                      "type": "empty",
-                      "state": {},
-                      "icon": "lucide-file",
-                      "title": "新分頁"
-                    }
-                  },
-                  {
-                    "id": "ffeb1f48bf7e94df",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "markdown/S4_ict/25-26exam1_ppt.md",
-                        "mode": "source",
-                        "source": true,
-                        "backlinks": true,
-                        "backlinkOpts": {
-                          "collapseAll": false,
-                          "extraContext": false,
-                          "sortOrder": "alphabetical",
-                          "showSearch": false,
-                          "searchQuery": "",
-                          "backlinkCollapsed": false,
-                          "unlinkedCollapsed": true
-                        }
-                      },
-                      "icon": "lucide-file",
-                      "title": "25-26exam1_ppt"
-                    }
-                  }
-                ],
-                "currentTab": 1
+            "id": "bcba85f77c5b4f15",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "python assignment/Python_Student_Handbook_Ch1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              {
-                "id": "bfbfed4f065aaaec",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "51b597f02818b66c",
-                    "type": "leaf",
-                    "state": {
-                      "type": "reveal-preview-view",
-                      "state": {},
-                      "icon": "lucide-file",
-                      "title": "Slide Preview"
-                    }
-                  },
-                  {
-                    "id": "d53cfba06679ff16",
-                    "type": "leaf",
-                    "state": {
-                      "type": "release-notes",
-                      "state": {
-                        "currentVersion": "1.11.7"
-                      },
-                      "icon": "lucide-book-up",
-                      "title": "發行記錄 1.11.7"
-                    }
-                  }
-                ],
-                "currentTab": 1
-              }
-            ],
-            "direction": "vertical"
+              "icon": "lucide-file",
+              "title": "Python_Student_Handbook_Ch1"
+            }
           },
           {
-            "id": "be810421858d1f22",
-            "type": "tabs",
-            "dimension": 22.22222222222222,
-            "children": [
-              {
-                "id": "3fd6252851a51adf",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "terminal:terminal",
-                  "state": {
-                    "terminal:terminal": {
-                      "cwd": null,
-                      "focus": false,
-                      "profile": {
-                        "type": "invalid"
-                      },
-                      "serial": null
-                    }
-                  },
-                  "pinned": true,
-                  "icon": "terminal",
-                  "title": "終端：無效"
+            "id": "d60136c80875679d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "課程筆記：PGDE 5320S.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
                 }
-              }
-            ]
+              },
+              "icon": "lucide-file",
+              "title": "課程筆記：PGDE 5320S"
+            }
+          },
+          {
+            "id": "7373182982c6fc22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SEN 溫習學習卡 (100 張).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "SEN 溫習學習卡 (100 張)"
+            }
           }
         ],
-        "direction": "horizontal"
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "52146e22fe9813a3",
+    "id": "d315690149360c54",
     "type": "split",
     "children": [
       {
-        "id": "77709ee0fc2aa52b",
+        "id": "a319060882499059",
         "type": "tabs",
         "children": [
           {
-            "id": "64ac5b1c8f6110b8",
+            "id": "e3fc622e60682b70",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -141,12 +107,12 @@
             }
           },
           {
-            "id": "ad1684d212c8e830",
+            "id": "5fa215dd1ce2b15b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "文本",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -158,7 +124,7 @@
             }
           },
           {
-            "id": "f57db498eaf65a04",
+            "id": "5350abcc4b5f1941",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -174,86 +140,78 @@
     "width": 300
   },
   "right": {
-    "id": "6b8d1e3ebd397a1d",
+    "id": "002cd05f39858ebc",
     "type": "split",
     "children": [
       {
-        "id": "ef381d50226bfb0c",
+        "id": "b4ba48fe4ad689c0",
         "type": "tabs",
         "children": [
           {
-            "id": "fbd424acbc55428f",
+            "id": "ff47dace669738cf",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/溢出誤差​.md",
+                "file": "課程筆記：PGDE 5320S.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "溢出誤差​ 的反向連結"
+              "title": "課程筆記：PGDE 5320S 的反向連結"
             }
           },
           {
-            "id": "cb5cbe96b79ca26f",
+            "id": "769b28c51e7c36d7",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "內（放射狀筆記）/ICT Topic/數字系統與表示法.md",
+                "file": "課程筆記：PGDE 5320S.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "數字系統與表示法 的對外連結"
+              "title": "課程筆記：PGDE 5320S 的對外連結"
             }
           },
           {
-            "id": "177660a3f024af50",
+            "id": "9ae282f75d5bc294",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "標籤"
             }
           },
           {
-            "id": "afe93131ea3c8563",
+            "id": "44d8cced2b8eb719",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "markdown/S4_ict/25-26exam1_ppt.md",
+                "file": "SEN 溫習學習卡 (100 張).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "25-26exam1_ppt 的大綱"
+              "title": "SEN 溫習學習卡 (100 張) 的大綱"
             }
           },
           {
-            "id": "d0503e970a8223e5",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "7df8fe99a403cbbc",
+            "id": "0ffbec0d08b1730a",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -261,9 +219,19 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "686e07296557effb",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "筆記復習序列"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -272,73 +240,31 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:建立新的 base": false,
-      "remotely-save:Remotely Save": false,
       "switcher:開啟快速切換": false,
       "graph:查看關聯圖": false,
       "canvas:建立新畫布": false,
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
       "command-palette:開啟命令面板": false,
+      "bases:建立新的 base": false,
       "pdf-plus:PDF++: Toggle auto-copy": false,
       "pdf-plus:PDF++: Toggle auto-focus": false,
       "pdf-plus:PDF++: Toggle auto-paste": false,
       "obsidian-git:Open Git source control": false,
       "templater-obsidian:Templater": false,
+      "remotely-save:Remotely Save": false,
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
       "obsidian-advanced-slides:Show Slide Preview": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "claudian:Open Claudian": false,
+      "obsidian-spaced-repetition:復習卡片": false
     }
   },
-  "active": "d53cfba06679ff16",
+  "active": "686e07296557effb",
   "lastOpenFiles": [
-    "export/25-26exam1_ppt/Pasted image 20260127094456.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/README.md",
-    "export/25-26exam1_ppt/plugin/chalkboard/_style.css",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/blackboard.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-black.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-blue.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-green.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-orange.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-purple.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-red.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/boardmarker-yellow.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/chalk-blue.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img/chalk-green.png",
-    "export/25-26exam1_ppt/plugin/chalkboard/img",
-    "export/25-26exam1_ppt/plugin/chalkboard/style.css",
-    "export/25-26exam1_ppt/plugin/chalkboard/plugin.js",
-    "export/25-26exam1_ppt/plugin/chalkboard/plugin (copy).js",
-    "export/25-26exam1_ppt/plugin/chalkboard",
-    "export/25-26exam1_ppt/plugin/chart/plugin.js",
-    "export/25-26exam1_ppt/plugin/chart/chart.min.js",
-    "export/25-26exam1_ppt/plugin/chart/README.md",
-    "export/25-26exam1_ppt/plugin/chart",
-    "export/25-26exam1_ppt/plugin/customcontrols/style.css",
-    "export/25-26exam1_ppt/plugin/customcontrols/README.md",
-    "export/25-26exam1_ppt/plugin/menu/README.md",
-    "export/25-26exam1_ppt/plugin/menu/CONTRIBUTING.md",
-    "未命名.canvas",
-    "markdown/S4_ict/25-26exam1_ppt.md",
-    "外（線性筆記）/Maps/A2 資訊處理.md",
-    "markdown/ICT_Book_A1_Chapter_1_ppt.md",
-    "markdown/ICT_Book_A1_Chapter_1.md",
-    "markdown/ICT Book A1 Chapter 3.md",
-    "markdown/ict_book_a1_ch3-ce673b40-b8cb-4426-be19-142fe35bfcc4.md",
-    "markdown/ict_book_a1_ch1.md",
-    "markdown/ICT Book A1 Chapter 2.md",
-    "markdown/ICT Book A1 Chapter 1.md",
-    "markdown/S4_ict/Ch.3_WS_多媒體.md",
-    "markdown/S4_ict/A1_ch.2.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.3 例題3.1 Q1.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.2 數據控制及數據組織.md",
-    "外（線性筆記）/書本內容/A1/A1 Ch.1資訊處理簡介.md",
-    "外（線性筆記）/書本內容/A1/2021P1Q40.md",
-    "試算表數據輸入.md",
-    "外（線性筆記）/書本內容/A2/A2 Ch.4 試算表.md",
-    "試算表簡介.md",
-    "A2 Ch.5 數據庫.md",
-    "外（線性筆記）/Maps/A1 資訊處理.md",
-    "未命名 1.canvas"
+    "課程筆記：PGDE 5320S.md",
+    "SEN 溫習學習卡 (100 張).md",
+    "綜合專案 (Integrated Projects).md",
+    "python assignment/Python_Student_Handbook_Ch1.md"
   ]
 }

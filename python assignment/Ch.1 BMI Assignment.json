@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "Python BMI 判斷器",
+        "content": "<h3>任務：BMI 判斷器</h3><p>請編寫一個 Python 程式，根據用戶輸入的體重和身高計算 BMI，並判斷身體狀況。</p><h4>功能要求：</h4><ol><li>顯示「Please input your weight(kg):」。</li><li>從輸入讀取體重 (weight)。</li><li>顯示「Please input your height(m):」。</li><li>從輸入讀取身高 (height)。</li><li>計算 BMI = 體重 / (身高^2)。</li><li>顯示 BMI 結果（要求：保留 <b>3 位有效數字</b>）。</li><li>根據 BMI 分類：<ul><li><b>BMI >= 24</b>：顯示「FAT」</li><li><b>BMI <= 20</b>：顯示「THIN」</li><li><b>其他情況</b>：顯示「FIT」</li></ul></li></ol><h4>獎分任務 (Bonus)：</h4><p>BMI 數值必須準確顯示為 3 位有效數字。提示：可以使用 <code>f\"{value:.3g}\"</code> 格式化字串。</p>",
+        "language": "python",
+        "code_template": "print(\"Please input your weight(kg):\")\nweight = float(input())\nprint(\"Please input your height(m):\")\nheight = float(input())\n\n# 1. 在下方計算 BMI\n\n\n# 2. 在下方輸出 BMI (保留 3 位有效數字)\n\n\n# 3. 在下方進行 if...elif...else 判斷\n",
+        "modal_solution": "print(\"Please input your weight(kg):\")\nweight = float(input())\nprint(\"Please input your height(m):\")\nheight = float(input())\n\nBMI = weight / (height ** 2)\n\nprint(f\"Your BMI is: {BMI:.3g}\")\n\nif BMI >= 24:\n    print(\"FAT\")\nelif BMI <= 20:\n    print(\"THIN\")\nelse:\n    print(\"FIT\")\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "testcases": [
+            {
+                "input": "75\n1.7",
+                "output": "Please input your weight(kg):\nPlease input your height(m):\nYour BMI is: 26\nFAT",
+                "name": "測試 1: 過重 (>=24)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "65\n1.75",
+                "output": "Please input your weight(kg):\nPlease input your height(m):\nYour BMI is: 21.2\nFIT",
+                "name": "測試 2: 健康 (20-24)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            },
+            {
+                "input": "50\n1.65",
+                "output": "Please input your weight(kg):\nPlease input your height(m):\nYour BMI is: 18.4\nTHIN",
+                "name": "測試 3: 過輕 (<=20)",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

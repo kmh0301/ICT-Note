@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第十課：Python range() 函數練習",
+        "content": "<h3>第十課：使用 range() 生成序列</h3><p>當需要執行大量次數時，我們使用 <code>range(start, stop)</code> 函數。</p><h4>任務目標：</h4><ol><li>編寫一個 <code>for</code> 迴圈。</li><li>配合 <code>range(1, 101)</code>。</li><li>顯示從 1 到 100 的所有整數（每個佔一行）。</li></ol><p><i>提示：range(1, 101) 將生成的數值序列不包含 101。</i></p>",
+        "language": "python",
+        "code_template": "# 1. 使用 for 迴圈配合 range(1, 101)\n\n\n# 2. 在下方顯示循環變數 i\n",
+        "modal_solution": "for i in range(1, 101):\n    print(i)\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "testcases": [
+            {
+                "input": "",
+                "output": "1\n2\n3\n",
+                "name": "預期輸出：1 到 100",
+                "match_type": "C",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

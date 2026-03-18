@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第十一課：Python 累加運算 (Accumulation)",
+        "content": "<h3>第十一課：計算總和</h3><p>這項練習將教會你如何使用迴圈來計算從 1 到 100 的總和。</p><h4>任務目標：</h4><ol><li>定義一個變數 <code>total_sum = 0</code>。</li><li>使用 <code>for i in range(1, 101)</code> 進行循環計算。</li><li>每次循環中將 <code>i</code> 加進 <code>total_sum</code>。</li><li>在迴圈<b>結束後</b>，顯示最終的結果。</li></ol>",
+        "language": "python",
+        "code_template": "total_sum = 0\n\n# 1. 在下方編寫 for 迴圈進行累加運算\n\n\n# 2. 在下方（迴圈外）顯示最終總和結果\n",
+        "modal_solution": "total_sum = 0\nfor i in range(1, 101):\n    total_sum = total_sum + i\nprint(total_sum)\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "testcases": [
+            {
+                "input": "",
+                "output": "5050",
+                "name": "正確總和結果",
+                "match_type": "C",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "assignment": {
+        "title": "第九課：Python 基礎迴圈 (for loop)",
+        "content": "<h3>第九課：for 迴圈</h3><p>在這項練習中，你將學習如何讓電腦重複執行指定的次數。</p><h4>任務目標：</h4><ol><li>使用 <code>for</code> 迴圈遍歷列表 <code>[1, 2, 3, 4]</code>。</li><li>在每次循環中，顯示「hi, Python」。</li></ol>",
+        "language": "python",
+        "code_template": "# 1. 使用 for 迴圈遍歷 [1, 2, 3, 4]\nfor i in [1, 2, 3, 4]:\n    # 2. 在下方顯示輸出內容\n",
+        "modal_solution": "for i in [1, 2, 3, 4]:\n    print(\"hi, Python\")\n",
+        "eval_method": "auto",
+        "enable_grade": 1,
+        "enable_late_submission": 0,
+        "editor_copy_paste": 1,
+        "editor_file_upload": 1,
+        "autolock": 0,
+        "testcase_visible": 0,
+        "testcases": [
+            {
+                "input": "",
+                "output": "hi, Python\nhi, Python\nhi, Python\nhi, Python",
+                "name": "預期輸出結果",
+                "match_type": "F",
+                "grade_point": 1,
+                "visibility": 2
+            }
+        ]
+    }
+}
